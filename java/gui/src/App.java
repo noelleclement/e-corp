@@ -1,3 +1,4 @@
+import Backend.*;
 import GUI.*;
 
 /**
@@ -6,6 +7,7 @@ import GUI.*;
 public class App {
     public static void main(String[] args) {
         System.out.println("hoi");
-        Gui gui = new Gui();
+        GUI gui = new GUI();
+        Backend backend = new Backend();
     }
 }

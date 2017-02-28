@@ -1,16 +1,24 @@
 package GUI;
 
-import javax.swing.*;
 
 /**
  * Created by Hans de Rooij on 21/02/2017.
+ *
+ * This class is for handling all the different gui components. It'll
+ * also initialize the different handlers
+ *
+ * basically all the front end peasantery
  */
-public class Gui {
-    private JFrame mainScreen;
-    public Gui() {
-        this.mainScreen = new JFrame("ATM E corp");
-        mainScreen.setSize(400, 400);
-        mainScreen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        mainScreen.setVisible(true);
+public class GUI {
+    private MainScreen mainScreen;
+    private KeyboardHandler k;
+    public GUI() {
+        k = new KeyboardHandler(this);
+        this.mainScreen = new MainScreen();
+        mainScreen.addKeyListener(k);
+    }
+
+    public void keyPressed(char key) {
+        System.out.println(key);
     }
 }
