@@ -16,13 +16,25 @@ import java.util.Arrays;
  */
 public class Users extends ArrayList<User> {
     public Users() {
-        this.retrieveUsers();
+        this("users.csv");
     }
 
-    public void retrieveUsers() {
+    public Users(String fileName) {
+        this.retrieveUsers(fileName);
+    }
+
+    public User findUser(int accountNumber) throws UnexsistingUserException {
+        for(User user:this) {
+            if(user.getAccountNumber()==accountNumber)
+                return user;
+        }
+        throw new UnexsistingUserException();
+    }
+
+    public void retrieveUsers(String fileName) {
         CSVReader reader = null;
         try {
-            reader = new CSVReader(new FileReader("users.csv"));
+            reader = new CSVReader(new FileReader(fileName));
             String [] nextLine;
             while ((nextLine = reader.readNext()) != null) {
                 // nextLine[] is an array of values from the line
@@ -31,7 +43,7 @@ public class Users extends ArrayList<User> {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            Path file = Paths.get("users.csv");
+            Path file = Paths.get(fileName);
             try {
                 Files.write(file, Arrays.asList("\"1\",\"Henk\""));
                 System.out.println("There wasn't a user file, now there is :)");

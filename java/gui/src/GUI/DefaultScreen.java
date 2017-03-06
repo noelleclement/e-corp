@@ -11,8 +11,8 @@ public abstract class DefaultScreen extends JFrame {
         super("E Corp -  ATM");
         setSize(1200,1000);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//TODO make app unexitable
-        setResizable(false);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//TODO make app unexitable after testing
+        setResizable(true);//TODO remove after testing
         setLayout(new GridBagLayout());
         GridBagConstraints companyLabelConstraints = new GridBagConstraints();
         companyLabelConstraints.fill = GridBagConstraints.HORIZONTAL;

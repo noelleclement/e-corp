@@ -11,4 +11,12 @@ public class User {
         this.accountNumber = accountNumber;
         this.name = name;
     }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
