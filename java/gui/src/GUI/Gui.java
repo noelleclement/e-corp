@@ -1,7 +1,6 @@
 package GUI;
 
-
-import com.sun.deploy.util.StringUtils;
+import Backend.*;
 
 /**
  * Created by Hans de Rooij on 21/02/2017.
@@ -14,43 +13,42 @@ import com.sun.deploy.util.StringUtils;
 public class GUI {
     private MainScreen mainScreen;
     private PinScreen pinScreen;
-    private KeyboardHandler k;
     private ActiveScreen activeScreen;
+
+    private KeyboardHandler k;
     public GUI() {
-        k = new KeyboardHandler(this);
         this.mainScreen = new MainScreen();
-        mainScreen.addKeyListener(k);
+        k = new KeyboardHandler(this);
+        mainScreen.addKeyListener(k);//TODO remove after buttons
         this.activeScreen = ActiveScreen.MAINSCREEN;
     }
 
     //TODO only temporary I SWEAR TESTING ONLY
     private String accountNumber="";
-    private boolean isNumeric(String str)
-    {
-        try
-        {
-            double d = Double.parseDouble(str);
-        }
-        catch(NumberFormatException nfe)
-        {
-            return false;
-        }
-        return true;
-    }
+
     public void keyPressed(char key) {
         System.out.println(key);
         switch(activeScreen) {
             case MAINSCREEN:
-                if(isNumeric(Character.toString(key))) {
+                if(Character.isDigit(key)) {
                     accountNumber = accountNumber+key;
                     mainScreen.tempLabelAccountNumber.setText(accountNumber);
                 }
                 if(Character.isSpaceChar(key)) {
                     this.activeScreen = ActiveScreen.PINSCREEN;
                     this.mainScreen.setVisible(false);
+                    this.mainScreen = null;
                     this.pinScreen = new PinScreen();
+                    pinScreen.addKeyListener(k);//TODO remove after keypad
                 }
                 break;
+            case PINSCREEN:
+                if(Character.isDigit(key)) {
+                    pinScreen.numberEntered(Character.getNumericValue(key));
+                } else if(Character.isLowerCase(key)) {
+                    pinScreen.characterEntered(Character.toString(key));
+                }
+                    break;
         }
     }
     private enum ActiveScreen {

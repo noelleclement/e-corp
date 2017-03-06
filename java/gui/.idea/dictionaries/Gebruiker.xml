@@ -2,6 +2,7 @@
   <dictionary name="Gebruiker">
     <words>
       <w>mainscreen</w>
+      <w>pinscreen</w>
     </words>
   </dictionary>
 </component>
