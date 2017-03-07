@@ -18,10 +18,10 @@ public class WithdrawMoneyScreen extends ButtonScreen {
         rightButtons[0].setIdentifier("A");
         rightButtons[0].setText("Backspace");
 
-        addPinField();
+        addAmountLabel();
     }
 
-    private void addPinField() {
+    private void addAmountLabel() {
         GridBagConstraints amountLabelConstraints = new GridBagConstraints();
         amountLabelConstraints.gridx = 0;
         amountLabelConstraints.gridy = 2;
@@ -42,9 +42,16 @@ public class WithdrawMoneyScreen extends ButtonScreen {
             amountLabel.setText(amount);
         }
         System.out.println(amount);
+        this.amountLabel.setText(amount);
     }
 
-    public void newNumber(int number) {
-        this.amount = amount + number;
+    public void addNumber(int number) {
+        this.currentNumber++;
+        this.amount = this.amount + number;
+        this.amountLabel.setText(amount);
+    }
+
+    public int getAmount() {
+        return Integer.parseInt(this.amount);
     }
 }

@@ -17,6 +17,7 @@ public class GUI {
     private ChooseActionScreen chooseActionScreen;
     private CheckBalanceScreen checkBalanceScreen;
     private WithdrawMoneyScreen withdrawMoneyScreen;
+    private WithdrawAmountCheckScreen withdrawAmountCheckScreen;
     private Backend backend;
 
     private KeyboardHandler k;
@@ -112,9 +113,27 @@ public class GUI {
                     }
                 }
                 break;
+            case WITHDRAWMONEYSCREEN:
+                if(Character.isLowerCase(key)) {
+                    switch(key) {
+                        case 'a':
+                            withdrawMoneyScreen.backSpace();
+                            break;
+                        case 'b':
+                            this.activeScreen = ActiveScreen.WITHDRAW_AMOUNT_CHECK_SCREEN;
+                            this.withdrawMoneyScreen.setVisible(false);
+
+
+                            break;
+                    }
+                } else if(Character.isDigit(key)) {
+                    withdrawMoneyScreen.addNumber(Character.getNumericValue(key));
+                }
+                break;
         }
     }
     private enum ActiveScreen {
-        MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN
+        MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN,
+        WITHDRAW_AMOUNT_CHECK_SCREEN
     }
 }
