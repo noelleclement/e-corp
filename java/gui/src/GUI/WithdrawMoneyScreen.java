@@ -1,6 +1,7 @@
 package GUI;
 
 import javax.swing.*;
+import javax.swing.border.MatteBorder;
 import java.awt.*;
 
 /**
@@ -13,11 +14,11 @@ public class WithdrawMoneyScreen extends ButtonScreen {
 
     public WithdrawMoneyScreen() {
         super();
-
+        mainTextLabel.setText("Enter the desired amount:");
         rightButtons[0].setIdentifier("A");
         rightButtons[0].setText("Backspace");
 
-
+        addPinField();
     }
 
     private void addPinField() {
@@ -26,8 +27,10 @@ public class WithdrawMoneyScreen extends ButtonScreen {
         amountLabelConstraints.gridy = 2;
         amountLabelConstraints.gridheight = 2;
         amountLabelConstraints.weightx = 1;
-        amountLabelConstraints.fill = GridBagConstraints.BOTH;
+        amountLabelConstraints.fill = GridBagConstraints.HORIZONTAL;
 
+        amountLabel.setBorder(new MatteBorder(1,1,1,1,Color.BLACK));
+        amountLabel.setFont(new Font("Ariel", Font.PLAIN, 60));
         add(amountLabel, amountLabelConstraints);
     }
 

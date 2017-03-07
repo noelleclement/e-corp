@@ -63,6 +63,8 @@ public class GUI {
                             pinScreen.backSpace();
                             break;
                         case 'b':
+                            if(pinScreen.getPin().length()<3)
+                                break;
                             if(backend.checkPin(pinScreen.getPin())) {
                                 this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
                                 this.pinScreen.setVisible(false);
@@ -91,6 +93,19 @@ public class GUI {
                             this.activeScreen = ActiveScreen.WITHDRAWMONEYSCREEN;
                             this.chooseActionScreen.setVisible(false);
                             this.chooseActionScreen = null;
+                            this.withdrawMoneyScreen = new WithdrawMoneyScreen();
+                            withdrawMoneyScreen.addKeyListener(k);
+                            break;
+                    }
+                }
+                break;
+            case CHECK_BALANCE_SCREEN:
+                if(Character.isLowerCase(key)) {
+                    switch (key) {
+                        case 'a':
+                            this.activeScreen = ActiveScreen.WITHDRAWMONEYSCREEN;
+                            this.checkBalanceScreen.setVisible(false);
+                            this.checkBalanceScreen = null;
                             this.withdrawMoneyScreen = new WithdrawMoneyScreen();
                             withdrawMoneyScreen.addKeyListener(k);
                             break;

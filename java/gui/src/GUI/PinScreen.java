@@ -38,8 +38,11 @@ public class PinScreen extends ButtonScreen {
         }
         System.out.println(pin);
         if(currentNumber>3) {
-            rightButtons[2].setIdentifier("B");
-            rightButtons[2].setText("Continue");
+            rightButtons[1].setIdentifier("B");
+            rightButtons[1].setText("Continue");
+        } else {
+            rightButtons[1].setIdentifier("");
+            rightButtons[1].setText("");
         }
     }
 
