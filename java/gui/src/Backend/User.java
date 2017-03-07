@@ -8,12 +8,14 @@ public class User {
     private String name;
     private String pin;
     private int pinErrors;
+    private int balance;
 
-    public User(String accountNumber, String name, String pin, int pinErrors) {
+    public User(String accountNumber, String name, String pin, int pinErrors, int balance) {
         this.accountNumber = accountNumber;
         this.name = name;
         this.pin = pin;
         this.pinErrors = pinErrors;
+        this.balance = balance;
     }
 
     public String getAccountNumber() {
@@ -38,11 +40,16 @@ public class User {
         return "\""+this.accountNumber+"\",\"" +
                     this.name+"\",\"" +
                     this.pin+"\",\"" +
-                    this.pinErrors+"\"";
+                    this.pinErrors+"\",\"" +
+                    this.balance+"\"";
     }
 
     public int getPinErrors() {
         return pinErrors;
+    }
+
+    public int getBalance() {
+        return this.balance;
     }
 
     public void incrementPinErrors() {

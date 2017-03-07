@@ -28,6 +28,9 @@ public abstract class ButtonScreen extends DefaultScreen {
         add(mainTextLabel,mainTextConstraints);
         //addTopFiller();
         initRightButtons();
+
+        rightButtons[3].setText("EXIT");
+        rightButtons[3].setIdentifier("D");
     }
 
     private void initRightButtons() {

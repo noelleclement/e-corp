@@ -26,8 +26,6 @@ public class PinScreen extends ButtonScreen {
 // make right buttons right :)
         rightButtons[0].setIdentifier("A");
         rightButtons[0].setText("Backspace");
-        rightButtons[3].setText("EXIT");
-        rightButtons[3].setIdentifier("D");
     }
 
     public void numberEntered(int number) {

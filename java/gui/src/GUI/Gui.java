@@ -14,6 +14,9 @@ public class GUI {
     private MainScreen mainScreen;
     private PinScreen pinScreen;
     private ActiveScreen activeScreen;
+    private ChooseActionScreen chooseActionScreen;
+    private CheckBalanceScreen checkBalanceScreen;
+    private WithdrawMoneyScreen withdrawMoneyScreen;
     private Backend backend;
 
     private KeyboardHandler k;
@@ -61,6 +64,11 @@ public class GUI {
                             break;
                         case 'b':
                             if(backend.checkPin(pinScreen.getPin())) {
+                                this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
+                                this.pinScreen.setVisible(false);
+                                this.pinScreen = null;
+                                this.chooseActionScreen = new ChooseActionScreen();
+                                chooseActionScreen.addKeyListener(k);
                                 break;
                             } else {
                                 pinScreen.wrongPin(backend.getCurrentUser().getPinErrors());
@@ -69,9 +77,29 @@ public class GUI {
                     }
                 }
                 break;
+            case CHOOSE_ACTION_SCREEN:
+                if(Character.isLowerCase(key)) {
+                    switch (key) {
+                        case 'a':
+                            this.activeScreen = ActiveScreen.CHECK_BALANCE_SCREEN;
+                            this.chooseActionScreen.setVisible(false);
+                            this.chooseActionScreen = null;
+                            this.checkBalanceScreen = new CheckBalanceScreen(backend.getCurrentUser());
+                            checkBalanceScreen.addKeyListener(k);
+                            break;
+                        case 'b':
+                            this.activeScreen = ActiveScreen.WITHDRAWMONEYSCREEN;
+                            this.chooseActionScreen.setVisible(false);
+                            this.chooseActionScreen = null;
+                            this.withdrawMoneyScreen = new WithdrawMoneyScreen();
+                            withdrawMoneyScreen.addKeyListener(k);
+                            break;
+                    }
+                }
+                break;
         }
     }
     private enum ActiveScreen {
-        MAINSCREEN, PINSCREEN
+        MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN
     }
 }

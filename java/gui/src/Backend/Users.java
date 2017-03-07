@@ -73,14 +73,15 @@ public class Users extends ArrayList<User> {
             String [] nextLine;
             while ((nextLine = reader.readNext()) != null) {
                 // nextLine[] is an array of values from the line
-                this.add(new User(nextLine[0],nextLine[1],nextLine[2],Integer.parseInt(nextLine[3])));
+                this.add(new User(nextLine[0],nextLine[1],nextLine[2],Integer.parseInt(nextLine[3])
+                        ,Integer.parseInt(nextLine[4])));
                 System.out.println("id " + nextLine[0] + "\tnaam " + nextLine[1]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             Path file = Paths.get(fileName);
             try {
-                Files.write(file, Arrays.asList("\"1\",\"Henk\",\"1234\",\"0\""));
+                Files.write(file, Arrays.asList("\"1\",\"Henk\",\"1234\",\"0\",\"100000\""));
                 System.out.println("There wasn't a user file, now there is :)");
             } catch (IOException e1) {
                 e1.printStackTrace();
