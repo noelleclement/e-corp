@@ -7,7 +7,7 @@ import GUI.*;
 public class App {
     public static void main(String[] args) {
         System.out.println("hoi");
-        GUI gui = new GUI();
         Backend backend = new Backend();
+        GUI gui = new GUI(backend);
     }
 }

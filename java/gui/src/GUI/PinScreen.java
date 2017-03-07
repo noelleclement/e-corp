@@ -1,5 +1,7 @@
 package GUI;
 
+import Backend.Backend;
+
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
@@ -10,26 +12,22 @@ import java.awt.*;
 public class PinScreen extends ButtonScreen {
     private PinField pinField = new PinField();
     private String pin = "";
+    private Backend backend;
     private int currentNumber = 0;
-    public PinScreen() {
+    private JLabel errorField = new JLabel();
+    public PinScreen(Backend _backend) {
         super();
+        this.backend = _backend;
         this.mainTextLabel.setText("Please insert your PIN");
 
         addPinField();
-    }
+        addErrorField();
 
-    public void characterEntered(String button) {
-        switch(button) {
-            case "a": //Backspace
-                if(currentNumber>0) {
-                    currentNumber--;
-                    pinField.setNumber(currentNumber,false);
-
-                    pin = pin.substring(0, pin.length()-1);
-                }
-                System.out.println(pin);
-                break;
-        }
+// make right buttons right :)
+        rightButtons[0].setIdentifier("A");
+        rightButtons[0].setText("Backspace");
+        rightButtons[3].setText("EXIT");
+        rightButtons[3].setIdentifier("D");
     }
 
     public void numberEntered(int number) {
@@ -47,20 +45,42 @@ public class PinScreen extends ButtonScreen {
         }
     }
 
+    public void wrongPin(int tries) {
+        this.errorField.setText("<html>You've entered the <br>wrong PIN <br>"+tries+" times</html>");
+    }
+
+    public void backSpace() {
+        if(currentNumber>0) {
+            currentNumber--;
+            pinField.setNumber(currentNumber,false);
+
+            pin = pin.substring(0, pin.length()-1);
+        }
+        System.out.println(pin);
+    }
+
     private void addPinField() {
         GridBagConstraints pinFieldConstraints = new GridBagConstraints();
         pinFieldConstraints.gridx = 0;
         pinFieldConstraints.gridy = 2;
-        pinFieldConstraints.gridheight = 4;
+        pinFieldConstraints.gridheight = 2;
         pinFieldConstraints.weightx = 1;
         pinFieldConstraints.fill = GridBagConstraints.BOTH;
 
-        rightButtons[0].setIdentifier("A");
-        rightButtons[0].setText("Backspace");
-        rightButtons[3].setText("EXIT");
-        rightButtons[3].setIdentifier("D");
-
         add(pinField, pinFieldConstraints);
+    }
+
+    private void addErrorField() {
+        GridBagConstraints errorFieldConstraints = new GridBagConstraints();
+        errorFieldConstraints.gridx = 0;
+        errorFieldConstraints.gridy = 4;
+        errorFieldConstraints.gridheight = 2;
+        errorFieldConstraints.weightx = 1;
+        errorFieldConstraints.fill = GridBagConstraints.BOTH;
+
+        errorField.setFont(new Font("Ariel",Font.PLAIN,70));
+
+        add(errorField, errorFieldConstraints);
     }
 
     private class PinField extends JPanel {
@@ -90,5 +110,9 @@ public class PinScreen extends ButtonScreen {
                 this.add(pinNumbers[i]);
             }
         }
+    }
+
+    public String getPin() {
+        return pin;
     }
 }
