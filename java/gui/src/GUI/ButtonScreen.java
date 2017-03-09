@@ -9,7 +9,7 @@ import java.awt.*;
  * Created by Hans de Rooij on 06/03/2017.
  */
 public abstract class ButtonScreen extends DefaultScreen {
-    protected JLabel mainTextLabel = new JLabel("Loading...", JLabel.CENTER);
+    protected JLabel mainTextLabel = new JLabel("Loading...");
     protected RightButton[] rightButtons = new RightButton[4];
     protected JLabel bottomFiller = new JLabel("");
     public ButtonScreen() {
