@@ -17,7 +17,8 @@ public class WithdrawMoneyScreen extends ButtonScreen {
         mainTextLabel.setText("Enter the desired amount:");
         rightButtons[0].setIdentifier("A");
         rightButtons[0].setText("Backspace");
-
+        rightButtons[1].setIdentifier("B");
+        rightButtons[1].setText("Confirm");
         addPinField();
     }
 
@@ -46,5 +47,11 @@ public class WithdrawMoneyScreen extends ButtonScreen {
 
     public void newNumber(int number) {
         this.amount = amount + number;
+        currentNumber++;
+        amountLabel.setText(amount);
+    }
+
+    public int getEnteredAmount() {
+        return Integer.parseInt(this.amount);
     }
 }
