@@ -10,7 +10,7 @@ class EchoClient {
             main(String[] arstring) {
         try {
             SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-            SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("localhost", 9999);
+            SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("localhost", 4443);
 
             InputStream inputstream = System.in;
             InputStreamReader inputstreamreader = new InputStreamReader(inputstream);
