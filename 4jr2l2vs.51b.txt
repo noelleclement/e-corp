@@ -1,0 +1,18 @@
+﻿Revert "Amountscreen functional, start check screen"
+
+This reverts commit c47cdeced8c7a84e17a483483d74caa7dfe826d1.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   java/gui/.idea/workspace.xml
+#	modified:   java/gui/out/production/gui/GUI/ButtonScreen.class
+#	modified:   java/gui/src/GUI/ButtonScreen.java
+#	modified:   java/gui/src/GUI/GUI.java
+#	deleted:    java/gui/src/GUI/WithdrawAmountCheckScreen.java
+#	modified:   java/gui/src/GUI/WithdrawMoneyScreen.java
+#
+
