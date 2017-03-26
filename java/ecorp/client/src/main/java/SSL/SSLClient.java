@@ -9,6 +9,7 @@ import java.security.Security;
 
 public class SSLClient extends Thread{
     private String message = "ping";
+    private String reaction;
     public SSLClient(String message) {
         this.message = message;
     }
@@ -42,8 +43,8 @@ public class SSLClient extends Thread{
                 bufferedwriter.write(this.message + '\n');
                 bufferedwriter.flush();
                 if ((inputLine = in.readLine()) != null) {
-
-                    System.out.println(inputLine);
+                    this.reaction = inputLine;
+                    //System.out.println(inputLine);
                     sslsocket.close();
                     break;
                 }
@@ -51,5 +52,9 @@ public class SSLClient extends Thread{
         } catch (Exception exception) {
             exception.printStackTrace();
         }
+    }
+
+    public String getReaction() {
+        return reaction;
     }
 }

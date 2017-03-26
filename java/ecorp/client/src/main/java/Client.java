@@ -5,7 +5,6 @@ import SSL.SSLClient;
  */
 public class Client {
     public static void main(String[] args) {
-        SSLClient client = new SSLClient("moi");
-        client.start();
+        System.out.println(new API().isCorrectCard("123", "asdf").IBAN);
     }
 }
