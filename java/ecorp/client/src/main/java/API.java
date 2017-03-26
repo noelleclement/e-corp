@@ -76,7 +76,7 @@ public class API {
         object.addProperty("hoeveelheid", hoeveelheid);
         String reaction = getSSLReaction(object.toString());
         object = new JsonParser().parse(reaction);
-        
+
     }
     private String getSSLReaction(String json) {
         System.out.println("Sending this to the server:"+json);
