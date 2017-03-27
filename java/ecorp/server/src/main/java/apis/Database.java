@@ -63,8 +63,7 @@ public class Database {
     }
 
 
-
-
+    
 
 
     public boolean withDraw(String rekeningNr, int amount) {
@@ -105,78 +104,61 @@ public class Database {
     }
 
 
-    //TODO kijken of deze compareRekeningNr methode beetje sense maakt
-    public boolean compareRekeningNr(String rekeningNr) {
-        //TODO varchar in sql goed als string in java?
 
+    public boolean comparePasRekening (String rekeningNr, int pasNr){
+        //TODO varchar in sql goed als string in java?
+        //TODO int in java goed als ? in sql?
+        //TODO letop: nog geen pas tabel
+        //TODO loggers toevoegen
 
         try{
-            PreparedStatement ps = con.prepareCall("SELECT rekeningNr"
-                                                    + "FROM E-corp.klant"
-                                                    + "WHERE E-corp.klant.rekeningNr = ?");
-            ps.setString(1,rekeningNr);
+            PreparedStatement ps = con.prepareCall("SELECT *"
+                                                    + "FROM E-corp.pas"
+                                                    + "WHERE E-corp.pas.rekeningNr = ? AND E-corp.pas.pasNr = ?");
+            ps.setString(1, rekeningNr);
+            ps.setInt(2, pasNr);
             rs = ps.executeQuery();
             if (rs.next()){
                 return true;
             }
 
-            logger.debug("rekeningNr bestaat niet");
+            logger.debug("pasNr rekeningNr combi bestaat niet");
             return false;
         }
         catch (SQLException e){
-            logger.error("Execution of query select rekeningNr failed", e);
+            logger.error("Execution of query compare pas & rekeningnr from pastable failed", e);
         }
 
         return false;
+
     }
 
-    //TODO kijken of deze comparePasNr methode beetje sense maakt
-    public boolean comparePasNr (int pasNr) {
+
+    public boolean comparePincode (int pasNr, int pincode){
         //TODO int in java goed als ? in sql?
         //TODO letop: nog geen pas tabel
-
+        //TODO loggers toevoegen
 
         try{
-            PreparedStatement ps = con.prepareCall("SELECT pasNr"
+            PreparedStatement ps = con.prepareCall("SELECT pincode"
                                                     + "FROM E-corp.pas"
                                                     + "WHERE E-corp.pas.pasNr = ?");
             ps.setInt(1, pasNr);
             rs = ps.executeQuery();
-            if (rs.next()){
+            if (ps == pincode){
                 return true;
             }
 
-            logger.debug("pasNr bestaat niet");
+            logger.debug("pincode niet correct");
             return false;
         }
         catch (SQLException e){
-            logger.error("Execution of query select pasNr failed", e);
+            logger.error("Execution of query pincode compare failed", e);
         }
 
         return false;
+
     }
-
-    public int getPincode (int pasNr){
-        //TODO letop nog geen pas tabel in database
-        //TODO iets doen met dat 't max 4 cijfers mogen zijn of moet dat in API?
-        //TODO moet er nog niets qua veiligheid dat je niet zomaar pincode ertussenuit kunt opvragen?
-
-        int pincode = 0000;
-        try {
-            PreparedStatement ps = con.prepareStatement("SELECT pincode "
-                                                        + "FROM E-corp.pas "
-                                                        + "WHERE E-corp.pas.pasNr = ?");
-            ps.setString(1, pasNr);
-            rs = ps.executeQuery();
-            rs.next();
-            pincode = rs.getInt("saldo");
-            logger.debug("Saldo = " + pincode); //als handig kan ook pas/nr etc toegevoegd worden
-        } catch (SQLException e) {
-            logger.error("Execution of query getPincode failed", e); //moet nog wat uitgebreider
-        }
-        return pincode;
-    }
-
 
 
 
