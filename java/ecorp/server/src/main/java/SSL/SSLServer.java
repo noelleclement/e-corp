@@ -44,8 +44,12 @@ public class SSLServer extends Thread {
                 String inputLine, outputLine;
 
                 while ((inputLine = in.readLine()) != null) {
+<<<<<<< HEAD
 
                     out.write("You said: "+inputLine+"\n");
+=======
+                    out.write(inputLine+"\n");
+>>>>>>> origin/master
                     out.flush();
                     System.out.println(inputLine);
                     API api = new API()
