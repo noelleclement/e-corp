@@ -1,13 +1,13 @@
+package Backend;
+
 import SSL.SSLClient;
 import com.google.gson.*;
-
-import java.util.Observable;
 
 /**
  * Created by Hans de Rooij on 24/03/2017.
  */
 public class API {
-    public JsonResponse isCorrectCard(String accountNumber, String passNumber) {
+    public JsonResponses.ControleerRekeningnummer isCorrectCard(String accountNumber, String passNumber) {
         JsonObject object = new JsonObject();
         object.addProperty("type","CONTROLEER_REKENINGNUMMER");
         object.addProperty("IBAN",accountNumber);
@@ -55,7 +55,7 @@ public class API {
         }
     }
 
-    public JsonResponse saldoOpvragen(String transactionID, String IBAN) {
+    public JsonResponses.SaldoInformatie saldoOpvragen(String transactionID, String IBAN) {
         JsonObject object = new JsonObject();
         object.addProperty("transactionId", transactionID);
         object.addProperty("IBAN", IBAN);
@@ -77,6 +77,23 @@ public class API {
         String reaction = getSSLReaction(object.toString());
         object = new JsonParser().parse(reaction);
 
+        switch(object.get("type").getAsString()) {
+            case "OPNAME_IS_MOGELIJK":
+                return new JsonResponses.GeldopnameMogelijk(object.get("transactionId").getAsString(),
+                                                            object.get("IBAN").getAsString(),
+                                                            object.get("hoeveelheid").getAsInt());
+                break;
+            case "HOGER_DAN_DAGLIMIET":
+                return new JsonResponses.OpnameHogerDanDaglimiet(object.get("transactionID").getAsString(),
+                        object.get("IBAN").getAsString(),
+                        object.get("daglimiet").getAsInt());
+                break;
+            case "ONTOEREIKEND_SALDO":
+                return new JsonResponses.OntoereikendSaldo(object.get("transactionId").getAsString(),
+                        object.get("IBAN").getAsString(),
+                        object.get("saldo").getAsDouble());
+                break;
+        }
     }
     private String getSSLReaction(String json) {
         System.out.println("Sending this to the server:"+json);

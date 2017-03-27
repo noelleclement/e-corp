@@ -1,3 +1,5 @@
+package Backend;
+
 import com.google.gson.JsonElement;
 
 /**
@@ -10,4 +12,5 @@ public class JsonResponse {
     }
     public String type;
     public String IBAN;
+    public String transaction_id
 }

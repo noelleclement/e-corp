@@ -30,4 +30,11 @@ public class MainScreen extends ButtonlessScreen {
 
         add(tempLabelAccountNumber, tempAccountLabelConstraints);
     }
+    public void incorrectRekeningnummer() {
+        this.mainTextLabel.setText("<html><p align='center'>This card is not recognized</p></html>");
+        this.tempLabelAccountNumber.setText("");
+    }
+    public void pasGeblokkeerd() {
+        this.mainTextLabel.setText("<html><p align='center'>This card is blocked<br>contact your bank</p></html>");
+    }
 }

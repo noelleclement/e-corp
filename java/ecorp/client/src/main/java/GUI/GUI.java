@@ -1,5 +1,6 @@
 package GUI;
 
+
 import Backend.*;
 
 /**
@@ -19,11 +20,13 @@ public class GUI {
     private WithdrawMoneyScreen withdrawMoneyScreen;
     private WithdrawAmountConfirmScreen withdrawAmountConfirmScreen;
     private EndScreen endScreen;
-    private Backend backend;
+    private API api;
+    private Transaction transaction;
+    private JsonResponse response;
 
     private KeyboardHandler k;
-    public GUI(Backend backend) {
-        this.backend = backend;
+    public GUI() {
+        this.api = new API();
         this.mainScreen = new MainScreen();
         k = new KeyboardHandler(this);
         mainScreen.addKeyListener(k);//TODO remove after buttons
@@ -44,13 +47,25 @@ public class GUI {
                 if(Character.isSpaceChar(key)) {
                     try {
                         System.out.println(accountNumber);
-                        backend.users.findUser(accountNumber);
-                        this.activeScreen = ActiveScreen.PINSCREEN;
-                        this.mainScreen.setVisible(false);
-                        this.mainScreen = null;
-                        this.pinScreen = new PinScreen(backend);
-                        pinScreen.addKeyListener(k);//TODO remove after keypad
-
+                        JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "0");
+                        switch (response.type) {
+                            case "CORRECT_REKENINGNUMMER":
+                                this.transaction = new Transaction(response.IBAN,
+                                        response.transaction_id,
+                                        response.card_uid);
+                                this.activeScreen = ActiveScreen.PINSCREEN;
+                                this.mainScreen.setVisible(false);
+                                this.mainScreen = null;
+                                this.pinScreen = new PinScreen(backend);
+                                pinScreen.addKeyListener(k);//TODO remove after keypad
+                                break;
+                            case "INCORRECT_REKENINGNUMMER":
+                                this.mainScreen.incorrectRekeningnummer();
+                                break;
+                            case "PAS_GEBLOKKEERD":
+                                this.mainScreen.pasGeblokkeerd();
+                                break;
+                        }
                     } catch (UnexsistingUserException e) {
                         System.out.println("nonexsiting user");
                     }
@@ -67,17 +82,25 @@ public class GUI {
                         case 'b':
                             if(pinScreen.getPin().length()<3)
                                 break;
-                            if(backend.checkPin(pinScreen.getPin())) {
-                                this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
-                                this.pinScreen.setVisible(false);
-                                this.pinScreen = null;
-                                this.chooseActionScreen = new ChooseActionScreen();
-                                chooseActionScreen.addKeyListener(k);
-                                break;
-                            } else {
-                                pinScreen.wrongPin(backend.getCurrentUser().getPinErrors());
+                            response = api.checkPinCode(transaction.getTransactionId(),
+                                                        transaction.getIBAN(),
+                                                        pinScreen.getPin(),
+                                                        transaction.getCARD_UID());
+                            switch(response.type) {
+                                case "CORRECTE_PINCODE":
+                                    this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
+                                    this.pinScreen.setVisible(false);
+                                    this.pinScreen = null;
+                                    this.chooseActionScreen = new ChooseActionScreen();
+                                    chooseActionScreen.addKeyListener(k);
+                                    break;
+                                case "INCORRECT_PINCODE":
+                                    JsonResponses.IncorrectePincode wrongPinResponse = (JsonResponses.IncorrectePincode) response;
+                                    pinScreen.wrongPin(wrongPinResponse.pogingen);
+                                    break;
+
                             }
-                                break;
+                            break;
                     }
                 }
                 break;
@@ -85,10 +108,12 @@ public class GUI {
                 if(Character.isLowerCase(key)) {
                     switch (key) {
                         case 'a':
+                            JsonResponses.SaldoInformatie response = api.saldoOpvragen(transaction.getTransactionId(),
+                                    transaction.getIBAN());
                             this.activeScreen = ActiveScreen.CHECK_BALANCE_SCREEN;
                             this.chooseActionScreen.setVisible(false);
                             this.chooseActionScreen = null;
-                            this.checkBalanceScreen = new CheckBalanceScreen(backend.getCurrentUser());
+                            this.checkBalanceScreen = new CheckBalanceScreen(response.saldo);
                             checkBalanceScreen.addKeyListener(k);
                             break;
                         case 'b':
@@ -122,6 +147,7 @@ public class GUI {
                             break;
                         case 'b':
                             int amount = withdrawMoneyScreen.getEnteredAmount();
+
                             this.activeScreen = ActiveScreen.WITHDRAWAMOUNTCONFIRMSCREEN;
                             this.withdrawMoneyScreen.setVisible(false);
                             this.withdrawMoneyScreen = null;
