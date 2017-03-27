@@ -7,6 +7,13 @@
     <groupId>nl.hro.0912423.ecorp</groupId>
     <artifactId>server</artifactId>
     <version>1.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>nl.hro.0912423.ecorp</groupId>
+            <artifactId>client</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
