@@ -10,7 +10,7 @@ import java.sql.*;
  * Created by Noelle on 22-03-17.
  */
 
-public class Database {
+public class Database implements DatabaseInf{
 
     private static final Logger logger = LoggerFactory.getLogger(Database.class);
     private Connection con;
