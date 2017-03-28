@@ -83,7 +83,7 @@ public class Database implements DatabaseInf{
                     + "WHERE E-corp.pas.pasNr = ?");
             ps.setInt(1, pasNr);
             rs = ps.executeQuery();
-            if (ps == pincode){
+            if (rs.getInt(pincode) == pincode){         //kan dit? is dit efficient?
                 return true;
             }
 
