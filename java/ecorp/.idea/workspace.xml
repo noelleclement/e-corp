@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="61c4f8d0-b814-4fcc-8823-9303cb05214d" name="Default" comment="" />
+<<<<<<< HEAD
+=======
 =======
     <list default="true" id="61c4f8d0-b814-4fcc-8823-9303cb05214d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/Database.java" afterPath="$PROJECT_DIR$/server/src/main/java/Database.java" />
     </list>
+>>>>>>> origin/master
 >>>>>>> origin/master
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/server/target/" />
@@ -25,44 +27,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-<<<<<<< HEAD
       <file leaf-file-name="API.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/API.java">
-=======
-      <file leaf-file-name="API.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/API.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="93" column="59" lean-forward="false" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#isCorrectCard#0;class#API#0" expanded="false" />
-                <element signature="method#checkPinCode#0;class#API#0" expanded="false" />
-                <element signature="method#saldoOpvragen#0;class#API#0" expanded="false" />
-                <element signature="method#getSSLReaction#0;class#API#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/GUI.java">
->>>>>>> origin/master
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="188" column="14" lean-forward="false" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="14" />
+            <state relative-caret-position="858">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
 =======
 <<<<<<< HEAD
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="1947">
+              <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+=======
             <state relative-caret-position="165">
               <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
 =======
@@ -126,12 +110,10 @@
             <state relative-caret-position="240">
               <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
 >>>>>>> origin/master
+>>>>>>> origin/master
               <folding>
-                <marker date="1490604190107" expanded="true" signature="1280:1394" ph="SELECT saldo... E" />
-                <marker date="1490604190107" expanded="true" signature="2213:2318" ph="UPDATE klant... " />
-                <marker date="1490604190107" expanded="true" signature="3257:3438" ph="SELECT reken... " />
-                <marker date="1490604190107" expanded="true" signature="4093:4260" ph="SELECT pasNr... " />
-                <marker date="1490604190107" expanded="true" signature="5006:5185" ph="SELECT pinco... E" />
+                <marker date="1490616526058" expanded="true" signature="1280:1394" ph="SELECT saldo... E" />
+                <marker date="1490616526058" expanded="true" signature="4775:5513" ph="//..." />
               </folding>
             </state>
           </provider>
@@ -140,38 +122,13 @@
       <file leaf-file-name="SSLServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="660">
-              <caret line="53" column="57" lean-forward="true" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
-=======
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
->>>>>>> origin/master
+            <state relative-caret-position="1452">
+              <caret line="53" column="57" lean-forward="false" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-=======
-      <file leaf-file-name="JsonResponses.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/JsonResponses.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="92" column="43" lean-forward="false" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
-              <folding>
-                <element signature="docComment;class#JsonResponses#0" expanded="false" />
-                <element signature="class#ControleerRekeningnummer#0;class#JsonResponses#0" expanded="false" />
-                <element signature="class#CorrectePincode#0;class#JsonResponses#0" expanded="false" />
-                <element signature="class#IncorrectePincode#0;class#JsonResponses#0" expanded="false" />
-                <element signature="class#PincodePogingenOverschreven#0;class#JsonResponses#0" expanded="false" />
-                <element signature="class#SaldoInformatie#0;class#JsonResponses#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
->>>>>>> origin/master
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -193,6 +150,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/server/src/main/java/Server.java" />
+        <option value="$PROJECT_DIR$/server/pom.xml" />
         <option value="$PROJECT_DIR$/client/pom.xml" />
         <option value="$PROJECT_DIR$/client/src/main/java/SSL/SSLClient.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/jsonResponses.java" />
@@ -208,14 +166,9 @@
         <option value="$PROJECT_DIR$/client/src/main/java/Backend/JsonResponses.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/Backend/API.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/server/src/main/java/apis/Database.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/apis/API.java" />
-=======
-        <option value="$PROJECT_DIR$/server/pom.xml" />
-        <option value="$PROJECT_DIR$/server/src/main/java/Database.java" />
->>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -233,15 +186,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-<<<<<<< HEAD
     <option name="x" value="-13" />
     <option name="y" value="-13" />
     <option name="width" value="2762" />
     <option name="height" value="1770" />
-=======
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
->>>>>>> origin/master
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -259,12 +207,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
-=======
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
->>>>>>> origin/master
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,7 +246,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="ecorp" />
@@ -556,13 +500,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-=======
-        </subPane>
-      </pane>
->>>>>>> origin/master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1031,15 +968,15 @@
       <workItem from="1490102799782" duration="10791000" />
       <workItem from="1490353412414" duration="11929000" />
       <workItem from="1490547054827" duration="2922000" />
-<<<<<<< HEAD
       <workItem from="1490603455925" duration="9981000" />
-=======
-      <workItem from="1490603147768" duration="1614000" />
->>>>>>> origin/master
+      <workItem from="1490701114392" duration="92000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="36441000" />
+=======
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="28080000" />
 =======
@@ -1049,6 +986,7 @@
     <option name="totallyTimeSpent" value="27982000" />
 >>>>>>> origin/master
 >>>>>>> 4ecca4c944e42ebd161af9996526ec47ada9e0d8
+>>>>>>> origin/master
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1060,12 +998,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
+<<<<<<< HEAD
+=======
 =======
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
 <<<<<<< HEAD
 =======
+>>>>>>> origin/master
 >>>>>>> origin/master
     <editor active="true" />
 >>>>>>> 4ecca4c944e42ebd161af9996526ec47ada9e0d8
@@ -1085,6 +1025,9 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31042296" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+<<<<<<< HEAD
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30543634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 =======
 <<<<<<< HEAD
@@ -1094,8 +1037,8 @@
 =======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30543634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> 4ecca4c944e42ebd161af9996526ec47ada9e0d8
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 >>>>>>> origin/master
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1108,7 +1051,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23992069" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1167,6 +1110,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1213,10 +1162,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <marker date="1490616526058" expanded="true" signature="1280:1394" ph="SELECT saldo... E" />
+            <marker date="1490616526058" expanded="true" signature="4775:5513" ph="//..." />
+=======
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/JsonResponses.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -1228,10 +1187,17 @@
             <element signature="class#IncorrectePincode#0;class#JsonResponses#0" expanded="false" />
             <element signature="class#PincodePogingenOverschreven#0;class#JsonResponses#0" expanded="false" />
             <element signature="class#SaldoInformatie#0;class#JsonResponses#0" expanded="false" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1749">
+          <caret line="53" column="57" lean-forward="true" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
+=======
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/API.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -1250,10 +1216,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -1283,13 +1252,10 @@
         </state>
       </provider>
     </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/API.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="1254">
-=======
-        <state relative-caret-position="570">
->>>>>>> origin/master
           <caret line="93" column="59" lean-forward="false" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1303,50 +1269,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/CheckBalanceScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="264">
-=======
-        <state relative-caret-position="120">
->>>>>>> origin/master
           <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="528">
           <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
             <element signature="e#428#429#0" expanded="true" />
-=======
-        <state relative-caret-position="240">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
->>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/Backend.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="165">
-=======
-        <state relative-caret-position="75">
->>>>>>> origin/master
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
@@ -1354,11 +1294,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/JsonResponses.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="1419">
-=======
-        <state relative-caret-position="645">
->>>>>>> origin/master
           <caret line="92" column="43" lean-forward="false" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
           <folding>
             <element signature="docComment;class#JsonResponses#0" expanded="false" />
@@ -1373,13 +1309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="4917">
-=======
-        <state relative-caret-position="2235">
->>>>>>> origin/master
           <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,7 +1332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1460,6 +1390,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1504,9 +1435,12 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
           <folding />
 >>>>>>> origin/master
 >>>>>>> 4ecca4c944e42ebd161af9996526ec47ada9e0d8
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -1518,7 +1452,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1526,8 +1459,6 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/client/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1539,16 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-<<<<<<< HEAD
-=======
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -1589,7 +1510,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="290">
           <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
         </state>
@@ -1598,41 +1518,19 @@
     <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/KeyboardHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-=======
-        <state relative-caret-position="75">
->>>>>>> origin/master
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/User.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="47">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
-        <state relative-caret-position="240">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-          </folding>
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/API.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="1254">
           <caret line="93" column="59" lean-forward="false" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
           <folding>
@@ -1642,10 +1540,6 @@
             <element signature="method#saldoOpvragen#0;class#API#0" expanded="false" />
             <element signature="method#getSSLReaction#0;class#API#0" expanded="false" />
           </folding>
-=======
-        <state relative-caret-position="290">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -1657,17 +1551,18 @@
 =======
         <state relative-caret-position="385">
           <caret line="152" column="60" lean-forward="true" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
+<<<<<<< HEAD
+=======
           <folding />
 >>>>>>> 4ecca4c944e42ebd161af9996526ec47ada9e0d8
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/CheckBalanceScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="264">
           <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1678,33 +1573,20 @@
           <folding>
             <element signature="e#428#429#0" expanded="true" />
           </folding>
-=======
-        <state relative-caret-position="47">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/Backend.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="165">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
-        <state relative-caret-position="120">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/JsonResponses.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="1030">
-=======
-        <state relative-caret-position="645">
->>>>>>> origin/master
           <caret line="92" column="43" lean-forward="false" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
           <folding>
             <element signature="docComment;class#JsonResponses#0" expanded="false" />
@@ -1719,33 +1601,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="660">
-          <caret line="53" column="57" lean-forward="true" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
+        <state relative-caret-position="1452">
+          <caret line="53" column="57" lean-forward="false" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-=======
-        <state relative-caret-position="570">
-          <caret line="93" column="59" lean-forward="false" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
->>>>>>> origin/master
+        <state relative-caret-position="1947">
+          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
           <folding>
-            <marker date="1490604190107" expanded="true" signature="1280:1394" ph="SELECT saldo... E" />
-            <marker date="1490604190107" expanded="true" signature="2213:2318" ph="UPDATE klant... " />
-            <marker date="1490604190107" expanded="true" signature="3257:3438" ph="SELECT reken... " />
-            <marker date="1490604190107" expanded="true" signature="4093:4260" ph="SELECT pasNr... " />
-            <marker date="1490604190107" expanded="true" signature="5006:5185" ph="SELECT pinco... E" />
+            <marker date="1490616526058" expanded="true" signature="1280:1394" ph="SELECT saldo... E" />
+            <marker date="1490616526058" expanded="true" signature="4775:5513" ph="//..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/API.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="858">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+=======
         <state relative-caret-position="1035">
           <caret line="188" column="14" lean-forward="false" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="14" />
           <folding />
@@ -1789,6 +1671,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> origin/master
   </component>
   <component name="masterDetails">
     <states>
