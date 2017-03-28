@@ -31,7 +31,7 @@ public class API {
 
     public String controleerRekeningNummer(JsonObject object){
 
-        boolean reknrpasinvoer database.compareRekeningNr(object.get("IBAN").getAsString());
+        boolean reknrpasinvoer database.comparePasRekening(object.get("IBAN").getAsString());
             if (reknrpasinvoer){
 
                 JsonObject result = new JsonObject;

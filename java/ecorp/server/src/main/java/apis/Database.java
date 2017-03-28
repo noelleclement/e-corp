@@ -10,7 +10,7 @@ import java.sql.*;
  * Created by Noelle on 22-03-17.
  */
 
-public class Database {
+public class Database implements DatabaseInf{
 
     private static final Logger logger = LoggerFactory.getLogger(Database.class);
     private Connection con;
@@ -44,27 +44,28 @@ public class Database {
 
     }
 
-    public boolean compareRekeningNr (String rekeningNr){
+    public boolean comparePasRekening (String rekeningNr, int pasNr){
         //TODO varchar in sql goed als string in java?
         //TODO int in java goed als ? in sql?
         //TODO letop: nog geen pas tabel
         //TODO loggers toevoegen
 
         try{
-            PreparedStatement ps = con.prepareCall("SELECT rekeningNr"
-                    + "FROM E-corp.klant"
-                    + "WHERE E-corp.klant.rekeningNr = ?");
+            PreparedStatement ps = con.prepareCall("SELECT *"
+                    + "FROM E-corp.pas"
+                    + "WHERE E-corp.pas.rekeningNr = ? AND E-corp.pas.pasNr = ?");
             ps.setString(1, rekeningNr);
+            ps.setInt(2, pasNr);
             rs = ps.executeQuery();
             if (rs.next()){
                 return true;
             }
 
-            logger.debug("rekeningNr bestaat niet in klanttabel");
+            logger.debug("pasNr rekeningNr combi bestaat niet");
             return false;
         }
         catch (SQLException e){
-            logger.error("Execution of query compare rekeningnr from klanttable failed", e);
+            logger.error("Execution of query compare pas & rekeningnr from pastable failed", e);
         }
 
         return false;
@@ -158,33 +159,7 @@ public class Database {
 
 
 
-    public boolean comparePasRekening (String rekeningNr, int pasNr){
-        //TODO varchar in sql goed als string in java?
-        //TODO int in java goed als ? in sql?
-        //TODO letop: nog geen pas tabel
-        //TODO loggers toevoegen
 
-        try{
-            PreparedStatement ps = con.prepareCall("SELECT *"
-                                                    + "FROM E-corp.pas"
-                                                    + "WHERE E-corp.pas.rekeningNr = ? AND E-corp.pas.pasNr = ?");
-            ps.setString(1, rekeningNr);
-            ps.setInt(2, pasNr);
-            rs = ps.executeQuery();
-            if (rs.next()){
-                return true;
-            }
-
-            logger.debug("pasNr rekeningNr combi bestaat niet");
-            return false;
-        }
-        catch (SQLException e){
-            logger.error("Execution of query compare pas & rekeningnr from pastable failed", e);
-        }
-
-        return false;
-
-    }
 
 
 
