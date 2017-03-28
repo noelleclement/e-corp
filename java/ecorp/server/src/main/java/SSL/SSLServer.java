@@ -7,6 +7,8 @@ import java.security.PrivilegedActionException;
 
 
 import javax.net.ssl.*;
+
+import apis.API;
 import com.sun.net.ssl.*;
 import com.sun.net.ssl.internal.ssl.Provider;
 
@@ -34,6 +36,8 @@ public class SSLServer extends Thread {
             SSLServerSocket sslServerSocket = (SSLServerSocket)sslServerSocketfactory.createServerSocket(intSSLport);
             SSLSocket sslSocket = (SSLSocket)sslServerSocket.accept();
 
+            API api = new API;
+
             // Create Input / Output Streams for communication with the client
             while(true)
             {
@@ -44,12 +48,10 @@ public class SSLServer extends Thread {
                 String inputLine, outputLine;
 
                 while ((inputLine = in.readLine()) != null) {
-<<<<<<< HEAD
 
-                    out.write("You said: "+inputLine+"\n");
-=======
-                    out.write(inputLine+"\n");
->>>>>>> origin/master
+                    //out.write("You said: "+inputLine+"\n");
+                    //out.write(inputLine+"\n");
+                    out.write(api.parse(inputLine)+"\n");
                     out.flush();
                     System.out.println(inputLine);
                     API api = new API()
