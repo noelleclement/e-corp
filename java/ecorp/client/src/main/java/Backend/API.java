@@ -32,26 +32,28 @@ public class API {
         String reaction = getSSLReaction(object.toString());
         JsonElement element = new JsonParser().parse(reaction);
         object = element.getAsJsonObject();
-        switch (object.get("type").getAsString()) {
-            case "CORRECTE_PINCODE":
-                return new JsonResponses.CorrectePincode(object.get("type").getAsString(),
-                        object.get("IBAN").getAsString(),
-                        object.get("transactionId").getAsString(),
-                        object.get("CARD_UID").getAsString());
-                break;
-            case "INCORRECT_PINCODE":
-                return new JsonResponses.IncorrectePincode(object.get("type").getAsString(),
-                        object.get("IBAN").getAsString(),
-                        object.get("transactionId").getAsString(),
-                        object.get("CARD_UID").getAsString(),
-                        object.get("pogingen").getAsInt());
-                break;
-            case "MAXIMAAL_AANTAL_POGINGEN":
-                return new JsonResponses.PincodePogingenOverschreven(object.get("type").getAsString(),
-                        object.get("IBAN").getAsString(),
-                        object.get("transactionId").getAsString(),
-                        object.get("CARD_UID").getAsString());
-                break;
+        if(object.get("type").getAsString().equals("CORRECTE_PINCODE")) {
+            return new JsonResponses.CorrectePincode(object.get("type").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("transactionId").getAsString(),
+                    object.get("CARD_UID").getAsString());
+        }else if(object.get("type").getAsString().equals("INCORRECT_PINCODE")) {
+            return new JsonResponses.IncorrectePincode(object.get("type").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("transactionId").getAsString(),
+                    object.get("CARD_UID").getAsString(),
+                    object.get("pogingen").getAsInt());
+        }else if(object.get("type").getAsString().equals("MAXIMAAL_AANTAL_POGINGEN")) {
+            return new JsonResponses.PincodePogingenOverschreven(object.get("type").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("transactionId").getAsString(),
+                    object.get("CARD_UID").getAsString());
+        }else{
+            System.out.println("Onbekende reactie op pincodecheck");
+            return new JsonResponses.PincodePogingenOverschreven(object.get("type").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("transactionId").getAsString(),
+                    object.get("CARD_UID").getAsString());
         }
     }
 
@@ -61,7 +63,8 @@ public class API {
         object.addProperty("IBAN", IBAN);
         object.addProperty("type","SALDO_OPVRAGEN");
         String reaction = getSSLReaction(object.toString());
-        object = new JsonParser().parse(reaction);
+        JsonElement element = new JsonParser().parse(reaction);
+        object = element.getAsJsonObject();
         return new JsonResponses.SaldoInformatie(object.get("type").getAsString(),
                 object.get("IBAN").getAsString(),
                 object.get("transactionId").getAsString(),
@@ -75,24 +78,26 @@ public class API {
         object.addProperty("IBAN", IBAN);
         object.addProperty("hoeveelheid", hoeveelheid);
         String reaction = getSSLReaction(object.toString());
-        object = new JsonParser().parse(reaction);
+        JsonElement element = new JsonParser().parse(reaction);
+        object = element.getAsJsonObject();
 
-        switch(object.get("type").getAsString()) {
-            case "OPNAME_IS_MOGELIJK":
-                return new JsonResponses.GeldopnameMogelijk(object.get("transactionId").getAsString(),
-                                                            object.get("IBAN").getAsString(),
-                                                            object.get("hoeveelheid").getAsInt());
-                break;
-            case "HOGER_DAN_DAGLIMIET":
-                return new JsonResponses.OpnameHogerDanDaglimiet(object.get("transactionID").getAsString(),
-                        object.get("IBAN").getAsString(),
-                        object.get("daglimiet").getAsInt());
-                break;
-            case "ONTOEREIKEND_SALDO":
-                return new JsonResponses.OntoereikendSaldo(object.get("transactionId").getAsString(),
-                        object.get("IBAN").getAsString(),
-                        object.get("saldo").getAsDouble());
-                break;
+        if(object.get("type").getAsString().equals("OPNAME_IS_MOGELIJK")) {
+            return new JsonResponses.GeldopnameMogelijk(object.get("transactionId").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("hoeveelheid").getAsInt());
+        }else if(object.get("type").getAsString().equals("HOGER_DAN_DAGLIMIET")) {
+            return new JsonResponses.OpnameHogerDanDaglimiet(object.get("transactionID").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("daglimiet").getAsInt());
+        }else if(object.get("type").getAsString().equals("ONTOEREIKEND_SALDO")) {
+            return new JsonResponses.OntoereikendSaldo(object.get("transactionId").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("saldo").getAsDouble());
+        }else{
+            System.out.println("Onbekende reactie op opnamehoeveelheid");
+            return new JsonResponses.OntoereikendSaldo(object.get("transactionId").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("saldo").getAsDouble());
         }
     }
     private String getSSLReaction(String json) {

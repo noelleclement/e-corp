@@ -45,29 +45,21 @@ public class GUI {
                     mainScreen.tempLabelAccountNumber.setText(accountNumber);
                 }
                 if(Character.isSpaceChar(key)) {
-                    try {
-                        System.out.println(accountNumber);
-                        JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "0");
-                        switch (response.type) {
-                            case "CORRECT_REKENINGNUMMER":
-                                this.transaction = new Transaction(response.IBAN,
-                                        response.transaction_id,
-                                        response.card_uid);
-                                this.activeScreen = ActiveScreen.PINSCREEN;
-                                this.mainScreen.setVisible(false);
-                                this.mainScreen = null;
-                                this.pinScreen = new PinScreen(backend);
-                                pinScreen.addKeyListener(k);//TODO remove after keypad
-                                break;
-                            case "INCORRECT_REKENINGNUMMER":
-                                this.mainScreen.incorrectRekeningnummer();
-                                break;
-                            case "PAS_GEBLOKKEERD":
-                                this.mainScreen.pasGeblokkeerd();
-                                break;
-                        }
-                    } catch (UnexsistingUserException e) {
-                        System.out.println("nonexsiting user");
+                    System.out.println(accountNumber);
+                    JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "0");
+                    if(response.type == "CORRECT_REKENINGNUMMER") {
+                        this.transaction = new Transaction(response.IBAN,
+                                response.transaction_id,
+                                response.card_uid);
+                        this.activeScreen = ActiveScreen.PINSCREEN;
+                        this.mainScreen.setVisible(false);
+                        this.mainScreen = null;
+                        this.pinScreen = new PinScreen();
+                        pinScreen.addKeyListener(k);//TODO remove after keypad
+                    } else if(response.type == "INCORRECT_REKENINGNUMMER") {
+                        this.mainScreen.incorrectRekeningnummer();
+                    } else if(response.type == "PAS_GEBLOKKEERD") {
+                        this.mainScreen.pasGeblokkeerd();
                     }
                 }
                 break;
@@ -86,18 +78,15 @@ public class GUI {
                                                         transaction.getIBAN(),
                                                         pinScreen.getPin(),
                                                         transaction.getCARD_UID());
-                            switch(response.type) {
-                                case "CORRECTE_PINCODE":
-                                    this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
-                                    this.pinScreen.setVisible(false);
-                                    this.pinScreen = null;
-                                    this.chooseActionScreen = new ChooseActionScreen();
-                                    chooseActionScreen.addKeyListener(k);
-                                    break;
-                                case "INCORRECT_PINCODE":
-                                    JsonResponses.IncorrectePincode wrongPinResponse = (JsonResponses.IncorrectePincode) response;
-                                    pinScreen.wrongPin(wrongPinResponse.pogingen);
-                                    break;
+                            if(response.type == "CORRECTE_PINCODE") {
+                                this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
+                                this.pinScreen.setVisible(false);
+                                this.pinScreen = null;
+                                this.chooseActionScreen = new ChooseActionScreen();
+                                chooseActionScreen.addKeyListener(k);
+                            }else if(response.type.equals("INCORRECT_PINCODE")) {
+                                JsonResponses.IncorrectePincode wrongPinResponse = (JsonResponses.IncorrectePincode) response;
+                                pinScreen.wrongPin(wrongPinResponse.pogingen);
 
                             }
                             break;
