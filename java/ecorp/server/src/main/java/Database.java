@@ -11,7 +11,7 @@ import java.sql.*;
 
 public class Database {
 
-    private static final Logger logger = LoggerFactory.getLogger(Database.class); //met final foutcode
+    private static final Logger logger = LoggerFactory.getLogger(Database.class);
     private Connection con;
     private String host;
     private String uName;
