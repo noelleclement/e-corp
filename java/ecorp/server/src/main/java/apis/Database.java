@@ -12,7 +12,7 @@ import java.sql.*;
 
 public class Database {
 
-    private static final Logger logger = LoggerFactory.getLogger(Database.class); //met final foutcode
+    private static final Logger logger = LoggerFactory.getLogger(Database.class);
     private Connection con;
     private String host;
     private String uName;
@@ -44,6 +44,59 @@ public class Database {
 
     }
 
+    public boolean compareRekeningNr (String rekeningNr){
+        //TODO varchar in sql goed als string in java?
+        //TODO int in java goed als ? in sql?
+        //TODO letop: nog geen pas tabel
+        //TODO loggers toevoegen
+
+        try{
+            PreparedStatement ps = con.prepareCall("SELECT rekeningNr"
+                    + "FROM E-corp.klant"
+                    + "WHERE E-corp.klant.rekeningNr = ?");
+            ps.setString(1, rekeningNr);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+
+            logger.debug("rekeningNr bestaat niet in klanttabel");
+            return false;
+        }
+        catch (SQLException e){
+            logger.error("Execution of query compare rekeningnr from klanttable failed", e);
+        }
+
+        return false;
+
+    }
+
+    public boolean comparePincode (int pasNr, int pincode){
+        //TODO int in java goed als ? in sql?
+        //TODO letop: nog geen pas tabel
+        //TODO loggers toevoegen
+
+        try{
+            PreparedStatement ps = con.prepareCall("SELECT pincode"
+                    + "FROM E-corp.pas"
+                    + "WHERE E-corp.pas.pasNr = ?");
+            ps.setInt(1, pasNr);
+            rs = ps.executeQuery();
+            if (ps == pincode){
+                return true;
+            }
+
+            logger.debug("pincode niet correct");
+            return false;
+        }
+        catch (SQLException e){
+            logger.error("Execution of query pincode compare failed", e);
+        }
+
+        return false;
+
+    }
+
     public int getBalance(String rekeningNr) {
         //TODO nu (22-3) staat saldo nog als int in database
         int saldo = 0;
@@ -62,11 +115,11 @@ public class Database {
         return saldo;
     }
 
-
+    //TODO info saldo?
     
 
 
-    public boolean withDraw(String rekeningNr, int amount) {
+    public boolean getWithdraw(String rekeningNr, int amount) {
         //TODO nu (22-3) staat saldo nog als int in database
 
         try {
@@ -134,31 +187,7 @@ public class Database {
     }
 
 
-    public boolean comparePincode (int pasNr, int pincode){
-        //TODO int in java goed als ? in sql?
-        //TODO letop: nog geen pas tabel
-        //TODO loggers toevoegen
 
-        try{
-            PreparedStatement ps = con.prepareCall("SELECT pincode"
-                                                    + "FROM E-corp.pas"
-                                                    + "WHERE E-corp.pas.pasNr = ?");
-            ps.setInt(1, pasNr);
-            rs = ps.executeQuery();
-            if (ps == pincode){
-                return true;
-            }
-
-            logger.debug("pincode niet correct");
-            return false;
-        }
-        catch (SQLException e){
-            logger.error("Execution of query pincode compare failed", e);
-        }
-
-        return false;
-
-    }
 
 
 
