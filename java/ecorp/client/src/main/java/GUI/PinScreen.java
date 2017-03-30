@@ -12,12 +12,10 @@ import java.awt.*;
 public class PinScreen extends ButtonScreen {
     private PinField pinField = new PinField();
     private String pin = "";
-    private Backend backend;
     private int currentNumber = 0;
     private JLabel errorField = new JLabel();
-    public PinScreen(Backend _backend) {
+    public PinScreen() {
         super();
-        this.backend = _backend;
         this.mainTextLabel.setText("Please insert your PIN");
 
         addPinField();
