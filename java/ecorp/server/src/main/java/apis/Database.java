@@ -44,7 +44,7 @@ public class Database implements DatabaseInf{
 
     }
 
-    public boolean comparePasRekening (String rekeningNr, int pasNr){
+    public boolean comparePasRekening (String rekeningNr, String pasNr){
         //TODO varchar in sql goed als string in java?
         //TODO int in java goed als ? in sql?
         //TODO letop: nog geen pas tabel
@@ -55,7 +55,7 @@ public class Database implements DatabaseInf{
                     + "FROM E-corp.pas"
                     + "WHERE E-corp.pas.rekeningNr = ? AND E-corp.pas.pasNr = ?");
             ps.setString(1, rekeningNr);
-            ps.setInt(2, pasNr);
+            ps.setString(2, pasNr);
             rs = ps.executeQuery();
             if (rs.next()){
                 return true;
@@ -72,7 +72,7 @@ public class Database implements DatabaseInf{
 
     }
 
-    public boolean comparePincode (int pasNr, int pincode){
+    public boolean comparePincode (String pasNr, String pincode){
         //TODO int in java goed als ? in sql?
         //TODO letop: nog geen pas tabel
         //TODO loggers toevoegen
@@ -81,9 +81,9 @@ public class Database implements DatabaseInf{
             PreparedStatement ps = con.prepareCall("SELECT pincode"
                     + "FROM E-corp.pas"
                     + "WHERE E-corp.pas.pasNr = ?");
-            ps.setInt(1, pasNr);
+            ps.setInt(1, Integer.parseInt(pasNr));
             rs = ps.executeQuery();
-            if (ps == pincode){
+            if (ps.getResultSet().getString("pincode") == pincode){
                 return true;
             }
 
@@ -98,7 +98,12 @@ public class Database implements DatabaseInf{
 
     }
 
-    public int getBalance(String rekeningNr) {
+    @Override
+    public boolean withdrawPossible(String rekeningNr, int amount) {
+        return false;
+    }
+
+    public double getBalance(String rekeningNr) {
         //TODO nu (22-3) staat saldo nog als int in database
         int saldo = 0;
         try {
@@ -124,7 +129,7 @@ public class Database implements DatabaseInf{
         //TODO nu (22-3) staat saldo nog als int in database
 
         try {
-            int saldo = getBalance(rekeningNr);
+            double saldo = getBalance(rekeningNr);
             if (saldo > amount) {
                 //pinnen
                 logger.debug("withDraw with Rekeningnr " + rekeningNr, "saldo: " + saldo);
@@ -134,7 +139,7 @@ public class Database implements DatabaseInf{
                         + "WHERE rekeningnr = ?");
                 //werd ook al in getBalance gebruikt maar hoe werkt dat ? met next enzo
 
-                ps.setInt(1, (saldo - amount));
+                ps.setInt(1, ((int)saldo - amount));
                 ps.setString(2, rekeningNr);
                 //wat is die parameterindex
 

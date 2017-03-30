@@ -37,7 +37,7 @@ public class API {
                     object.get("IBAN").getAsString(),
                     object.get("transactionId").getAsString(),
                     object.get("CARD_UID").getAsString());
-        }else if(object.get("type").getAsString().equals("INCORRECT_PINCODE")) {
+        }else if(object.get("type").getAsString().equals("INCORRECTE_PINCODE")) {
             return new JsonResponses.IncorrectePincode(object.get("type").getAsString(),
                     object.get("IBAN").getAsString(),
                     object.get("transactionId").getAsString(),
@@ -105,7 +105,7 @@ public class API {
         SSLClient ssl = new SSLClient(json);
         ssl.start();
         while(ssl.isAlive()) {}
-        //System.out.println(ssl.getReaction());
+        System.out.println("Server reaction:"+ssl.getReaction());
         return ssl.getReaction();
     }
 }

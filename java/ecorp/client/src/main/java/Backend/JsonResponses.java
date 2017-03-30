@@ -67,7 +67,7 @@ public class JsonResponses {
         public int hoeveelheid;
 
         public GeldopnameMogelijk(String transaction_id, String IBAN, int hoeveelheid) {
-            super(type, IBAN);
+            super("OPNAME_IS_MOGELIJK", IBAN);
             this.type = "OPNAME_IS_MOGELIJK";
             this.transaction_id = transaction_id;
             this.hoeveelheid = hoeveelheid;
@@ -77,8 +77,8 @@ public class JsonResponses {
     public static class OpnameHogerDanDaglimiet extends JsonResponse {
         public int daglimiet;
 
-        public GeldopnameMogelijk(String transaction_id, String IBAN, int daglimiet) {
-            super(type, IBAN);
+        public OpnameHogerDanDaglimiet(String transaction_id, String IBAN, int daglimiet) {
+            super("HOGER_DAN_DAGLIMIET", IBAN);
             this.type = "HOGER_DAN_DAGLIMIET";
             this.transaction_id = transaction_id;
             this.daglimiet = daglimiet;
@@ -88,8 +88,8 @@ public class JsonResponses {
     public static class OntoereikendSaldo extends JsonResponse {
         public double saldo;
 
-        public GeldopnameMogelijk(String transaction_id, String IBAN, double saldo) {
-            super(type, IBAN);
+        public OntoereikendSaldo(String transaction_id, String IBAN, double saldo) {
+            super("ONTOEREIKEND_SALDO", IBAN);
             this.type = "ONTOEREIKEND_SALDO";
             this.transaction_id = transaction_id;
             this.saldo = saldo;

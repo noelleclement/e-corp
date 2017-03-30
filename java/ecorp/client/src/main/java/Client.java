@@ -7,7 +7,7 @@ import GUI.GUI;
  */
 public class Client {
     public static void main(String[] args) {
-        GUI gui = new GUI(new Backend());
+        GUI gui = new GUI();
         //System.out.println(new Backend.API().isCorrectCard("123", "asdf").IBAN);
     }
 }
