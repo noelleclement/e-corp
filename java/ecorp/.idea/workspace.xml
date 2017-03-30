@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51d6ccd7-d7ea-41db-8019-9de6098b4a3a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/classes/JsonResponse.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/SSL/SSLServer.class" afterPath="$PROJECT_DIR$/server/target/classes/SSL/SSLServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Backend/API.java" afterPath="$PROJECT_DIR$/client/src/main/java/Backend/API.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Backend/JsonResponse.java" afterPath="$PROJECT_DIR$/client/src/main/java/Backend/JsonResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Backend/JsonResponses.java" afterPath="$PROJECT_DIR$/client/src/main/java/Backend/JsonResponses.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Backend/Users.java" afterPath="$PROJECT_DIR$/client/src/main/java/Backend/Users.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Client.java" afterPath="$PROJECT_DIR$/client/src/main/java/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/ChooseActionScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/ChooseActionScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/server.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecorp.iml" afterPath="$PROJECT_DIR$/ecorp.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/pom.xml" afterPath="$PROJECT_DIR$/server/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.iml" afterPath="$PROJECT_DIR$/server/server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java" afterPath="$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/Server.java" afterPath="$PROJECT_DIR$/server/src/main/java/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/API.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/API.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/Database.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/Database.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/MockDB.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/MockDB.java" />
     </list>
     <ignored path="$PROJECT_DIR$/client/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="API.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="API.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/API.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="1562">
               <caret line="94" column="15" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
               <folding>
                 <element signature="method#controleerPinCode#0;class#API#0" expanded="false" />
@@ -63,11 +50,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ecorp.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecorp.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="API.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/API.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2442">
-              <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseInf.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DatabaseInf.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="324">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,12 +96,14 @@
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="141" column="35" lean-forward="false" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
+              <caret line="145" column="35" lean-forward="false" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
               <folding>
-                <marker date="1490863988442" expanded="true" signature="1393:1522" ph="SELECT *FROM... E" />
-                <marker date="1490863988442" expanded="true" signature="2234:2339" ph="SELECT pinco... " />
-                <marker date="1490863988442" expanded="true" signature="3092:3206" ph="SELECT saldo... E" />
-                <marker date="1490863988442" expanded="true" signature="4056:4161" ph="UPDATE klant... " />
+                <element signature="e#2984#2985#0" expanded="false" />
+                <element signature="e#3012#3013#0" expanded="false" />
+                <marker date="1490870826075" expanded="true" signature="1393:1522" ph="SELECT *FROM... E" />
+                <marker date="1490870826075" expanded="true" signature="2234:2339" ph="SELECT pinco... " />
+                <marker date="1490870826075" expanded="true" signature="3220:3334" ph="SELECT saldo... E" />
+                <marker date="1490870826075" expanded="true" signature="4184:4289" ph="UPDATE klant... " />
               </folding>
             </state>
           </provider>
@@ -120,16 +129,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WithdrawAmountConfirmScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MockDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/MockDB.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -145,24 +144,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SSLServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="968">
-              <caret line="53" column="60" lean-forward="false" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>comp</find>
       <find>onbekend d</find>
+      <find>&lt;&lt;&lt;&lt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,12 +176,13 @@
         <option value="$PROJECT_DIR$/server/src/main/java/SSL/SSLServer.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/Backend/API.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/apis/MockDB.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/apis/API.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/apis/Database.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/ChooseActionScreen.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/apis/API.java" />
+        <option value="$PROJECT_DIR$/ecorp.iml" />
+        <option value="$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java" />
       </list>
     </option>
   </component>
@@ -277,8 +266,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1303" />
+    <option name="x" value="952" />
+    <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -385,36 +374,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecorp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecorp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SSL" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1039,12 +998,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490701222905</updated>
       <workItem from="1490701228946" duration="10739000" />
-      <workItem from="1490863470638" duration="4129000" />
+      <workItem from="1490863470638" duration="4946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14868000" />
+    <option name="totallyTimeSpent" value="15685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1056,7 +1015,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1303" height="1038" extended-state="0" />
+    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1066,15 +1025,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33218786" sideWeight="0.5126324" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33218786" sideWeight="0.5133333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12996778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33218786" sideWeight="0.48736757" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33218786" sideWeight="0.48666668" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13137034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21189894" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2888889" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1190,10 +1149,12 @@
         <state relative-caret-position="2156">
           <caret line="102" column="8" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="21" />
           <folding>
-            <marker date="1490863988442" expanded="true" signature="1393:1522" ph="SELECT *FROM... E" />
-            <marker date="1490863988442" expanded="true" signature="2234:2339" ph="SELECT pinco... " />
-            <marker date="1490863988442" expanded="true" signature="3092:3206" ph="SELECT saldo... E" />
-            <marker date="1490863988442" expanded="true" signature="4056:4161" ph="UPDATE klant... " />
+            <element signature="e#2984#2985#0" expanded="false" />
+            <element signature="e#3012#3013#0" expanded="false" />
+            <marker date="1490870826075" expanded="true" signature="1393:1522" ph="SELECT *FROM... E" />
+            <marker date="1490870826075" expanded="true" signature="2234:2339" ph="SELECT pinco... " />
+            <marker date="1490870826075" expanded="true" signature="3220:3334" ph="SELECT saldo... E" />
+            <marker date="1490870826075" expanded="true" signature="4184:4289" ph="UPDATE klant... " />
           </folding>
         </state>
       </provider>
@@ -1265,13 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="1143" column="5" lean-forward="false" selection-start-line="1143" selection-start-column="5" selection-end-line="1143" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1344,28 +1298,22 @@
     <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
-          <caret line="141" column="35" lean-forward="false" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
+          <caret line="145" column="35" lean-forward="false" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
           <folding>
-            <marker date="1490863988442" expanded="true" signature="1393:1522" ph="SELECT *FROM... E" />
-            <marker date="1490863988442" expanded="true" signature="2234:2339" ph="SELECT pinco... " />
-            <marker date="1490863988442" expanded="true" signature="3092:3206" ph="SELECT saldo... E" />
-            <marker date="1490863988442" expanded="true" signature="4056:4161" ph="UPDATE klant... " />
+            <element signature="e#2984#2985#0" expanded="false" />
+            <element signature="e#3012#3013#0" expanded="false" />
+            <marker date="1490870826075" expanded="true" signature="1393:1522" ph="SELECT *FROM... E" />
+            <marker date="1490870826075" expanded="true" signature="2234:2339" ph="SELECT pinco... " />
+            <marker date="1490870826075" expanded="true" signature="3220:3334" ph="SELECT saldo... E" />
+            <marker date="1490870826075" expanded="true" signature="4184:4289" ph="UPDATE klant... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Backend/API.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2442">
-          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1396,13 +1344,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ecorp.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/API.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="1562">
           <caret line="94" column="15" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
           <folding>
             <element signature="method#controleerPinCode#0;class#API#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
