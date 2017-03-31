@@ -3,13 +3,9 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-<<<<<<< HEAD
-=======
       <sourceFolder url="file://$MODULE_DIR$/server/src/main/java/apis" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/server/src/main/java/SSL" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/server/src/main/java" isTestSource="false" />
->>>>>>> origin/master
-      <sourceFolder url="file://$MODULE_DIR$/server/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
