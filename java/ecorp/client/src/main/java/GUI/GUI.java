@@ -47,7 +47,7 @@ public class GUI {
                 if(Character.isSpaceChar(key)) {
                     System.out.println(accountNumber);
                     JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "0");
-                    if(response.type == "CORRECT_REKENINGNUMMER") {
+                    if(response.type.equals("CORRECT_REKENINGNUMMER")) {
                         this.transaction = new Transaction(response.IBAN,
                                 response.transaction_id,
                                 response.card_uid);
@@ -56,9 +56,9 @@ public class GUI {
                         this.mainScreen = null;
                         this.pinScreen = new PinScreen();
                         pinScreen.addKeyListener(k);//TODO remove after keypad
-                    } else if(response.type == "INCORRECT_REKENINGNUMMER") {
+                    } else if(response.type.equals("INCORRECT_REKENINGNUMMER")) {
                         this.mainScreen.incorrectRekeningnummer();
-                    } else if(response.type == "PAS_GEBLOKKEERD") {
+                    } else if(response.type.equals("PAS_GEBLOKKEERD")) {
                         this.mainScreen.pasGeblokkeerd();
                     }
                 }
@@ -78,13 +78,13 @@ public class GUI {
                                                         transaction.getIBAN(),
                                                         pinScreen.getPin(),
                                                         transaction.getCARD_UID());
-                            if(response.type == "CORRECTE_PINCODE") {
+                            if(response.type.equals("CORRECTE_PINCODE")) {
                                 this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
                                 this.pinScreen.setVisible(false);
                                 this.pinScreen = null;
                                 this.chooseActionScreen = new ChooseActionScreen();
                                 chooseActionScreen.addKeyListener(k);
-                            }else if(response.type.equals("INCORRECT_PINCODE")) {
+                            }else if(response.type.equals("INCORRECTE_PINCODE")) {
                                 JsonResponses.IncorrectePincode wrongPinResponse = (JsonResponses.IncorrectePincode) response;
                                 pinScreen.wrongPin(wrongPinResponse.pogingen);
 
@@ -152,11 +152,19 @@ public class GUI {
                 if(Character.isLowerCase(key)) {
                     switch (key) {
                         case 'a':
-                            this.activeScreen = ActiveScreen.ENDSCREEN;
-                            this.withdrawAmountConfirmScreen.setVisible(false);
-                            this.withdrawAmountConfirmScreen = null;
-                            this.endScreen = new EndScreen();
-                            endScreen.addKeyListener(k);
+                            JsonResponse result = api.gewensteOpnameHoeveelheid(transaction.getTransactionId(),
+                                    transaction.getIBAN(),
+                                    withdrawAmountConfirmScreen.getDesiredAmount());
+                            if(result.type.equals("OPNAME_IS_MOGELIJK")) {
+                                this.activeScreen = ActiveScreen.ENDSCREEN;
+                                this.withdrawAmountConfirmScreen.setVisible(false);
+                                this.withdrawAmountConfirmScreen = null;
+                                this.endScreen = new EndScreen();
+                                endScreen.addKeyListener(k);
+                            } else if(result.type.equals("HOGER_DAN_DAGLIMIET")) {
+                                result = (JsonResponses.OpnameHogerDanDaglimiet) result;
+                                //withdrawAmountConfirmScreen.hogerDanDaglimiet();
+                            }
                             break;
                         case 'b':
                             this.activeScreen = ActiveScreen.WITHDRAWMONEYSCREEN;

@@ -1,17 +1,21 @@
 import SSL.SSLServer;
+<<<<<<< HEAD
+import apis.*;
+=======
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+>>>>>>> origin/master
 
 /**
  * Created by Hans de Rooij on 21/03/2017.
  */
 public class Server {
 
-    private static Logger logger = LoggerFactory.getLogger(Database.class);
+//    private static Logger logger = LoggerFactory.getLogger(Database.class);
     private static DatabaseInf DB_INSTANCE;
 
 
-    public Server() {
+    public static void Server() {
         while (true) {
             SSLServer server = new SSLServer();
             server.start();
@@ -27,8 +31,8 @@ public class Server {
                 ? new MockDB()
                 : new Database();
 
-        logger.info("Database inst is: "+DB_INSTANCE.getClass().toString());
-
-
+        //logger.info("Database inst is: "+DB_INSTANCE.getClass().toString());
+        System.out.println("Db inst:"+DB_INSTANCE.getClass().toString());
+        Server();
     }
 }

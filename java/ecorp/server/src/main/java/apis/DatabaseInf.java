@@ -1,6 +1,6 @@
 package apis;
 
-public interface DatabaseInf{
+public interface DatabaseInf {
 
     int getBalance(String rekeningNr);
         //double return

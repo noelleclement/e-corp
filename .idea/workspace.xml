@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="088de7d1-9864-4ced-a40d-9de302840aeb" name="Default" comment="" />
+    <list default="true" id="088de7d1-9864-4ced-a40d-9de302840aeb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/API.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/Backend.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$ControleerRekeningnummer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$CorrectePincode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$GeldopnameMogelijk.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$IncorrectePincode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$OntoereikendSaldo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$OpnameHogerDanDaglimiet.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$PincodePogingenOverschreven.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$SaldoInformatie.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/Transaction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/UnexsistingUserException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/Users.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Client.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ButtonScreen$RightButton.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ButtonScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ButtonlessScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/CheckBalanceScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ChooseActionScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/DefaultScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/EndScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$ActiveScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/KeyboardHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/MainScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/PinScreen$PinField.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/PinScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawAmountConfirmScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawMoneyScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/Server.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/API.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/Database.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/DatabaseInf.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/MockDB.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/log4j.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/JsonResponse.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/SSL/SSLServer.class" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/SSL/SSLServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/java/ecorp/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/API.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/API.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponse.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponses.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponses.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/Users.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/Users.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Client.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/ChooseActionScreen.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/ChooseActionScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/GUI.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/GUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/ecorp.iml" afterPath="$PROJECT_DIR$/java/ecorp/ecorp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/pom.xml" afterPath="$PROJECT_DIR$/java/ecorp/server/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/server.iml" afterPath="$PROJECT_DIR$/java/ecorp/server/server.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/SSL/SSLServer.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/SSL/SSLServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/Server.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/API.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/API.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/DatabaseInf.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/DatabaseInf.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/MockDB.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/MockDB.java" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +73,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -20,10 +85,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="2762" />
-    <option name="height" value="1770" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -42,14 +106,81 @@
     <panes>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecorp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-corp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecorp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/java/ecorp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -164,14 +295,15 @@
       <updated>1490357600449</updated>
       <workItem from="1490357605399" duration="9000" />
       <workItem from="1490357681118" duration="27000" />
+      <workItem from="1490963649594" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36000" />
+    <option name="totallyTimeSpent" value="46000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -181,20 +313,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1253655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12660944" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -202,6 +334,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />

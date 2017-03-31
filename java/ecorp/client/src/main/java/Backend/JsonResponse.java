@@ -12,5 +12,5 @@ public class JsonResponse {
     }
     public String type;
     public String IBAN;
-    public String transaction_id
+    public String transaction_id;
 }

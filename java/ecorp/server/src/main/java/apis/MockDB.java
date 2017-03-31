@@ -1,8 +1,8 @@
 package apis;
 
-class MockDB implements DatabaseInf {
+public class MockDB implements DatabaseInf {
 
-    public int getBalance(String rekeningNr){
+    public double getBalance(String rekeningNr){
 
         return 0;
     }
@@ -11,4 +11,21 @@ class MockDB implements DatabaseInf {
 
         return false;
     }
+
+    @Override
+    public boolean comparePasRekening(String rekeningNr, String PasNr) {
+        return true;
+    }
+
+    @Override
+    public boolean comparePincode(String PasNr, String pinCode) {
+        return true;
+    }
+
+    @Override
+    public boolean withdrawPossible(String rekeningNr, int amount) {
+        return false;
+    }
+
+
 }

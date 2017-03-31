@@ -68,7 +68,7 @@ public class Users extends ArrayList<User> {
         }
     }
     public void retrieveUsers(String fileName) {
-        CSVReader reader = null;
+        /*CSVReader reader = null;
         try {
             reader = new CSVReader(new FileReader(fileName));
             String [] nextLine;
@@ -89,7 +89,7 @@ public class Users extends ArrayList<User> {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     public User getCurrentUser() {
