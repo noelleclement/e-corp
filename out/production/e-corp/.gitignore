@@ -1,0 +1,8 @@
+java/gui/out
+java/gui/.idea
+java/gui/gui.iml
+java/ssl/ssl.iml
+java/ssl/.idea
+java/ssl/out
+java/ecorp/.idea
+java/ecorp/.idea/**/workspace.xml
