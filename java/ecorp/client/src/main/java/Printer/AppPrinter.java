@@ -1,6 +1,8 @@
 /**
  * Created by Noelle on 31-03-17.
  */
+package Printer;
+
 public class AppPrinter {
 
 

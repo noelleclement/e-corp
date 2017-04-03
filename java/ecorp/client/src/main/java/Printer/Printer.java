@@ -4,6 +4,7 @@
 
 
     //package printen;
+package Printer;
 
 import java.awt.*;
 import java.awt.print.PageFormat;
@@ -19,36 +20,41 @@ import javax.swing.JPanel;
 
     public class Printer {
 
-        private PageFormat mPageFormat;
+        private PageFormat page;
         public String[] message = {"ING Bank", "uw saldo:" + " \u20AC" + "250"}; //dingen binnenhalen van informatie transactie ofzo
 
         public double amount;
 
         public Printer(double money) {
+
             amount = money;
+        }
+
+        public static void main (String[] args){
+
         }
 
         public void preview() {
             JFrame frame = new JFrame();
 
+            frame.setVisible(true);
             frame.setTitle("Preview van label 99014");
             frame.setSize(300, 400);
             frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-            frame.setVisible(true);
-
             frame.add(new PrintPreview());
         }
 
 
         public void print (boolean voorbeeld) {
-            Printer ps = new Printer();
+
+
             if (voorbeeld) {
-                ps.preview();
+                this.preview();
             }
 
             if (!voorbeeld) {
                 PrinterJob pj = PrinterJob.getPrinterJob();
-                PageFormat page = new PageFormat();
+                page = new PageFormat();
                 Paper paper = new Paper();
 
                 paper.setImageableArea(0, 0, 160, 290);
@@ -82,21 +88,28 @@ import javax.swing.JPanel;
         public void createPrint (Graphics2D graphics) {
             graphics.setColor(Color.white);
             graphics.fillRect(0, 0, 160, 280);
+
             graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-            /*
-            Image img = new ImageIcon("c:/logo.gif").getImage();
-            graphics.drawImage(img, 25, 15, 36, 36, null);
-            */
+
 
             graphics.setColor(Color.black);
-            graphics.setFont(new Font("Monospaced", Font.BOLD, 25));
-            graphics.drawString(message[0], 25, 70);
 
-			graphics.setFont(new Font("Monospaced", Font.BOLD, 12));
-			graphics.drawString(message[1], 15, 100);
-			graphics.drawLine(10, 280, 150, 280);
-			//dingen toevoegen wat uitgeprint moet worden (string message)
+            graphics.setFont(new Font("Roboto", Font.BOLD, 18));
+            graphics.drawString("PsyBank", 55, 34);
+
+            graphics.setFont(new Font("Roboto", Font.PLAIN, 14));
+            graphics.drawString("Dé bank voor u!", 55, 50);
+
+            graphics.drawLine(5, 60, 150, 60);
+
+
+
+            graphics.drawLine(5, 240, 150, 240);
+
+            graphics.setFont(new Font("Monospace", Font.PLAIN, 10));
+            graphics.drawString("Bedankt en tot ziens", 30, 255);
+            graphics.drawString("kijk ook eens op psybank.ml", 10, 270);
     }
 
 
