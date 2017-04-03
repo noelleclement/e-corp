@@ -5,6 +5,7 @@ public interface DatabaseInf {
     double getSaldo(String rekeningNr);
     //saldo opvragen database
 
+
     boolean checkSaldo(String rekeningNr, int amount);
     //checken of saldo>amount
     //true als goed, false als te weinig

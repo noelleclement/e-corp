@@ -16,7 +16,7 @@ public class SSLServer extends Thread {
 
     public void run(){
 
-        int intSSLport = 4443; // Port where the SSL Server needs to listen for new requests from the client
+        int intSSLport = 4443; // Port where the SSL server.Server needs to listen for new requests from the client
 
         {
             // Registering the JSSE provider
@@ -31,7 +31,7 @@ public class SSLServer extends Thread {
         }
 
         try {
-            // Initialize the Server Socket
+            // Initialize the server.Server Socket
             SSLServerSocketFactory sslServerSocketfactory = (SSLServerSocketFactory)SSLServerSocketFactory.getDefault();
             SSLServerSocket sslServerSocket = (SSLServerSocket)sslServerSocketfactory.createServerSocket(intSSLport);
             SSLSocket sslSocket = (SSLSocket)sslServerSocket.accept();

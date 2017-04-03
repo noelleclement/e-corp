@@ -73,6 +73,7 @@ public class Database implements DatabaseInf{
 
     }
 
+<<<<<<< HEAD
     public int withdrawPossible(String rekeningNr, String pasNr, int amount){
 
         boolean result = checkSaldo(rekeningNr, amount);
@@ -88,12 +89,48 @@ public class Database implements DatabaseInf{
 
         result = getGeblokkeerd(pasNr);
         if(result){
+=======
+    public int comparePincode (String pasNr, String pincode){
+        //TODO int in java goed als ? in sql?
+        //TODO letop: nog geen pas tabel
+        //TODO loggers toevoegen
+
+        try{
+            PreparedStatement ps = con.prepareCall("SELECT pincode"
+                    + "FROM E-corp.pas"
+                    + "WHERE E-corp.pas.pasNr = ?");
+            ps.setInt(1, Integer.parseInt(pasNr));
+            rs = ps.executeQuery();
+            if (ps.getResultSet().getString("pincode") == pincode){
+
+                return 0;
+            }
+
+            logger.debug("pincode niet correct");
+            return 1;
+        }
+        catch (SQLException e){
+            logger.error("Execution of query pincode compare failed", e);
+        }
+
+        return 1;
+>>>>>>> 1b8395ae7de6bb4218322c4878a8839a6f0ec1bd
 
             if (logger.isDebugEnabled()) {
                 logger.debug("getGeblokkeerd geeft true: pas is geblokkeerd");
             }
 
+<<<<<<< HEAD
             return 1;
+=======
+    public boolean withdrawpossible(String rekeningNr, int amount) {
+        return false;
+    }
+
+    public boolean withdrawPossible(String rekeningNr, int amount) {
+        return false;
+    }
+>>>>>>> 1b8395ae7de6bb4218322c4878a8839a6f0ec1bd
 
         }
 
@@ -145,6 +182,7 @@ public class Database implements DatabaseInf{
         return false;
     }
 
+<<<<<<< HEAD
 
 
     public boolean getGeblokkeerd(String pasNr) {
@@ -392,6 +430,11 @@ public class Database implements DatabaseInf{
 
 
 
+=======
+    public boolean comparePasRekening(String rekeningNr, int pasNr) {
+        return false;
+    }
+>>>>>>> 1b8395ae7de6bb4218322c4878a8839a6f0ec1bd
 
 
 

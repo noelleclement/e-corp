@@ -2,65 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="088de7d1-9864-4ced-a40d-9de302840aeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/API.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/Backend.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponse.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$ControleerRekeningnummer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$CorrectePincode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$GeldopnameMogelijk.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$IncorrectePincode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$OntoereikendSaldo.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$OpnameHogerDanDaglimiet.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$PincodePogingenOverschreven.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses$SaldoInformatie.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/JsonResponses.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/Transaction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/UnexsistingUserException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/Users.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Client.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ButtonScreen$RightButton.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ButtonScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ButtonlessScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/CheckBalanceScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/ChooseActionScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/DefaultScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/EndScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$ActiveScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/KeyboardHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/MainScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/PinScreen$PinField.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/PinScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawAmountConfirmScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawMoneyScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/Server.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/API.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/Database.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/DatabaseInf.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/MockDB.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/log4j.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/JsonResponse.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/SSL/SSLServer.class" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/SSL/SSLServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/InteruptScreen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/server/Server.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/InteruptScreen.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/java/ecorp/server/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/Server.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/Server.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/server/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/API.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Backend/API.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/EndScreen.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/EndScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$1.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$ActiveScreen.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI$ActiveScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/GUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawAmountConfirmScreen.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawAmountConfirmScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawMoneyScreen.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/GUI/WithdrawMoneyScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/API.class" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/API.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/Database.class" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/Database.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/DatabaseInf.class" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/DatabaseInf.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/MockDB.class" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/apis/MockDB.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/e-corp.iml" afterPath="$PROJECT_DIR$/.idea/e-corp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/.idea/compiler.xml" afterPath="$PROJECT_DIR$/java/ecorp/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/java/ecorp/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/API.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/API.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponse.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponses.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/JsonResponses.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/Users.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Backend/Users.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Client.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/ChooseActionScreen.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/ChooseActionScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/EndScreen.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/EndScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/GUI.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/GUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/WithdrawMoneyScreen.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/GUI/WithdrawMoneyScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/ecorp.iml" afterPath="$PROJECT_DIR$/java/ecorp/ecorp.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/pom.xml" afterPath="$PROJECT_DIR$/java/ecorp/server/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/server.iml" afterPath="$PROJECT_DIR$/java/ecorp/server/server.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/SSL/SSLServer.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/SSL/SSLServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/Server.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/Server.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/API.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/API.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/DatabaseInf.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/DatabaseInf.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/MockDB.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/MockDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/java/ecorp/server/target/classes/log4j.properties" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,6 +56,105 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="DatabaseInf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/DatabaseInf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <folding>
+                <element signature="e#12715#12716#0" expanded="false" />
+                <element signature="e#12743#12744#0" expanded="false" />
+                <marker date="1491214176000" expanded="true" signature="1252:1452" ph="SELECT saldo... E" />
+                <marker date="1491214176000" expanded="true" signature="2727:2832" ph="SELECT pinco... " />
+                <marker date="1491214176000" expanded="true" signature="4417:4602" ph="UPDATE klant... " />
+                <marker date="1491214176000" expanded="true" signature="5332:5521" ph="SELECT geblo... " />
+                <marker date="1491214176000" expanded="true" signature="6081:6255" ph="UPDATE pasSE... " />
+                <marker date="1491214176000" expanded="true" signature="6799:6984" ph="SELECT fpogi... " />
+                <marker date="1491214176000" expanded="true" signature="7505:7683" ph="UPDATE pasSE... " />
+                <marker date="1491214176000" expanded="true" signature="8255:8441" ph="UPDATE pasSE... " />
+                <marker date="1491214176000" expanded="true" signature="8945:9131" ph="UPDATE pasSE... " />
+                <marker date="1491214176000" expanded="true" signature="10362:10625" ph="SELECT SUM(h... " />
+                <marker date="1491214176000" expanded="true" signature="11122:11315" ph="SELECT *FROM... E" />
+                <marker date="1491214176000" expanded="true" signature="11877:12054" ph="SELECT pinco... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/ecorp/server/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="20" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/ecorp/server/server.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ecorp.iml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/java/ecorp/ecorp.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="e-corp.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/e-corp.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-12989">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -78,16 +163,29 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/DatabaseInf.java" />
+        <option value="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java" />
+        <option value="$PROJECT_DIR$/java/ecorp/server/pom.xml" />
+        <option value="$PROJECT_DIR$/java/ecorp/ecorp.iml" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -105,6 +203,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -160,27 +259,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ecorp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -200,6 +294,61 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -225,6 +374,160 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -246,12 +549,80 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="e-corp" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -282,6 +653,22 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -296,14 +683,16 @@
       <workItem from="1490357605399" duration="9000" />
       <workItem from="1490357681118" duration="27000" />
       <workItem from="1490963649594" duration="10000" />
+      <workItem from="1491214572537" duration="954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46000" />
+    <option name="totallyTimeSpent" value="1000000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -311,15 +700,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12660944" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12804006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -344,5 +733,200 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/MockDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/DatabaseInf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <element signature="e#12715#12716#0" expanded="false" />
+            <element signature="e#12743#12744#0" expanded="false" />
+            <marker date="1491214176000" expanded="true" signature="1252:1452" ph="SELECT saldo... E" />
+            <marker date="1491214176000" expanded="true" signature="2727:2832" ph="SELECT pinco... " />
+            <marker date="1491214176000" expanded="true" signature="4417:4602" ph="UPDATE klant... " />
+            <marker date="1491214176000" expanded="true" signature="5332:5521" ph="SELECT geblo... " />
+            <marker date="1491214176000" expanded="true" signature="6081:6255" ph="UPDATE pasSE... " />
+            <marker date="1491214176000" expanded="true" signature="6799:6984" ph="SELECT fpogi... " />
+            <marker date="1491214176000" expanded="true" signature="7505:7683" ph="UPDATE pasSE... " />
+            <marker date="1491214176000" expanded="true" signature="8255:8441" ph="UPDATE pasSE... " />
+            <marker date="1491214176000" expanded="true" signature="8945:9131" ph="UPDATE pasSE... " />
+            <marker date="1491214176000" expanded="true" signature="10362:10625" ph="SELECT SUM(h... " />
+            <marker date="1491214176000" expanded="true" signature="11122:11315" ph="SELECT *FROM... E" />
+            <marker date="1491214176000" expanded="true" signature="11877:12054" ph="SELECT pinco... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ecorp/server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ecorp/server/server.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12989">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/e-corp.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ecorp/ecorp.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>e-corp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

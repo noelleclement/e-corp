@@ -17,4 +17,15 @@ public class WithdrawAmountConfirmScreen extends ButtonScreen {
     public int getDesiredAmount() {
         return this.amount;
     }
+
+    public void ontoereikendSaldo() {
+        this.mainTextLabel.setText("<html>Uw saldo is niet toereikend<br> voor deze transactie</html>");
+        this.rightButtons[0].setIdentifier("");
+        this.rightButtons[0].setText("");
+        this.rightButtons[1].setText("Ga terug");
+    }
+
+    public void hogerDanDaglimiet() {
+        this.mainTextLabel.setText("<html>U gaat met het voorgestelde<br> bedrag over uw daglimiet heen</html>");
+    }
 }
