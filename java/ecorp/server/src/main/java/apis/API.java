@@ -1,6 +1,7 @@
 package apis;
 
 import com.google.gson.*;
+
 /**
  * Created by Joost Jonkers on 24-3-2017.
  */
@@ -20,7 +21,7 @@ public class API {
         JsonObject object = jelement.getAsJsonObject();
         String type = object.get("type").getAsString();
         System.out.println(type);
-        if (type.equals("CONTROLEER_REKENINGNUMMER")){
+        if (type.equals("CONTROLEER_REKENINGNUMMER")) {
             return this.controleerRekeningNummer(object);
         } else if (type.equals("CONTROLEER_PINCODE")) {
             return this.controleerPinCode(object);
@@ -28,6 +29,9 @@ public class API {
             return this.vraagSaldo(object);
         } else if (type.equals("GEWENSTE_OPNAME_HOEVEELHEID")) {
             return this.opnameHoeveelheidVragen(object);
+        } else if (type.equals("GELD_OPNEMEN")) {
+            return this.geldOpname(object);
+
         } else {
             System.out.println("Onbekend ding");
             return "";
@@ -67,27 +71,42 @@ public class API {
 
     public String controleerPinCode(JsonObject object){
 
-        boolean pinCodeInvoer = database.comparePincode(object.get("CARD_UID").getAsString(), object.get("pinCode").getAsString());
-            if (pinCodeInvoer) {
+        int pinCodeInvoer = database.comparePincode(object.get("CARD_UID").getAsString(), object.get("pinCode").getAsString());
+        if (pinCodeInvoer == 0) {
 
-                JsonObject result = new JsonObject();
-                result.addProperty("transactionId", "123");
-                result.addProperty("IBAN", object.get("IBAN").getAsString());
-                result.addProperty("type", "CORRECTE_PINCODE");
-                result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
-                return result.toString();
+            JsonObject result = new JsonObject();
+            result.addProperty("transactionId", "123");
+            result.addProperty("IBAN", object.get("IBAN").getAsString());
+            result.addProperty("type", "CORRECTE_PINCODE");
+            result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
+            return result.toString();
 
-            } else {
+        } else if(pinCodeInvoer==1) {
 
-                JsonObject result = new JsonObject();
-                result.addProperty("transactionId", "123");
-                result.addProperty("IBAN", object.get("IBAN").getAsString());
-                result.addProperty("type", "INCORRECTE_PINCODE");
-                result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
-                result.addProperty("pogingen", 2);
-                return result.toString();
-
+            JsonObject result = new JsonObject();
+            result.addProperty("transactionId", "123");
+            result.addProperty("IBAN", object.get("IBAN").getAsString());
+            result.addProperty("type", "INCORRECTE_PINCODE");
+            result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
+            result.addProperty("pogingen", 2);
+            return result.toString();
+        } else if(pinCodeInvoer==2) {
+            JsonObject result = new JsonObject();
+            result.addProperty("transactionId", "123");
+            result.addProperty("IBAN", object.get("IBAN").getAsString());
+            result.addProperty("type", "INCORRECTE_PINCODE");
+            result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
+            result.addProperty("pogingen", 1);
+            return result.toString();
         }
+
+        JsonObject result = new JsonObject();
+        result.addProperty("transactionId", "123");
+        result.addProperty("IBAN", object.get("IBAN").getAsString());
+        result.addProperty("type", "MAXIMAAL_AANTAL_POGINGEN");
+        result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
+        result.addProperty("pogingen", 0);
+        return result.toString();
     }
 
     public String vraagSaldo(JsonObject object){
@@ -99,19 +118,6 @@ public class API {
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "SALDO_INFORMATIE");
             result.addProperty("saldo", saldoOpvragen);
-            return result.toString();
-
-    }
-
-    public String infoSaldo(JsonObject object) {
-
-        double saldoInfo = database.getBalance(object.get("Saldo").getAsString());
-
-            JsonObject result = new JsonObject();
-            result.addProperty("transactionId", "123");
-            result.addProperty("IBAN", object.get("IBAN").getAsString());
-            result.addProperty("type", "SALDO_INFORMATIE");
-            result.addProperty("saldo", "123.45");
             return result.toString();
 
     }
@@ -148,7 +154,7 @@ public class API {
             result.addProperty("transactionId", "123");
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "OPNAME_IS_MOGELIJK");
-            result.addProperty("hoeveelheid", "12");
+            result.addProperty("hoeveelheid", object.get("amount").getAsInt());
             return result.toString();
 
         /*} else if {

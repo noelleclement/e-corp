@@ -11,7 +11,7 @@ import Backend.*;
  *
  * basically all the front end peasantry
  */
-public class GUI {
+public class GUI {//TODO add exit on every screen
     private MainScreen mainScreen;
     private PinScreen pinScreen;
     private ActiveScreen activeScreen;
@@ -20,6 +20,7 @@ public class GUI {
     private WithdrawMoneyScreen withdrawMoneyScreen;
     private WithdrawAmountConfirmScreen withdrawAmountConfirmScreen;
     private EndScreen endScreen;
+    private InteruptScreen interuptScreen;
     private API api;
     private Transaction transaction;
     private JsonResponse response;
@@ -90,6 +91,13 @@ public class GUI {
 
                             }
                             break;
+                        case 'd':
+                            this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
+                            this.pinScreen.setVisible(false);
+                            this.pinScreen = null;
+                            this.interuptScreen = new InteruptScreen();
+                            interuptScreen.addKeyListener(k);
+                            break;
                     }
                 }
                 break;
@@ -112,6 +120,13 @@ public class GUI {
                             this.withdrawMoneyScreen = new WithdrawMoneyScreen();
                             withdrawMoneyScreen.addKeyListener(k);
                             break;
+                        case 'd':
+                            this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
+                            this.chooseActionScreen.setVisible(false);
+                            this.chooseActionScreen = null;
+                            this.interuptScreen = new InteruptScreen();
+                            interuptScreen.addKeyListener(k);
+                            break;
                     }
                 }
                 break;
@@ -124,6 +139,13 @@ public class GUI {
                             this.checkBalanceScreen = null;
                             this.withdrawMoneyScreen = new WithdrawMoneyScreen();
                             withdrawMoneyScreen.addKeyListener(k);
+                            break;
+                        case 'd':
+                            this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
+                            this.checkBalanceScreen.setVisible(false);
+                            this.checkBalanceScreen = null;
+                            this.interuptScreen = new InteruptScreen();
+                            interuptScreen.addKeyListener(k);
                             break;
                     }
                 }
@@ -143,6 +165,22 @@ public class GUI {
                             this.withdrawAmountConfirmScreen = new WithdrawAmountConfirmScreen(amount);
                             withdrawAmountConfirmScreen.addKeyListener(k);
                             break;
+                        case 'c':
+                            JsonResponses.SaldoInformatie response = api.saldoOpvragen(transaction.getTransactionId(),
+                                    transaction.getIBAN());
+                            this.activeScreen = ActiveScreen.CHECK_BALANCE_SCREEN;
+                            this.withdrawMoneyScreen.setVisible(false);
+                            this.withdrawMoneyScreen = null;
+                            this.checkBalanceScreen = new CheckBalanceScreen(response.saldo);
+                            checkBalanceScreen.addKeyListener(k);
+                            break;
+                        case 'd':
+                            this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
+                            this.withdrawMoneyScreen.setVisible(false);
+                            this.withdrawMoneyScreen = null;
+                            this.interuptScreen = new InteruptScreen();
+                            interuptScreen.addKeyListener(k);
+                            break;
                     }
                 } else if(Character.isDigit(key)) {
                     this.withdrawMoneyScreen.newNumber(Character.getNumericValue(key));
@@ -156,14 +194,17 @@ public class GUI {
                                     transaction.getIBAN(),
                                     withdrawAmountConfirmScreen.getDesiredAmount());
                             if(result.type.equals("OPNAME_IS_MOGELIJK")) {
+                                api.geldOpnemen(transaction.getTransactionId(),transaction.getIBAN(),withdrawAmountConfirmScreen.getDesiredAmount());
                                 this.activeScreen = ActiveScreen.ENDSCREEN;
                                 this.withdrawAmountConfirmScreen.setVisible(false);
                                 this.withdrawAmountConfirmScreen = null;
                                 this.endScreen = new EndScreen();
                                 endScreen.addKeyListener(k);
                             } else if(result.type.equals("HOGER_DAN_DAGLIMIET")) {
-                                result = (JsonResponses.OpnameHogerDanDaglimiet) result;
-                                //withdrawAmountConfirmScreen.hogerDanDaglimiet();
+                                //result = (JsonResponses.OpnameHogerDanDaglimiet) result;
+                                withdrawAmountConfirmScreen.hogerDanDaglimiet();
+                            } else if(result.type.equals("ONTOEREIKEND_SALDO")) {
+                                withdrawAmountConfirmScreen.ontoereikendSaldo();
                             }
                             break;
                         case 'b':
@@ -173,13 +214,33 @@ public class GUI {
                             this.withdrawMoneyScreen = new WithdrawMoneyScreen();
                             withdrawMoneyScreen.addKeyListener(k);
                             break;
+                        case 'd':
+                            this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
+                            this.withdrawAmountConfirmScreen.setVisible(false);
+                            this.withdrawAmountConfirmScreen = null;
+                            this.interuptScreen = new InteruptScreen();
+                            interuptScreen.addKeyListener(k);
+                            break;
                     }
                 }
                 break;
+            case ENDSCREEN:
+                this.activeScreen=ActiveScreen.MAINSCREEN;
+                this.endScreen.setVisible(false);
+                this.endScreen = null;
+                this.mainScreen = new MainScreen();
+                mainScreen.addKeyListener(k);
+                break;
+            case INTERUPTEDSCREEN:
+                this.activeScreen=ActiveScreen.MAINSCREEN;
+                this.interuptScreen.setVisible(false);
+                this.interuptScreen = null;
+                this.mainScreen = new MainScreen();
+                mainScreen.addKeyListener(k);
         }
     }
     private enum ActiveScreen {
         MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN, WITHDRAWAMOUNTCONFIRMSCREEN,
-        ENDSCREEN
+        ENDSCREEN, INTERUPTEDSCREEN
     }
 }

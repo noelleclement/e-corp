@@ -100,6 +100,38 @@ public class API {
                     object.get("saldo").getAsDouble());
         }
     }
+
+    public JsonResponse geldOpnemen(String transactionID, String IBAN, int hoeveelheid) {
+        JsonObject object = new JsonObject();
+        object.addProperty("type", "GELD_OPNEMEN");
+        object.addProperty("trasactionId", transactionID);
+        object.addProperty("IBAN", IBAN);
+        object.addProperty("amount", hoeveelheid);
+        String reaction = getSSLReaction(object.toString());
+        JsonElement element = new JsonParser().parse(reaction);
+        object = element.getAsJsonObject();
+
+        if(object.get("type").getAsString().equals("OPNAME_IS_MOGELIJK")) {
+            return new JsonResponses.GeldopnameMogelijk(object.get("transactionId").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("hoeveelheid").getAsInt());
+        }else if(object.get("type").getAsString().equals("HOGER_DAN_DAGLIMIET")) {
+            return new JsonResponses.OpnameHogerDanDaglimiet(object.get("transactionID").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("daglimiet").getAsInt());
+        }else if(object.get("type").getAsString().equals("ONTOEREIKEND_SALDO")) {
+            return new JsonResponses.OntoereikendSaldo(object.get("transactionId").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("saldo").getAsDouble());
+        }else{
+            System.out.println("Onbekende reactie op opnamehoeveelheid");
+            return new JsonResponses.OntoereikendSaldo(object.get("transactionId").getAsString(),
+                    object.get("IBAN").getAsString(),
+                    object.get("saldo").getAsDouble());
+        }
+    }
+
+
     private String getSSLReaction(String json) {
         System.out.println("Sending this to the server:"+json);
         SSLClient ssl = new SSLClient(json);

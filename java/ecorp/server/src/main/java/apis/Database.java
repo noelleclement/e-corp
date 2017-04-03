@@ -72,7 +72,7 @@ public class Database implements DatabaseInf{
 
     }
 
-    public boolean comparePincode (String pasNr, String pincode){
+    public int comparePincode (String pasNr, String pincode){
         //TODO int in java goed als ? in sql?
         //TODO letop: nog geen pas tabel
         //TODO loggers toevoegen
@@ -83,26 +83,26 @@ public class Database implements DatabaseInf{
                     + "WHERE E-corp.pas.pasNr = ?");
             ps.setInt(1, Integer.parseInt(pasNr));
             rs = ps.executeQuery();
-<<<<<<< HEAD
             if (ps.getResultSet().getString("pincode") == pincode){
-=======
-            if (rs.getInt(pincode) == pincode){         //kan dit? is dit efficient?
->>>>>>> origin/master
-                return true;
+
+                return 0;
             }
 
             logger.debug("pincode niet correct");
-            return false;
+            return 1;
         }
         catch (SQLException e){
             logger.error("Execution of query pincode compare failed", e);
         }
 
-        return false;
+        return 1;
 
     }
 
-    @Override
+    public boolean withdrawpossible(String rekeningNr, int amount) {
+        return false;
+    }
+
     public boolean withdrawPossible(String rekeningNr, int amount) {
         return false;
     }
@@ -166,13 +166,9 @@ public class Database implements DatabaseInf{
         return false;
     }
 
-
-
-
-
-
-
-
+    public boolean comparePasRekening(String rekeningNr, int pasNr) {
+        return false;
+    }
 
 
     // rekeningnr info opvragen {check of rekeningnr in database} http://stackoverflow.com/questions/11288557/how-do-i-tell-if-a-row-exists-in-a-table

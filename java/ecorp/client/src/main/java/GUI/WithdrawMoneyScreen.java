@@ -19,6 +19,8 @@ public class WithdrawMoneyScreen extends ButtonScreen {
         rightButtons[0].setText("Backspace");
         rightButtons[1].setIdentifier("B");
         rightButtons[1].setText("Confirm");
+        rightButtons[2].setText("Check Balance");
+        rightButtons[2].setIdentifier("C");
         addPinField();
     }
 
