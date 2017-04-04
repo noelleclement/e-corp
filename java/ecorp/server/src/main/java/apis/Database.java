@@ -129,7 +129,7 @@ public class Database implements DatabaseInf{
                 //pinnen
                 logger.debug("withDraw with Rekeningnr " + rekeningNr, "saldo: " + saldo);
 
-                PreparedStatement ps = con.prepareStatement("UPDATE klant "
+                PreparedStatement ps = con.prepareStatement("UPDATE [E-corp].klant "
                                                                 + "SET saldo = ? "
                                                                 + "WHERE rekeningnr = ?");
 
@@ -160,8 +160,8 @@ public class Database implements DatabaseInf{
     public boolean getGeblokkeerd(String pasNr) {
         try{
             PreparedStatement ps = con.prepareStatement("SELECT geblokkeerd "
-                                                            + "FROM E-corp.pas "
-                                                            + "WHERE E-corp.pas.pasNr = ?");
+                                                            + "FROM [E-corp].pas "
+                                                            + "WHERE [E-corp].pas.pasNr = ?");
             ps.setString(1, pasNr);
             rs = ps.executeQuery();
             rs.next();
@@ -182,7 +182,7 @@ public class Database implements DatabaseInf{
 
     public boolean setGeblokkeerd(String pasNr) {
         try{
-            PreparedStatement ps = con.prepareStatement("UPDATE pas "
+            PreparedStatement ps = con.prepareStatement("UPDATE [E-corp].pas "
                                                             + "SET geblokkeerd = ? "
                                                             + "WHERE pasNr = ?");
 
@@ -208,8 +208,8 @@ public class Database implements DatabaseInf{
     public int getFoutief(String pasNr) {
         try{
             PreparedStatement ps = con.prepareStatement( "SELECT fpoging "
-                                                            + "FROM E-corp.pas "
-                                                            + "WHERE E-corp.pas.pasNr = ?");
+                                                            + "FROM [E-corp].pas "
+                                                            + "WHERE [E-corp].pas.pasNr = ?");
             ps.setString(1, pasNr);
             rs = ps.executeQuery();
             rs.next();
@@ -232,7 +232,7 @@ public class Database implements DatabaseInf{
         try{
             if(pincodeTrue){
                 //set fpoging op 0
-                PreparedStatement ps = con.prepareStatement("UPDATE pas "
+                PreparedStatement ps = con.prepareStatement("UPDATE [E-corp].pas "
                                                                 + "SET fpoging = ? "
                                                                 + "WHERE pasNr = ?");
 
@@ -255,7 +255,7 @@ public class Database implements DatabaseInf{
 
                 if(aantalFout == 0 || aantalFout == 1){
                     //set fpoging aantalFout+1
-                    PreparedStatement ps = con.prepareStatement("UPDATE pas "
+                    PreparedStatement ps = con.prepareStatement("UPDATE [E-corp].pas "
                                                                     + "SET fpoging = ? "
                                                                     + "WHERE pasNr = ?");
 
@@ -275,7 +275,7 @@ public class Database implements DatabaseInf{
 
                 if(aantalFout==2){
                     //set fpoging 3
-                    PreparedStatement ps = con.prepareStatement("UPDATE pas "
+                    PreparedStatement ps = con.prepareStatement("UPDATE [E-corp].pas "
                                                                     + "SET fpoging = ? "
                                                                     + "WHERE pasNr = ?");
 
@@ -326,8 +326,8 @@ public class Database implements DatabaseInf{
             String todaySt = todayLD.toString();
 
             PreparedStatement ps = con.prepareStatement("SELECT SUM(hoeveelheid) as SUMamount "
-                                                            + "FROM E-corp.transactie "
-                                                            + "WHERE E-corp.transactie.pasNr = ? AND DATE(E-corp.transactie.datumtijd) = ?");
+                                                            + "FROM [E-corp].transactie "
+                                                            + "WHERE [E-corp].transactie.pasNr = ? AND DATE([E-corp].transactie.datumtijd) = ?");
 
             ps.setString(1, pasNr);
             ps.setString(2, todaySt);    //gaat dit goed?
@@ -348,8 +348,8 @@ public class Database implements DatabaseInf{
     public boolean checkPasRekening(String rekeningNr, String pasNr) {
         try{
             PreparedStatement ps = con.prepareCall("SELECT * "
-                                                    + "FROM E-corp.pas "
-                                                    + "WHERE E-corp.pas.rekeningNr = ? AND E-corp.pas.pasNr = ?");
+                                                    + "FROM [E-corp].pas "
+                                                    + "WHERE [E-corp].pas.rekeningNr = ? AND [E-corp].pas.pasNr = ?");
             ps.setString(1, rekeningNr);
             ps.setString(2, pasNr);
             rs = ps.executeQuery();
@@ -369,8 +369,8 @@ public class Database implements DatabaseInf{
     public boolean checkPincode(String pasNr, String pincode) {
         try{
             PreparedStatement ps = con.prepareCall("SELECT pincode "
-                                                        + "FROM E-corp.pas "
-                                                        + "WHERE E-corp.pas.pasNr = ?");
+                                                        + "FROM [E-corp].pas "
+                                                        + "WHERE [E-corp].pas.pasNr = ?");
             ps.setString(1,pasNr);
             rs = ps.executeQuery();
             rs.next();
