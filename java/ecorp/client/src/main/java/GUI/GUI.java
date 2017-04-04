@@ -48,7 +48,7 @@ public class GUI {//TODO add exit on every screen
                 }
                 if(Character.isSpaceChar(key)) {
                     System.out.println(accountNumber);
-                    JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "1111111");
+                    JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "111222");
                     if(response.type.equals("CORRECT_REKENINGNUMMER")) {
                         this.transaction = new Transaction(response.IBAN,
                                 response.transaction_id,
