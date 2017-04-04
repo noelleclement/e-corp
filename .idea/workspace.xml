@@ -2,51 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="088de7d1-9864-4ced-a40d-9de302840aeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/Arduinio/rfid-master.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/eCorpKey" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ssl/mySrvKeystore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/.idea/e-corp.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/4jr2l2vs.51b.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/Arduinio/Lees_Shrijf/Lees_Shrijf.ino" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/Arduinio/Lees_Shrijf/functions.ino" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/Arduinio/dumpie/dumpie.ino" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/.idea/java.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/client/client.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/client/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/ecorp.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/database.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/server.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/ecorp/server/target/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/e-corp/java/gui/users.csv" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Test.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/Printer/Printer$OutPrintable.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Printer/Printer$OutPrintable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/Printer/Printer$PrintPreview.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Printer/Printer$PrintPreview.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/target/classes/Printer/Printer.class" afterPath="$PROJECT_DIR$/java/ecorp/client/target/classes/Printer/Printer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/pom.xml" afterPath="$PROJECT_DIR$/java/ecorp/server/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/server.iml" afterPath="$PROJECT_DIR$/java/ecorp/server/server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/java/ecorp/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Printer/Printer.java" afterPath="$PROJECT_DIR$/java/ecorp/client/src/main/java/Printer/Printer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/MockDB.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/apis/MockDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java/ecorp/server/src/main/java/server/Server.java" afterPath="$PROJECT_DIR$/java/ecorp/server/src/main/java/server/Server.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,12 +36,12 @@
             <state relative-caret-position="163">
               <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="17" />
               <folding>
-                <element signature="e#427#428#0" expanded="false" />
-                <element signature="e#476#477#0" expanded="false" />
-                <element signature="e#560#561#0" expanded="false" />
-                <element signature="e#588#589#0" expanded="false" />
-                <element signature="e#672#673#0" expanded="false" />
-                <element signature="e#706#707#0" expanded="false" />
+                <element signature="e#401#402#0" expanded="false" />
+                <element signature="e#425#426#0" expanded="false" />
+                <element signature="e#496#497#0" expanded="false" />
+                <element signature="e#524#525#0" expanded="false" />
+                <element signature="e#595#596#0" expanded="false" />
+                <element signature="e#629#630#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -735,16 +697,15 @@
       <workItem from="1490963649594" duration="10000" />
       <workItem from="1491214572537" duration="1040000" />
       <workItem from="1491216232040" duration="92000" />
-      <workItem from="1491216357309" duration="2194000" />
+      <workItem from="1491216357309" duration="2537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3372000" />
+    <option name="totallyTimeSpent" value="3715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1010,12 +971,12 @@
         <state relative-caret-position="163">
           <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="17" />
           <folding>
-            <element signature="e#427#428#0" expanded="false" />
-            <element signature="e#476#477#0" expanded="false" />
-            <element signature="e#560#561#0" expanded="false" />
-            <element signature="e#588#589#0" expanded="false" />
-            <element signature="e#672#673#0" expanded="false" />
-            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
+            <element signature="e#425#426#0" expanded="false" />
+            <element signature="e#496#497#0" expanded="false" />
+            <element signature="e#524#525#0" expanded="false" />
+            <element signature="e#595#596#0" expanded="false" />
+            <element signature="e#629#630#0" expanded="false" />
           </folding>
         </state>
       </provider>

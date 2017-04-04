@@ -23,11 +23,20 @@ import javax.swing.JPanel;
         private PageFormat page;
         public String[] message = {"ING Bank", "uw saldo:" + " \u20AC" + "250"}; //dingen binnenhalen van informatie transactie ofzo
 
-        public double amount;
+        public String transactieID;
+        public String rekeningNr;
+        public String bedrag;
+        public String datumtijd;
 
-        public Printer(double money) {
 
-            amount = money;
+        public Printer(int transactieID_, String rekeningNr_, String datumtijd_, int bedrag_) {
+
+            transactieID = Integer.toString(transactieID_);
+            rekeningNr = rekeningNr_;
+            bedrag = Integer.toString(bedrag_);
+            datumtijd = datumtijd_;             //letop hier wordt er rekening mee gehouden dat datumtijd overal in server door wordt gegeven als String
+
+
         }
 
         public static void main (String[] args){
@@ -45,7 +54,10 @@ import javax.swing.JPanel;
         }
 
 
-        public void print (boolean voorbeeld) {
+        public void print (boolean voorbeeld ) {
+
+
+
 
 
             if (voorbeeld) {
@@ -91,25 +103,57 @@ import javax.swing.JPanel;
 
             graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-
-
             graphics.setColor(Color.black);
 
+            Image img = new ImageIcon("//Users/Noelle/Documents/github/e-corp/445110_1.jpg").getImage();
+            graphics.drawImage(img, 55, 10, 50, 50, null);
+
+            /*
             graphics.setFont(new Font("Roboto", Font.BOLD, 18));
-            graphics.drawString("PsyBank", 55, 34);
+            graphics.drawString("E-corp", 45, 34);
+            */
 
-            graphics.setFont(new Font("Roboto", Font.PLAIN, 14));
-            graphics.drawString("Dé bank voor u!", 55, 50);
+            graphics.setFont(new Font("Roboto", Font.PLAIN, 8));
+            graphics.drawString("Together we can change the world", 13, 70);
 
-            graphics.drawLine(5, 60, 150, 60);
+            graphics.drawLine(10, 80, 150, 80);
+
+            //transactieid
+            graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
+            graphics.drawString("TransactieNr: ", 20, 110);
+
+            graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
+            graphics.drawString(transactieID, 80, 110);
+
+            //rekeningnr Exxxxxx2834
+            graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
+            graphics.drawString("RekeningNr: ", 20, 130);
+
+            graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
+            graphics.drawString(rekeningNr, 80, 130);
+
+            //datum/tijd
+            graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
+            graphics.drawString("Datum: ", 20, 150);
+
+            graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
+            graphics.drawString(datumtijd, 80, 150);
+
+            //bedrag
+            graphics.setFont(new Font("Bodoni MT", Font.BOLD, 10));
+            graphics.drawString("Totaal: ", 15, 200);
+
+            graphics.setFont(new Font("Dialog", Font.BOLD, 10));
+            graphics.drawString(bedrag, 80, 200);
 
 
 
-            graphics.drawLine(5, 240, 150, 240);
+
+
+            graphics.drawLine(10, 260, 150, 260);
 
             graphics.setFont(new Font("Monospace", Font.PLAIN, 10));
-            graphics.drawString("Bedankt en tot ziens", 30, 255);
-            graphics.drawString("kijk ook eens op psybank.ml", 10, 270);
+            graphics.drawString("Bedankt en tot ziens", 30, 273);
     }
 
 
