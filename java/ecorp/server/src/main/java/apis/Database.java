@@ -209,7 +209,7 @@ public class Database implements DatabaseInf{
             rs.next();
 
             int result = rs.getInt("fpoging");
-
+            System.out.println("aantal pogingen getFoutief opgehaald: "+result);
             return result;
 
 
@@ -351,7 +351,7 @@ public class Database implements DatabaseInf{
                 if(!getGeblokkeerd(pasNr)){
                     return true;
                 }
-                
+
 
             }
 
