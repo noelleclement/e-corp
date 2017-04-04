@@ -348,7 +348,11 @@ public class Database implements DatabaseInf{
             ps.setString(2, pasNr);
             rs = ps.executeQuery();
             if (rs.next()){
-                return true;
+                if(!getGeblokkeerd(pasNr)){
+                    return true;
+                }
+                
+
             }
 
             logger.debug("pasNr rekeningNr combi bestaat niet");
