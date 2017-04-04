@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d682b8e1-4669-4908-98dd-1b6e753d1aec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Printer/AppPrinter.java" afterPath="$PROJECT_DIR$/client/src/main/java/Printer/AppPrinter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/Database.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/Database.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,21 +50,21 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4578">
-              <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+            <state relative-caret-position="247">
+              <caret line="125" column="76" lean-forward="true" selection-start-line="125" selection-start-column="76" selection-end-line="125" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1491309515000" expanded="true" signature="1252:1452" ph="SELECT saldo... E" />
-                <marker date="1491309515000" expanded="true" signature="3315:3500" ph="UPDATE klant... " />
-                <marker date="1491309515000" expanded="true" signature="4217:4408" ph="SELECT geblo... " />
-                <marker date="1491309515000" expanded="true" signature="4968:5144" ph="UPDATE pasSE... " />
-                <marker date="1491309515000" expanded="true" signature="5688:5875" ph="SELECT fpogi... " />
-                <marker date="1491309515000" expanded="true" signature="6396:6576" ph="UPDATE pasSE... " />
-                <marker date="1491309515000" expanded="true" signature="7148:7336" ph="UPDATE pasSE... " />
-                <marker date="1491309515000" expanded="true" signature="7838:8026" ph="UPDATE pasSE... " />
-                <marker date="1491309515000" expanded="true" signature="9284:9549" ph="SELECT SUM(h... " />
-                <marker date="1491309515000" expanded="true" signature="10069:10264" ph="SELECT *FROM... E" />
-                <marker date="1491309515000" expanded="true" signature="10826:11005" ph="SELECT pinco... " />
+                <marker date="1491310175000" expanded="true" signature="1252:1452" ph="SELECT saldo... E" />
+                <marker date="1491310175000" expanded="true" signature="3315:3509" ph="UPDATE klant... " />
+                <marker date="1491310175000" expanded="true" signature="4226:4421" ph="SELECT geblo... " />
+                <marker date="1491310175000" expanded="true" signature="4981:5166" ph="UPDATE pasSE... " />
+                <marker date="1491310175000" expanded="true" signature="5710:5901" ph="SELECT fpogi... " />
+                <marker date="1491310175000" expanded="true" signature="6422:6611" ph="UPDATE pasSE... " />
+                <marker date="1491310175000" expanded="true" signature="7183:7380" ph="UPDATE pasSE... " />
+                <marker date="1491310175000" expanded="true" signature="7882:8079" ph="UPDATE pasSE... " />
+                <marker date="1491310175000" expanded="true" signature="9337:9608" ph="SELECT SUM(h... " />
+                <marker date="1491310175000" expanded="true" signature="10128:10329" ph="SELECT *FROM... E" />
+                <marker date="1491310175000" expanded="true" signature="10891:11074" ph="SELECT pinco... " />
               </folding>
             </state>
           </provider>
@@ -693,12 +691,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491218700850</updated>
-      <workItem from="1491218702506" duration="7249000" />
+      <workItem from="1491218702506" duration="7600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7249000" />
+    <option name="totallyTimeSpent" value="7600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -839,21 +837,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4578">
-          <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+        <state relative-caret-position="247">
+          <caret line="125" column="76" lean-forward="true" selection-start-line="125" selection-start-column="76" selection-end-line="125" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1491309515000" expanded="true" signature="1252:1452" ph="SELECT saldo... E" />
-            <marker date="1491309515000" expanded="true" signature="3315:3500" ph="UPDATE klant... " />
-            <marker date="1491309515000" expanded="true" signature="4217:4408" ph="SELECT geblo... " />
-            <marker date="1491309515000" expanded="true" signature="4968:5144" ph="UPDATE pasSE... " />
-            <marker date="1491309515000" expanded="true" signature="5688:5875" ph="SELECT fpogi... " />
-            <marker date="1491309515000" expanded="true" signature="6396:6576" ph="UPDATE pasSE... " />
-            <marker date="1491309515000" expanded="true" signature="7148:7336" ph="UPDATE pasSE... " />
-            <marker date="1491309515000" expanded="true" signature="7838:8026" ph="UPDATE pasSE... " />
-            <marker date="1491309515000" expanded="true" signature="9284:9549" ph="SELECT SUM(h... " />
-            <marker date="1491309515000" expanded="true" signature="10069:10264" ph="SELECT *FROM... E" />
-            <marker date="1491309515000" expanded="true" signature="10826:11005" ph="SELECT pinco... " />
+            <marker date="1491310175000" expanded="true" signature="1252:1452" ph="SELECT saldo... E" />
+            <marker date="1491310175000" expanded="true" signature="3315:3509" ph="UPDATE klant... " />
+            <marker date="1491310175000" expanded="true" signature="4226:4421" ph="SELECT geblo... " />
+            <marker date="1491310175000" expanded="true" signature="4981:5166" ph="UPDATE pasSE... " />
+            <marker date="1491310175000" expanded="true" signature="5710:5901" ph="SELECT fpogi... " />
+            <marker date="1491310175000" expanded="true" signature="6422:6611" ph="UPDATE pasSE... " />
+            <marker date="1491310175000" expanded="true" signature="7183:7380" ph="UPDATE pasSE... " />
+            <marker date="1491310175000" expanded="true" signature="7882:8079" ph="UPDATE pasSE... " />
+            <marker date="1491310175000" expanded="true" signature="9337:9608" ph="SELECT SUM(h... " />
+            <marker date="1491310175000" expanded="true" signature="10128:10329" ph="SELECT *FROM... E" />
+            <marker date="1491310175000" expanded="true" signature="10891:11074" ph="SELECT pinco... " />
           </folding>
         </state>
       </provider>
