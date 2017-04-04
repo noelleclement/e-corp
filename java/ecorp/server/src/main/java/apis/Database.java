@@ -215,7 +215,7 @@ public class Database implements DatabaseInf{
             rs.next();
 
             int result = rs.getInt("fpoging");
-
+            System.out.println("aantal pogingen getFoutief opgehaald: "+result);
             return result;
 
 
@@ -354,7 +354,11 @@ public class Database implements DatabaseInf{
             ps.setString(2, pasNr);
             rs = ps.executeQuery();
             if (rs.next()){
-                return true;
+                if(!getGeblokkeerd(pasNr)){
+                    return true;
+                }
+
+
             }
 
             logger.debug("pasNr rekeningNr combi bestaat niet");

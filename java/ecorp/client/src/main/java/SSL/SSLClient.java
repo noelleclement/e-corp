@@ -39,9 +39,10 @@ public class SSLClient extends Thread{
                             sslsocket.getInputStream()));
 
             String string, inputLine = null;
+
+            bufferedwriter.write(this.message + '\n');
+            bufferedwriter.flush();
             while (true) {
-                bufferedwriter.write(this.message + '\n');
-                bufferedwriter.flush();
                 if ((inputLine = in.readLine()) != null) {
                     this.reaction = inputLine;
                     //System.out.println(inputLine);

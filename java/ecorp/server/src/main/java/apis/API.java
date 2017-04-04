@@ -7,7 +7,7 @@ import com.google.gson.*;
  */
 public class API {
 
-    private DatabaseInf database;
+    private static DatabaseInf database;
 
     public API(DatabaseInf database) {
 
