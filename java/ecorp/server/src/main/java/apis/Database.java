@@ -55,7 +55,9 @@ public class Database implements DatabaseInf{
             rs = ps.executeQuery();
             rs.next();
             saldo = rs.getDouble("saldo");
+
             logger.debug("Saldo = " + saldo); //als handig kan ook rekeningnr etc toegevoegd worden
+
         } catch (SQLException e) {
             logger.error("Execution of query select saldo failed", e); //moet nog wat uitgebreider
         }
@@ -151,8 +153,8 @@ public class Database implements DatabaseInf{
 
     public boolean getGeblokkeerd(String pasNr) {
         try{
-            PreparedStatement ps = con.prepareStatement("SELECT geblokkeerd"
-                                                            + "FROM E-corp.pas"
+            PreparedStatement ps = con.prepareStatement("SELECT geblokkeerd "
+                                                            + "FROM E-corp.pas "
                                                             + "WHERE E-corp.pas.pasNr = ?");
             ps.setString(1, pasNr);
             rs = ps.executeQuery();
@@ -174,8 +176,8 @@ public class Database implements DatabaseInf{
 
     public boolean setGeblokkeerd(String pasNr) {
         try{
-            PreparedStatement ps = con.prepareStatement("UPDATE pas"
-                                                            + "SET geblokkeerd = ?"
+            PreparedStatement ps = con.prepareStatement("UPDATE pas "
+                                                            + "SET geblokkeerd = ? "
                                                             + "WHERE pasNr = ?");
 
             ps.setInt(1, 1);
@@ -199,8 +201,8 @@ public class Database implements DatabaseInf{
 
     public int getFoutief(String pasNr) {
         try{
-            PreparedStatement ps = con.prepareStatement( "SELECT fpoging"
-                                                            + "FROM E-corp.pas"
+            PreparedStatement ps = con.prepareStatement( "SELECT fpoging "
+                                                            + "FROM E-corp.pas "
                                                             + "WHERE E-corp.pas.pasNr = ?");
             ps.setString(1, pasNr);
             rs = ps.executeQuery();
@@ -224,8 +226,8 @@ public class Database implements DatabaseInf{
         try{
             if(pincodeTrue){
                 //set fpoging op 0
-                PreparedStatement ps = con.prepareStatement("UPDATE pas"
-                                                                + "SET fpoging = ?"
+                PreparedStatement ps = con.prepareStatement("UPDATE pas "
+                                                                + "SET fpoging = ? "
                                                                 + "WHERE pasNr = ?");
 
                 ps.setInt(1, 0);
@@ -247,8 +249,8 @@ public class Database implements DatabaseInf{
 
                 if(aantalFout == 0 || aantalFout == 1){
                     //set fpoging aantalFout+1
-                    PreparedStatement ps = con.prepareStatement("UPDATE pas"
-                                                                    + "SET fpoging = ?"
+                    PreparedStatement ps = con.prepareStatement("UPDATE pas "
+                                                                    + "SET fpoging = ? "
                                                                     + "WHERE pasNr = ?");
 
                     ps.setInt(1, (aantalFout+1));
@@ -265,15 +267,16 @@ public class Database implements DatabaseInf{
                 }
 
 
-                if(aantalFout == 2){
+                if(aantalFout==2){
                     //set fpoging 3
-                    PreparedStatement ps = con.prepareStatement("UPDATE pas"
-                                                                    + "SET fpoging = ?"
+                    PreparedStatement ps = con.prepareStatement("UPDATE pas "
+                                                                    + "SET fpoging = ? "
                                                                     + "WHERE pasNr = ?");
 
                     ps.setInt(1, 3);
                     ps.setString(2, pasNr);
 
+                    //TODO
                     boolean result = ps.execute();
 
                     if (logger.isDebugEnabled()) {
@@ -316,13 +319,14 @@ public class Database implements DatabaseInf{
             LocalDate todayLD = LocalDate.now();
             String todaySt = todayLD.toString();
 
-            PreparedStatement ps = con.prepareStatement("SELECT SUM(hoeveelheid) as SUMamount"
-                                                            + "FROM E-corp.transactie"
+            PreparedStatement ps = con.prepareStatement("SELECT SUM(hoeveelheid) as SUMamount "
+                                                            + "FROM E-corp.transactie "
                                                             + "WHERE E-corp.transactie.pasNr = ? AND DATE(E-corp.transactie.datumtijd) = ?");
 
             ps.setString(1, pasNr);
             ps.setString(2, todaySt);    //gaat dit goed?
             rs = ps.executeQuery();
+            rs.next();
             double result = rs.getDouble("SUMamount");
 
             return result;
@@ -337,8 +341,8 @@ public class Database implements DatabaseInf{
 
     public boolean checkPasRekening(String rekeningNr, String pasNr) {
         try{
-            PreparedStatement ps = con.prepareCall("SELECT *"
-                                                    + "FROM E-corp.pas"
+            PreparedStatement ps = con.prepareCall("SELECT * "
+                                                    + "FROM E-corp.pas "
                                                     + "WHERE E-corp.pas.rekeningNr = ? AND E-corp.pas.pasNr = ?");
             ps.setString(1, rekeningNr);
             ps.setString(2, pasNr);
@@ -358,14 +362,15 @@ public class Database implements DatabaseInf{
 
     public boolean checkPincode(String pasNr, String pincode) {
         try{
-            PreparedStatement ps = con.prepareCall("SELECT pincode"
-                                                        + "FROM E-corp.pas"
+            PreparedStatement ps = con.prepareCall("SELECT pincode "
+                                                        + "FROM E-corp.pas "
                                                         + "WHERE E-corp.pas.pasNr = ?");
             ps.setString(1,pasNr);
             rs = ps.executeQuery();
+            rs.next();
             String psPincode = rs.getString("pincode");
 
-            if (psPincode == pincode){         //kan dit? is dit efficient?
+            if (psPincode.equals(pincode)){         //kan dit? is dit efficient?
                 setFoutief(pasNr, true);
                 return true;
             }
