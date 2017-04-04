@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client" target="1.5" />
-      <module name="server" target="2.4.1" />
+      <module name="server" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

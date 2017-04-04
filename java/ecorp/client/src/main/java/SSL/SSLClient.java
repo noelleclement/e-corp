@@ -28,7 +28,7 @@ public class SSLClient extends Thread{
         try {
 
             SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-            SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("localhost", 4443);
+            SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("145.24.222.99", 4443);
 
             OutputStream outputstream = sslsocket.getOutputStream();
             OutputStreamWriter outputstreamwriter = new OutputStreamWriter(outputstream);

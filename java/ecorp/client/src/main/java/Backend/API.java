@@ -71,12 +71,13 @@ public class API {
                 object.get("saldo").getAsDouble());
     }
 
-    public JsonResponse gewensteOpnameHoeveelheid(String transactionID, String IBAN, int hoeveelheid) {
+    public JsonResponse gewensteOpnameHoeveelheid(String transactionID, String IBAN, int hoeveelheid, String CARD_uid) {
         JsonObject object = new JsonObject();
         object.addProperty("type", "GEWENSTE_OPNAME_HOEVEELHEID");
         object.addProperty("trasactionId", transactionID);
         object.addProperty("IBAN", IBAN);
         object.addProperty("hoeveelheid", hoeveelheid);
+        object.addProperty("CARD_UID", CARD_uid);
         String reaction = getSSLReaction(object.toString());
         JsonElement element = new JsonParser().parse(reaction);
         object = element.getAsJsonObject();
@@ -101,12 +102,13 @@ public class API {
         }
     }
 
-    public JsonResponse geldOpnemen(String transactionID, String IBAN, int hoeveelheid) {
+    public JsonResponse geldOpnemen(String transactionID, String IBAN, int hoeveelheid, String CARD_UID) {
         JsonObject object = new JsonObject();
         object.addProperty("type", "GELD_OPNEMEN");
         object.addProperty("trasactionId", transactionID);
         object.addProperty("IBAN", IBAN);
         object.addProperty("amount", hoeveelheid);
+        object.addProperty("CARD_UID", CARD_UID);
         String reaction = getSSLReaction(object.toString());
         JsonElement element = new JsonParser().parse(reaction);
         object = element.getAsJsonObject();

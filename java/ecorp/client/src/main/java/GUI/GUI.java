@@ -21,6 +21,7 @@ public class GUI {//TODO add exit on every screen
     private WithdrawAmountConfirmScreen withdrawAmountConfirmScreen;
     private EndScreen endScreen;
     private InteruptScreen interuptScreen;
+    private BiljetkeuzeScreen biljetkeuzeScreen;
     private API api;
     private Transaction transaction;
     private JsonResponse response;
@@ -36,7 +37,7 @@ public class GUI {//TODO add exit on every screen
 
     //TODO only temporary I SWEAR TESTING ONLY
     private String accountNumber="";
-
+    private ActiveScreen lastScreen;
     public void keyPressed(char key) {
         System.out.println(key);
         switch(activeScreen) {
@@ -47,7 +48,7 @@ public class GUI {//TODO add exit on every screen
                 }
                 if(Character.isSpaceChar(key)) {
                     System.out.println(accountNumber);
-                    JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "0");
+                    JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "1111111");
                     if(response.type.equals("CORRECT_REKENINGNUMMER")) {
                         this.transaction = new Transaction(response.IBAN,
                                 response.transaction_id,
@@ -73,7 +74,7 @@ public class GUI {//TODO add exit on every screen
                             pinScreen.backSpace();
                             break;
                         case 'b':
-                            if(pinScreen.getPin().length()<3)
+                            if(pinScreen.getPin().length()<4)
                                 break;
                             response = api.checkPinCode(transaction.getTransactionId(),
                                                         transaction.getIBAN(),
@@ -120,6 +121,13 @@ public class GUI {//TODO add exit on every screen
                             this.withdrawMoneyScreen = new WithdrawMoneyScreen();
                             withdrawMoneyScreen.addKeyListener(k);
                             break;
+                        case 'c':
+                            this.activeScreen = ActiveScreen.BILJETKEUZESCREEN;
+                            this.chooseActionScreen.setVisible(false);
+                            this.chooseActionScreen = null;
+                            this.biljetkeuzeScreen = new BiljetkeuzeScreen();
+                            biljetkeuzeScreen.addKeyListener(k);
+                            break;
                         case 'd':
                             this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
                             this.chooseActionScreen.setVisible(false);
@@ -158,7 +166,7 @@ public class GUI {//TODO add exit on every screen
                             break;
                         case 'b':
                             int amount = withdrawMoneyScreen.getEnteredAmount();
-
+                            this.lastScreen = ActiveScreen.WITHDRAWMONEYSCREEN;
                             this.activeScreen = ActiveScreen.WITHDRAWAMOUNTCONFIRMSCREEN;
                             this.withdrawMoneyScreen.setVisible(false);
                             this.withdrawMoneyScreen = null;
@@ -186,18 +194,51 @@ public class GUI {//TODO add exit on every screen
                     this.withdrawMoneyScreen.newNumber(Character.getNumericValue(key));
                 }
                 break;
+            case BILJETKEUZESCREEN:
+                if(Character.isLowerCase(key)) {
+                    switch (key) {
+                        case 'c':
+                        case 'b':
+                            biljetkeuzeScreen.addSubstract(key);
+                            break;
+                        case 'a':
+                            int amount = biljetkeuzeScreen.getEnteredAmount();
+                            this.lastScreen = ActiveScreen.BILJETKEUZESCREEN;
+                            this.activeScreen = ActiveScreen.WITHDRAWAMOUNTCONFIRMSCREEN;
+                            this.biljetkeuzeScreen.setVisible(false);
+                            this.biljetkeuzeScreen.removeKeyListener(k);
+                            this.withdrawAmountConfirmScreen = new WithdrawAmountConfirmScreen(amount);
+                            withdrawAmountConfirmScreen.addKeyListener(k);
+                            break;
+                        case 'd':
+                            this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
+                            this.biljetkeuzeScreen.setVisible(false);
+                            this.biljetkeuzeScreen = null;
+                            this.interuptScreen = new InteruptScreen();
+                            interuptScreen.addKeyListener(k);
+                            break;
+                    }
+                } else if(Character.isDigit(key)) {
+                    biljetkeuzeScreen.newNumber(Character.getNumericValue(key));
+                }
+                break;
             case WITHDRAWAMOUNTCONFIRMSCREEN:
                 if(Character.isLowerCase(key)) {
                     switch (key) {
                         case 'a':
                             JsonResponse result = api.gewensteOpnameHoeveelheid(transaction.getTransactionId(),
                                     transaction.getIBAN(),
-                                    withdrawAmountConfirmScreen.getDesiredAmount());
+                                    withdrawAmountConfirmScreen.getDesiredAmount(),
+                                    transaction.getCARD_UID());
                             if(result.type.equals("OPNAME_IS_MOGELIJK")) {
-                                api.geldOpnemen(transaction.getTransactionId(),transaction.getIBAN(),withdrawAmountConfirmScreen.getDesiredAmount());
+                                api.geldOpnemen(transaction.getTransactionId(),
+                                        transaction.getIBAN(),
+                                        withdrawAmountConfirmScreen.getDesiredAmount(),
+                                        transaction.getCARD_UID());
                                 this.activeScreen = ActiveScreen.ENDSCREEN;
                                 this.withdrawAmountConfirmScreen.setVisible(false);
                                 this.withdrawAmountConfirmScreen = null;
+                                this.biljetkeuzeScreen = null;
                                 this.endScreen = new EndScreen();
                                 endScreen.addKeyListener(k);
                             } else if(result.type.equals("HOGER_DAN_DAGLIMIET")) {
@@ -208,11 +249,15 @@ public class GUI {//TODO add exit on every screen
                             }
                             break;
                         case 'b':
-                            this.activeScreen = ActiveScreen.WITHDRAWMONEYSCREEN;
+                            this.activeScreen = lastScreen;
                             this.withdrawAmountConfirmScreen.setVisible(false);
                             this.withdrawAmountConfirmScreen = null;
-                            this.withdrawMoneyScreen = new WithdrawMoneyScreen();
-                            withdrawMoneyScreen.addKeyListener(k);
+                            if(lastScreen==ActiveScreen.WITHDRAWMONEYSCREEN) {
+                                this.withdrawMoneyScreen = new WithdrawMoneyScreen();
+                                withdrawMoneyScreen.addKeyListener(k);
+                            } else {
+                                this.biljetkeuzeScreen.setVisible(true);
+                            }
                             break;
                         case 'd':
                             this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
@@ -241,6 +286,6 @@ public class GUI {//TODO add exit on every screen
     }
     private enum ActiveScreen {
         MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN, WITHDRAWAMOUNTCONFIRMSCREEN,
-        ENDSCREEN, INTERUPTEDSCREEN
+        ENDSCREEN, BILJETKEUZESCREEN, INTERUPTEDSCREEN
     }
 }

@@ -10,7 +10,13 @@ public interface DatabaseInf {
     //checken of saldo>amount
     //true als goed, false als te weinig
 
-
+    /**
+     *
+     * @param rekeningNr
+     * @param pasNr
+     * @param amount
+     * @return [0:saldo te laag|1:pas geblokkeerd|2:over daglimiet|3:top]
+     */
     int withdrawPossible (String rekeningNr, String pasNr, int amount);
     //checkSaldo(), getGeblokkeerd(), checkDaglimiet()
     //hier zouden we wel met int kunnen werken voor als iets niet boolean terug geeft

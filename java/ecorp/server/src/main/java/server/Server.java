@@ -5,7 +5,7 @@ import apis.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.ecorp.server.src.main.java.apis.Database;
+//import java.ecorp.server.src.main.java.apis.Database;
 
 /**
  * Created by Hans de Rooij on 21/03/2017.
@@ -18,7 +18,7 @@ public class Server {
 
     public static void Server() {
         while (true) {
-            SSLServer server = new SSLServer();
+            SSLServer server = new SSLServer(DB_INSTANCE);
             server.start();
             while (server.isAlive()) {
 

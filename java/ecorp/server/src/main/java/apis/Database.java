@@ -20,7 +20,7 @@ public class Database implements DatabaseInf{
     private String uPass;
     private ResultSet rs;
 
-    private Database() {
+    public Database() {
 
         this.con = null;
         this.host = "jdbc:mysql://localhost:3306/E-corp";
@@ -73,7 +73,13 @@ public class Database implements DatabaseInf{
 
     }
 
-
+    /**
+     *
+     * @param rekeningNr
+     * @param pasNr
+     * @param amount
+     * @return [0:saldo te laag|1:pas geblokkeerd|2:over daglimiet|3:top]
+     */
     public int withdrawPossible(String rekeningNr, String pasNr, int amount){
 
         boolean result = checkSaldo(rekeningNr, amount);
@@ -365,7 +371,7 @@ public class Database implements DatabaseInf{
             rs = ps.executeQuery();
             String psPincode = rs.getString("pincode");
 
-            if (psPincode == pincode){         //kan dit? is dit efficient?
+            if (psPincode.equals(pincode)){         //kan dit? is dit efficient?
                 setFoutief(pasNr, true);
                 return true;
             }

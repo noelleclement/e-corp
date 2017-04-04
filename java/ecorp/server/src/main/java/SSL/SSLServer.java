@@ -9,11 +9,17 @@ import java.security.PrivilegedActionException;
 import javax.net.ssl.*;
 
 import apis.API;
+import apis.DatabaseInf;
 import com.sun.net.ssl.*;
 import com.sun.net.ssl.internal.ssl.Provider;
 
 public class SSLServer extends Thread {
 
+    private DatabaseInf database;
+    public SSLServer(DatabaseInf database) {
+        super();
+        this.database = database;
+    }
     public void run(){
 
         int intSSLport = 4443; // Port where the SSL server.Server needs to listen for new requests from the client
@@ -36,7 +42,7 @@ public class SSLServer extends Thread {
             SSLServerSocket sslServerSocket = (SSLServerSocket)sslServerSocketfactory.createServerSocket(intSSLport);
             SSLSocket sslSocket = (SSLSocket)sslServerSocket.accept();
 
-            API api = new API();
+            API api = new API(database);
 
             // Create Input / Output Streams for communication with the client
             while(true)

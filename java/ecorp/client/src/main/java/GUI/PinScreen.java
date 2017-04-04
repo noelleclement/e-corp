@@ -55,6 +55,10 @@ public class PinScreen extends ButtonScreen {
 
             pin = pin.substring(0, pin.length()-1);
         }
+        if(getPin().length()<4) {
+            rightButtons[1].setIdentifier("");
+            rightButtons[1].setText("");
+        }
         System.out.println(pin);
     }
 
