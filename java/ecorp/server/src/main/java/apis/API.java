@@ -136,17 +136,22 @@ public class API {
             return result.toString();
 
         }else if(hoeveelheidOpname==1){
-
             result.addProperty("transactionId", "123");
             result.addProperty("IBAN", object.get("IBAN").getAsString());
-            result.addProperty("type", "ONTOEREIKEND_SALDO");
-            result.addProperty("saldo", database.getSaldo(object.get("IBAN").getAsString()));
+            result.addProperty("type", "PAS_GEBLOKKEERD");
+            result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
             return result.toString();
         }else if(hoeveelheidOpname==2) {
             result.addProperty("transactionId", "123");
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "HOGER_DAN_DAGLIMIET");
             result.addProperty("saldo", database.getDagTotaal(object.get("CARD_UID").getAsString()));
+            return result.toString();
+        }else if(hoeveelheidOpname==0) {
+            result.addProperty("transactionId", "123");
+            result.addProperty("IBAN", object.get("IBAN").getAsString());
+            result.addProperty("type", "ONTOEREIKEND_SALDO");
+            result.addProperty("saldo", database.getSaldo(object.get("IBAN").getAsString()));
             return result.toString();
         }
         return "{kak:1}";
@@ -159,7 +164,7 @@ public class API {
                 object.get("amount").getAsInt());
 
         if (opnameGeld) {
-
+            System.out.println("Geldopname Mogelijk");
             JsonObject result = new JsonObject();
             result.addProperty("transactionId", "123");
             result.addProperty("IBAN", object.get("IBAN").getAsString());
@@ -167,11 +172,12 @@ public class API {
             result.addProperty("hoeveelheid", object.get("amount").getAsInt());
             return result.toString();
         } else {
+            System.out.println("Geldopname niet Mogelijk");
             JsonObject result = new JsonObject();
             result.addProperty("transactionId", "123");
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "ONTOEREIKEND_SALDO");
-            result.addProperty("saldo", "123.45");
+            result.addProperty("saldo", database.getSaldo(object.get("IBAN").getAsString()));
             return result.toString();
 
         }

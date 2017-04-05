@@ -45,11 +45,8 @@ public class SSLServer extends Thread {
             API api = new API(database);
 
             // Create Input / Output Streams for communication with the client
-            int whilecounter = 0;//TODO test
             while(true)
             {
-                System.out.println(whilecounter);
-                whilecounter++;
                 PrintWriter out = new PrintWriter(sslSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(
@@ -57,10 +54,8 @@ public class SSLServer extends Thread {
                 String inputLine, outputLine;
 
                 while ((inputLine = in.readLine()) != null) {
-
                     //out.write("You said: "+inputLine+"\n");
                     //out.write(inputLine+"\n");
-                    System.out.println(api.parse(inputLine));
                     out.write(api.parse(inputLine)+"\n");
                     out.flush();
                     System.out.println(inputLine);

@@ -125,25 +125,28 @@ public class Database implements DatabaseInf{
 
         try {
             double saldo = getSaldo(rekeningNr);
+            boolean result2 = true;
             if (withdrawPossible(rekeningNr, pasNr, amount)==3) {
                 //pinnen
                 logger.debug("withDraw with Rekeningnr " + rekeningNr, "saldo: " + saldo);
 
-                PreparedStatement ps = con.prepareStatement("UPDATE klant "
+                PreparedStatement ps = con.prepareStatement("UPDATE rekening "
                                                                 + "SET saldo = ? "
-                                                                + "WHERE rekeningnr = ?");
+                                                                + "WHERE rekeningNr = ?");
 
                 ps.setDouble(1, (saldo - amount));
                 ps.setString(2, rekeningNr);
-
-                boolean result = ps.execute();
+                int result1 = ps.executeUpdate();
+                if(result1==1){
+                    result2 = true;
+                }
 
                 if (logger.isDebugEnabled()) {
                     logger.debug("Nieuwe saldo: ", getSaldo(rekeningNr));
                 }
 
 
-                return result;
+                return result2;
             }
 
             logger.debug("Saldo is ontoereikend, gebruik withdrawPossible() voor reden");
