@@ -22,6 +22,7 @@ public class GUI {//TODO add exit on every screen
     private EndScreen endScreen;
     private InteruptScreen interuptScreen;
     private BiljetkeuzeScreen biljetkeuzeScreen;
+    private PincodePasBlockedScreen pincodePasBlockedScreen;
     private API api;
     private Transaction transaction;
     private JsonResponse response;
@@ -90,6 +91,12 @@ public class GUI {//TODO add exit on every screen
                                 JsonResponses.IncorrectePincode wrongPinResponse = (JsonResponses.IncorrectePincode) response;
                                 pinScreen.wrongPin(wrongPinResponse.pogingen);
 
+                            }else if(response.type.equals("MAXIMAAL_AANTAL_POGINGEN")) {
+                                this.activeScreen = ActiveScreen.WRONGPINTOOOFTENSCREEN;
+                                this.pinScreen.setVisible(false);
+                                this.pinScreen = null;
+                                this.pincodePasBlockedScreen = new PincodePasBlockedScreen();
+                                this.pincodePasBlockedScreen.addKeyListener(k);
                             }
                             break;
                         case 'd':
@@ -148,6 +155,13 @@ public class GUI {//TODO add exit on every screen
                             this.withdrawMoneyScreen = new WithdrawMoneyScreen();
                             withdrawMoneyScreen.addKeyListener(k);
                             break;
+                        case 'b':
+                            this.activeScreen = ActiveScreen.BILJETKEUZESCREEN;
+                            this.checkBalanceScreen.setVisible(false);
+                            this.checkBalanceScreen = null;
+                            this.biljetkeuzeScreen = new BiljetkeuzeScreen();
+                            biljetkeuzeScreen.addKeyListener(k);
+                            break;
                         case 'd':
                             this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
                             this.checkBalanceScreen.setVisible(false);
@@ -157,6 +171,13 @@ public class GUI {//TODO add exit on every screen
                             break;
                     }
                 }
+                break;
+            case WRONGPINTOOOFTENSCREEN:
+                this.activeScreen=ActiveScreen.MAINSCREEN;
+                this.pincodePasBlockedScreen.setVisible(false);
+                this.pincodePasBlockedScreen = null;
+                this.mainScreen = new MainScreen();
+                mainScreen.addKeyListener(k);
                 break;
             case WITHDRAWMONEYSCREEN:
                 if(Character.isLowerCase(key)) {
@@ -282,10 +303,11 @@ public class GUI {//TODO add exit on every screen
                 this.interuptScreen = null;
                 this.mainScreen = new MainScreen();
                 mainScreen.addKeyListener(k);
+                break;
         }
     }
     private enum ActiveScreen {
         MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN, WITHDRAWAMOUNTCONFIRMSCREEN,
-        ENDSCREEN, BILJETKEUZESCREEN, INTERUPTEDSCREEN
+        ENDSCREEN, BILJETKEUZESCREEN, WRONGPINTOOOFTENSCREEN, INTERUPTEDSCREEN
     }
 }
