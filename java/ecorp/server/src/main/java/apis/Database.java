@@ -82,6 +82,7 @@ public class Database implements DatabaseInf{
      * @param amount
      * @return [0:saldo te laag|1:pas geblokkeerd|2:over daglimiet|3:top]
      */
+
     public int withdrawPossible(String rekeningNr, String pasNr, int amount){
 
         boolean result = checkSaldo(rekeningNr, amount);
@@ -136,17 +137,15 @@ public class Database implements DatabaseInf{
 
                 ps.setDouble(1, (saldo - amount));
                 ps.setString(2, rekeningNr);
-                int result1 = ps.executeUpdate();
-                if(result1==1){
-                    result2 = true;
+
+
+                int resultex = ps.executeUpdate();
+                if (resultex >= 1) {
+                    if (logger.isDebugEnabled()) {
+                        logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                    }
+                    return true;
                 }
-
-                if (logger.isDebugEnabled()) {
-                    logger.debug("Nieuwe saldo: ", getSaldo(rekeningNr));
-                }
-
-
-                return result2;
             }
 
             logger.debug("Saldo is ontoereikend, gebruik withdrawPossible() voor reden");
@@ -192,13 +191,15 @@ public class Database implements DatabaseInf{
             ps.setInt(1, 1);
             ps.setString(2, pasNr);
 
-            boolean result = ps.execute();
-
-            if (logger.isDebugEnabled()) {
-                logger.debug("Nieuwe waarde 'geblokkeerd'", getGeblokkeerd(pasNr));
+            int resultex = ps.executeUpdate();
+            if (resultex >= 1){
+                if (logger.isDebugEnabled()) {
+                    logger.debug("Nieuwe waarde 'geblokkeerd'", getGeblokkeerd(pasNr));
+                }
+                return true;
             }
 
-            return result;
+            return false;
 
         }catch(SQLException e){
             logger.error("Execution of query setGeblokkeerd failed", e);
@@ -242,13 +243,15 @@ public class Database implements DatabaseInf{
                 ps.setInt(1, 0);
                 ps.setString(2, pasNr);
 
-                boolean result = ps.execute();
-
-                if (logger.isDebugEnabled()) {
-                    logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                int resultex = ps.executeUpdate();
+                if (resultex >= 1){
+                    if (logger.isDebugEnabled()) {
+                        logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                    }
+                    return true;
                 }
 
-                return result;
+                return false;
 
             }
 
@@ -265,14 +268,15 @@ public class Database implements DatabaseInf{
                     ps.setInt(1, (aantalFout+1));
                     ps.setString(2, pasNr);
 
-                    boolean result = ps.execute();
-
-                    if (logger.isDebugEnabled()) {
-                        logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                    int resultex = ps.executeUpdate();
+                    if (resultex >= 1){
+                        if (logger.isDebugEnabled()) {
+                            logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                        }
+                        return true;
                     }
 
-
-                    return result;
+                    return false;
                 }
 
 
@@ -285,21 +289,26 @@ public class Database implements DatabaseInf{
                     ps.setInt(1, 3);
                     ps.setString(2, pasNr);
 
-                    //TODO
-                    boolean result = ps.execute();
+                    int resultex = ps.executeUpdate();
+                    if (resultex >= 1){
+                        boolean result = true;
+                        if (logger.isDebugEnabled()) {
+                            logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                        }
 
-                    if (logger.isDebugEnabled()) {
-                        logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                        //set geblokkeerd
+                        result = setGeblokkeerd(pasNr);
+
+                        if (logger.isDebugEnabled()) {
+                            logger.debug("Nieuwe waarde 'geblokkeerd'", getGeblokkeerd(pasNr));
+                        }
+
+                        return result;
                     }
 
-                    //set geblokkeerd
-                    result = setGeblokkeerd(pasNr);
+                    return false;
 
-                    if (logger.isDebugEnabled()) {
-                        logger.debug("Nieuwe waarde 'geblokkeerd'", getGeblokkeerd(pasNr));
-                    }
 
-                    return result;
                 }
             }
 
