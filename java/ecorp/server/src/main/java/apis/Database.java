@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 
 /**
@@ -363,19 +364,15 @@ public class Database implements DatabaseInf{
 
     public boolean setTransactie(String pasNr, int amount){
 
-        //datum vandaag
-        LocalDate todayLD = LocalDate.now();
-        String todaySt = todayLD.toString();
 
         //updaten
         try {
             PreparedStatement ps = con.prepareStatement("INSERT INTO tranactie (datumtijd, hoeveelheid, pasNr) "
-                                                             + "VALUES (?, ?, ?) ");
+                                                             + "VALUES (NOW(), ?, ?) ");
 
 
-            ps.setString(1, todaySt);
-            ps.setInt(2, amount);
-            ps.setString(3, pasNr);
+            ps.setInt(1, amount);
+            ps.setString(2, pasNr);
 
             int resultex = ps.executeUpdate();
             if (resultex >= 1) {
