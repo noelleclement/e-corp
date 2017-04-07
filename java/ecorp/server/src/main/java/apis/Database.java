@@ -140,9 +140,14 @@ public class Database implements DatabaseInf{
                 int resultex = ps.executeUpdate();
                 if (resultex >= 1){
                     if (logger.isDebugEnabled()) {
-                        logger.debug("Nieuwe waarde 'fpoging'", getFoutief(pasNr));
+                        logger.debug("Nieuwe waarde 'saldo'", getSaldo(rekeningNr));
                     }
-                    return true;
+
+                    boolean transactieResult = setTransactie(pasNr, amount);
+
+                    if(transactieResult){
+                        return true;
+                    }
                 }
             }
 
@@ -352,6 +357,37 @@ public class Database implements DatabaseInf{
             logger.error("Execution of query getDaglimiet failed", e);
         }
         return 0.0;
+    }
+
+    public boolean setTransactie(String pasNr, int amount){
+
+        //datum vandaag
+        LocalDate todayLD = LocalDate.now();
+        String todaySt = todayLD.toString();
+
+        //updaten
+        try {
+            PreparedStatement ps = con.prepareStatement("INSERT INTO tranactie (datumtijd, hoeveelheid, pasNr) "
+                                                             + "VALUES (?, ?, ?) ");
+
+
+            ps.setString(1, todaySt);
+            ps.setInt(2, amount);
+            ps.setString(3, pasNr);
+
+            int resultex = ps.executeUpdate();
+            if (resultex >= 1) {
+
+                return true;
+
+            }
+
+        } catch(SQLException e){
+            logger.error("Execution of insertinto setTransactie failed", e);
+        }
+
+        return false;
+
     }
 
 
