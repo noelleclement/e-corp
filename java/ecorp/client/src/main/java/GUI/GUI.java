@@ -3,6 +3,8 @@ package GUI;
 
 import Backend.*;
 
+import java.net.PasswordAuthentication;
+
 /**
  * Created by Hans de Rooij on 21/02/2017.
  *
@@ -23,6 +25,7 @@ public class GUI {//TODO add exit on every screen
     private InteruptScreen interuptScreen;
     private BiljetkeuzeScreen biljetkeuzeScreen;
     private PincodePasBlockedScreen pincodePasBlockedScreen;
+    private pasGeblokkeerdScreen pasGeblokkeerdScreen;
     private API api;
     private Transaction transaction;
     private JsonResponse response;
@@ -46,6 +49,9 @@ public class GUI {//TODO add exit on every screen
                 if(Character.isDigit(key)) {
                     accountNumber = accountNumber+key;
                     mainScreen.tempLabelAccountNumber.setText(accountNumber);
+                }else if(Character.isLowerCase(key)) {
+                    accountNumber = "";
+                    mainScreen.tempLabelAccountNumber.setText("-");
                 }
                 if(Character.isSpaceChar(key)) {
                     System.out.println(accountNumber);
@@ -59,10 +65,14 @@ public class GUI {//TODO add exit on every screen
                         this.mainScreen = null;
                         this.pinScreen = new PinScreen();
                         pinScreen.addKeyListener(k);//TODO remove after keypad
-                    } else if(response.type.equals("INCORRECT_REKENINGNUMMER")) {
+                    } else if(response.type.equals("INCORRECT_REKENINGNUMMER")) { //TODO maak scherm voor
                         this.mainScreen.incorrectRekeningnummer();
                     } else if(response.type.equals("PAS_GEBLOKKEERD")) {
-                        this.mainScreen.pasGeblokkeerd();
+                        this.activeScreen = ActiveScreen.PASGEBLOKKEERDSCHERM;
+                        this.mainScreen.setVisible(false);
+                        this.mainScreen = null;
+                        this.pasGeblokkeerdScreen = new pasGeblokkeerdScreen();
+                        this.pasGeblokkeerdScreen.addKeyListener(k);
                     }
                 }
                 break;
@@ -304,10 +314,17 @@ public class GUI {//TODO add exit on every screen
                 this.mainScreen = new MainScreen();
                 mainScreen.addKeyListener(k);
                 break;
+            case PASGEBLOKKEERDSCHERM:
+                this.activeScreen=ActiveScreen.MAINSCREEN;
+                this.pasGeblokkeerdScreen.setVisible(false);
+                this.pasGeblokkeerdScreen = null;
+                this.mainScreen = new MainScreen();
+                mainScreen.addKeyListener(k);
+                break;
         }
     }
     private enum ActiveScreen {
         MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN, WITHDRAWAMOUNTCONFIRMSCREEN,
-        ENDSCREEN, BILJETKEUZESCREEN, WRONGPINTOOOFTENSCREEN, INTERUPTEDSCREEN
+        ENDSCREEN, BILJETKEUZESCREEN, WRONGPINTOOOFTENSCREEN, PASGEBLOKKEERDSCHERM, INTERUPTEDSCREEN
     }
 }
