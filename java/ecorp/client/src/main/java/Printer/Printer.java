@@ -101,7 +101,7 @@ import javax.swing.JPanel;
 
             graphics.setColor(Color.black);
 
-            Image img = new ImageIcon("//Users/Noelle/Documents/github/e-corp/java/ecorp/client/src/main/java/Printer/445110_1.jpg").getImage();
+            Image img = new ImageIcon("/ecorp/client/src/main/java/Printer/445110_1.jpg").getImage();
             graphics.drawImage(img, 55, 10, 50, 50, null);
 
             /*

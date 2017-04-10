@@ -389,6 +389,30 @@ public class Database implements DatabaseInf{
 
     }
 
+    public int getLatestTransactieID(String pasNr){
+        try{
+            PreparedStatement ps = con.prepareStatement("SELECT transactieID "
+                                                            + "FROM transactie "
+                                                            + "WHERE pasNr = ? "
+                                                            + "ORDER BY datumtijd DESC");
+
+
+            ps.setString(1, pasNr);
+            rs = ps.executeQuery();
+            rs.next();
+
+            int result = rs.getInt("transactieID");
+            return result;
+
+
+
+        } catch(SQLException e){
+            logger.error("Execution of select getTransactie failed", e);
+        }
+
+        return 0;
+    }
+
 
     public boolean checkPasRekening(String rekeningNr, String pasNr) {
         try{

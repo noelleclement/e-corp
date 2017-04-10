@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d682b8e1-4669-4908-98dd-1b6e753d1aec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Printer/Printer.java" afterPath="$PROJECT_DIR$/client/src/main/java/Printer/Printer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/Database.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/Database.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,29 +14,49 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1307">
-              <caret line="167" column="48" lean-forward="false" selection-start-line="167" selection-start-column="48" selection-end-line="167" selection-end-column="48" />
+            <state relative-caret-position="626">
+              <caret line="396" column="54" lean-forward="true" selection-start-line="396" selection-start-column="54" selection-end-line="396" selection-end-column="54" />
               <folding>
-                <marker date="1491820921000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
-                <marker date="1491820921000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
-                <marker date="1491820921000" expanded="false" signature="11033:11510" ph="{...}" />
-                <marker date="1491820921000" expanded="true" signature="11582:12255" ph="{...}" />
-                <marker date="1491820921000" expanded="true" signature="11649:11823" ph="SELECT * FRO... pas" />
-                <marker date="1491820921000" expanded="false" signature="12319:13150" ph="{...}" />
-                <marker date="1491820921000" expanded="true" signature="12386:12551" ph="SELECT pinco... pas" />
+                <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
+                <element signature="method#withDraw#0;class#Database#0" expanded="false" />
+                <element signature="method#getGeblokkeerd#0;class#Database#0" expanded="false" />
+                <element signature="method#setGeblokkeerd#0;class#Database#0" expanded="false" />
+                <element signature="method#setFoutief#0;class#Database#0" expanded="false" />
+                <element signature="method#checkDaglimiet#0;class#Database#0" expanded="false" />
+                <element signature="method#getDagTotaal#0;class#Database#0" expanded="false" />
+                <element signature="method#checkPasRekening#0;class#Database#0" expanded="false" />
+                <marker date="1491825557000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
+                <marker date="1491825557000" expanded="true" signature="3528:3716" ph="UPDATE reken... " />
+                <marker date="1491825557000" expanded="true" signature="4658:4835" ph="SELECT geblo... pas" />
+                <marker date="1491825557000" expanded="true" signature="5395:5571" ph="UPDATE pas S... " />
+                <marker date="1491825557000" expanded="true" signature="6204:6377" ph="SELECT fpogi... pas" />
+                <marker date="1491825557000" expanded="true" signature="6978:7159" ph="UPDATE pas S... " />
+                <marker date="1491825557000" expanded="true" signature="7832:8020" ph="UPDATE pas S... " />
+                <marker date="1491825557000" expanded="true" signature="8634:8822" ph="UPDATE pas S... " />
+                <marker date="1491825557000" expanded="true" signature="10238:10482" ph="SELECT SUM(h... transactie" />
+                <marker date="1491825557000" expanded="true" signature="11016:11157" ph="INSERT INTO transactie... " />
+                <marker date="1491825557000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
+                <marker date="1491825557000" expanded="true" signature="11634:11734" ph="SELECT trans... transactie" />
+                <marker date="1491825557000" expanded="true" signature="11634:11805" ph="SELECT trans... transactie" />
+                <marker date="1491825557000" expanded="true" signature="11634:11815" ph="SELECT trans... transactie" />
+                <marker date="1491825557000" expanded="true" signature="11634:11889" ph="SELECT trans... transactie" />
+                <marker date="1491825557000" expanded="true" signature="11634:11904" ph="SELECT trans... transactie" />
+                <marker date="1491825557000" expanded="true" signature="12367:12541" ph="SELECT * FRO... pas" />
+                <marker date="1491825557000" expanded="false" signature="13037:13868" ph="{...}" />
+                <marker date="1491825557000" expanded="true" signature="13104:13269" ph="SELECT pinco... pas" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/Printer/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1770">
-              <caret line="131" column="67" lean-forward="true" selection-start-line="131" selection-start-column="67" selection-end-line="131" selection-end-column="67" />
+            <state relative-caret-position="242">
+              <caret line="116" column="26" lean-forward="true" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -62,6 +83,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/client/src/main/java/Printer/Printer.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/apis/Database.java" />
       </list>
     </option>
   </component>
@@ -637,7 +659,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1493000" />
+    <option name="totallyTimeSpent" value="3034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -682,8 +704,14 @@
           <line>17</line>
           <properties class="apis.API" method="parse" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/apis/Database.java</url>
+          <line>218</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -722,13 +750,33 @@
         <state relative-caret-position="4180">
           <caret line="194" column="18" lean-forward="false" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
           <folding>
-            <marker date="1491820921000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
-            <marker date="1491820921000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
-            <marker date="1491820921000" expanded="false" signature="11033:11510" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11582:12255" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11649:11823" ph="SELECT * FRO... pas" />
-            <marker date="1491820921000" expanded="false" signature="12319:13150" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="12386:12551" ph="SELECT pinco... pas" />
+            <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
+            <element signature="method#withDraw#0;class#Database#0" expanded="false" />
+            <element signature="method#getGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setFoutief#0;class#Database#0" expanded="false" />
+            <element signature="method#checkDaglimiet#0;class#Database#0" expanded="false" />
+            <element signature="method#getDagTotaal#0;class#Database#0" expanded="false" />
+            <element signature="method#checkPasRekening#0;class#Database#0" expanded="false" />
+            <marker date="1491825557000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
+            <marker date="1491825557000" expanded="true" signature="3528:3716" ph="UPDATE reken... " />
+            <marker date="1491825557000" expanded="true" signature="4658:4835" ph="SELECT geblo... pas" />
+            <marker date="1491825557000" expanded="true" signature="5395:5571" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="6204:6377" ph="SELECT fpogi... pas" />
+            <marker date="1491825557000" expanded="true" signature="6978:7159" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="7832:8020" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="8634:8822" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="10238:10482" ph="SELECT SUM(h... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11016:11157" ph="INSERT INTO transactie... " />
+            <marker date="1491825557000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
+            <marker date="1491825557000" expanded="true" signature="11634:11734" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11805" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11815" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11889" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11904" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="12367:12541" ph="SELECT * FRO... pas" />
+            <marker date="1491825557000" expanded="false" signature="13037:13868" ph="{...}" />
+            <marker date="1491825557000" expanded="true" signature="13104:13269" ph="SELECT pinco... pas" />
           </folding>
         </state>
       </provider>
@@ -798,13 +846,33 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491820921000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
-            <marker date="1491820921000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
-            <marker date="1491820921000" expanded="false" signature="11033:11510" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11582:12255" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11649:11823" ph="SELECT * FRO... pas" />
-            <marker date="1491820921000" expanded="false" signature="12319:13150" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="12386:12551" ph="SELECT pinco... pas" />
+            <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
+            <element signature="method#withDraw#0;class#Database#0" expanded="false" />
+            <element signature="method#getGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setFoutief#0;class#Database#0" expanded="false" />
+            <element signature="method#checkDaglimiet#0;class#Database#0" expanded="false" />
+            <element signature="method#getDagTotaal#0;class#Database#0" expanded="false" />
+            <element signature="method#checkPasRekening#0;class#Database#0" expanded="false" />
+            <marker date="1491825557000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
+            <marker date="1491825557000" expanded="true" signature="3528:3716" ph="UPDATE reken... " />
+            <marker date="1491825557000" expanded="true" signature="4658:4835" ph="SELECT geblo... pas" />
+            <marker date="1491825557000" expanded="true" signature="5395:5571" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="6204:6377" ph="SELECT fpogi... pas" />
+            <marker date="1491825557000" expanded="true" signature="6978:7159" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="7832:8020" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="8634:8822" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="10238:10482" ph="SELECT SUM(h... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11016:11157" ph="INSERT INTO transactie... " />
+            <marker date="1491825557000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
+            <marker date="1491825557000" expanded="true" signature="11634:11734" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11805" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11815" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11889" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11904" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="12367:12541" ph="SELECT * FRO... pas" />
+            <marker date="1491825557000" expanded="false" signature="13037:13868" ph="{...}" />
+            <marker date="1491825557000" expanded="true" signature="13104:13269" ph="SELECT pinco... pas" />
           </folding>
         </state>
       </provider>
@@ -860,13 +928,33 @@
         <state relative-caret-position="7612">
           <caret line="350" column="29" lean-forward="false" selection-start-line="350" selection-start-column="29" selection-end-line="350" selection-end-column="29" />
           <folding>
-            <marker date="1491820921000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
-            <marker date="1491820921000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
-            <marker date="1491820921000" expanded="false" signature="11033:11510" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11582:12255" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11649:11823" ph="SELECT * FRO... pas" />
-            <marker date="1491820921000" expanded="false" signature="12319:13150" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="12386:12551" ph="SELECT pinco... pas" />
+            <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
+            <element signature="method#withDraw#0;class#Database#0" expanded="false" />
+            <element signature="method#getGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setFoutief#0;class#Database#0" expanded="false" />
+            <element signature="method#checkDaglimiet#0;class#Database#0" expanded="false" />
+            <element signature="method#getDagTotaal#0;class#Database#0" expanded="false" />
+            <element signature="method#checkPasRekening#0;class#Database#0" expanded="false" />
+            <marker date="1491825557000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
+            <marker date="1491825557000" expanded="true" signature="3528:3716" ph="UPDATE reken... " />
+            <marker date="1491825557000" expanded="true" signature="4658:4835" ph="SELECT geblo... pas" />
+            <marker date="1491825557000" expanded="true" signature="5395:5571" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="6204:6377" ph="SELECT fpogi... pas" />
+            <marker date="1491825557000" expanded="true" signature="6978:7159" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="7832:8020" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="8634:8822" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="10238:10482" ph="SELECT SUM(h... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11016:11157" ph="INSERT INTO transactie... " />
+            <marker date="1491825557000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
+            <marker date="1491825557000" expanded="true" signature="11634:11734" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11805" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11815" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11889" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11904" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="12367:12541" ph="SELECT * FRO... pas" />
+            <marker date="1491825557000" expanded="false" signature="13037:13868" ph="{...}" />
+            <marker date="1491825557000" expanded="true" signature="13104:13269" ph="SELECT pinco... pas" />
           </folding>
         </state>
       </provider>
@@ -928,13 +1016,33 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491820921000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
-            <marker date="1491820921000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
-            <marker date="1491820921000" expanded="false" signature="11033:11510" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11582:12255" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11649:11823" ph="SELECT * FRO... pas" />
-            <marker date="1491820921000" expanded="false" signature="12319:13150" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="12386:12551" ph="SELECT pinco... pas" />
+            <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
+            <element signature="method#withDraw#0;class#Database#0" expanded="false" />
+            <element signature="method#getGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setFoutief#0;class#Database#0" expanded="false" />
+            <element signature="method#checkDaglimiet#0;class#Database#0" expanded="false" />
+            <element signature="method#getDagTotaal#0;class#Database#0" expanded="false" />
+            <element signature="method#checkPasRekening#0;class#Database#0" expanded="false" />
+            <marker date="1491825557000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
+            <marker date="1491825557000" expanded="true" signature="3528:3716" ph="UPDATE reken... " />
+            <marker date="1491825557000" expanded="true" signature="4658:4835" ph="SELECT geblo... pas" />
+            <marker date="1491825557000" expanded="true" signature="5395:5571" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="6204:6377" ph="SELECT fpogi... pas" />
+            <marker date="1491825557000" expanded="true" signature="6978:7159" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="7832:8020" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="8634:8822" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="10238:10482" ph="SELECT SUM(h... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11016:11157" ph="INSERT INTO transactie... " />
+            <marker date="1491825557000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
+            <marker date="1491825557000" expanded="true" signature="11634:11734" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11805" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11815" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11889" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11904" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="12367:12541" ph="SELECT * FRO... pas" />
+            <marker date="1491825557000" expanded="false" signature="13037:13868" ph="{...}" />
+            <marker date="1491825557000" expanded="true" signature="13104:13269" ph="SELECT pinco... pas" />
           </folding>
         </state>
       </provider>
@@ -1059,22 +1167,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1307">
-          <caret line="167" column="48" lean-forward="false" selection-start-line="167" selection-start-column="48" selection-end-line="167" selection-end-column="48" />
-          <folding>
-            <marker date="1491820921000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
-            <marker date="1491820921000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
-            <marker date="1491820921000" expanded="false" signature="11033:11510" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11582:12255" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="11649:11823" ph="SELECT * FRO... pas" />
-            <marker date="1491820921000" expanded="false" signature="12319:13150" ph="{...}" />
-            <marker date="1491820921000" expanded="true" signature="12386:12551" ph="SELECT pinco... pas" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Printer/AppPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1087,9 +1179,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/Printer/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="131" column="67" lean-forward="true" selection-start-line="131" selection-start-column="67" selection-end-line="131" selection-end-column="67" />
+        <state relative-caret-position="242">
+          <caret line="116" column="26" lean-forward="true" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="396" column="54" lean-forward="true" selection-start-line="396" selection-start-column="54" selection-end-line="396" selection-end-column="54" />
+          <folding>
+            <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
+            <element signature="method#withDraw#0;class#Database#0" expanded="false" />
+            <element signature="method#getGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setGeblokkeerd#0;class#Database#0" expanded="false" />
+            <element signature="method#setFoutief#0;class#Database#0" expanded="false" />
+            <element signature="method#checkDaglimiet#0;class#Database#0" expanded="false" />
+            <element signature="method#getDagTotaal#0;class#Database#0" expanded="false" />
+            <element signature="method#checkPasRekening#0;class#Database#0" expanded="false" />
+            <marker date="1491825557000" expanded="true" signature="1279:1465" ph="SELECT saldo... rekening" />
+            <marker date="1491825557000" expanded="true" signature="3528:3716" ph="UPDATE reken... " />
+            <marker date="1491825557000" expanded="true" signature="4658:4835" ph="SELECT geblo... pas" />
+            <marker date="1491825557000" expanded="true" signature="5395:5571" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="6204:6377" ph="SELECT fpogi... pas" />
+            <marker date="1491825557000" expanded="true" signature="6978:7159" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="7832:8020" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="8634:8822" ph="UPDATE pas S... " />
+            <marker date="1491825557000" expanded="true" signature="10238:10482" ph="SELECT SUM(h... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11016:11157" ph="INSERT INTO transactie... " />
+            <marker date="1491825557000" expanded="true" signature="11033:11157" ph="INSERT INTO tranactie... " />
+            <marker date="1491825557000" expanded="true" signature="11634:11734" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11805" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11815" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11889" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="11634:11904" ph="SELECT trans... transactie" />
+            <marker date="1491825557000" expanded="true" signature="12367:12541" ph="SELECT * FRO... pas" />
+            <marker date="1491825557000" expanded="false" signature="13037:13868" ph="{...}" />
+            <marker date="1491825557000" expanded="true" signature="13104:13269" ph="SELECT pinco... pas" />
+          </folding>
         </state>
       </provider>
     </entry>
