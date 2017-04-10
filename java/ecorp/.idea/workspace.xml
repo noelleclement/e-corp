@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d682b8e1-4669-4908-98dd-1b6e753d1aec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Backend/Backend.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Backend/JsonResponse.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Backend/Transaction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Backend/UnexsistingUserException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Backend/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Backend/Users.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Client.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/ButtonScreen$RightButton.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/ButtonScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/ButtonlessScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/CheckBalanceScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/ChooseActionScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/DefaultScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/EndScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/InteruptScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/KeyboardHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/MainScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/PasBestaatNietScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/PinScreen$PinField.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/GUI/WithdrawMoneyScreen.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Printer/AppPrinter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Printer/Printer$OutPrintable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Printer/Printer$PrintPreview.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/Printer/Printer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/classes/SSL/SSLClient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/PasBestaatNietScreen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/target/classes/SSL/SSLServer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/target/classes/apis/API.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/target/classes/apis/Database.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/target/classes/apis/DatabaseInf.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/target/classes/apis/MockDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/target/classes/server/Server.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/GUI/BiljetkeuzeScreen.class" afterPath="$PROJECT_DIR$/client/target/classes/GUI/BiljetkeuzeScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/GUI/GUI$1.class" afterPath="$PROJECT_DIR$/client/target/classes/GUI/GUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/GUI/GUI$ActiveScreen.class" afterPath="$PROJECT_DIR$/client/target/classes/GUI/GUI$ActiveScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/GUI/GUI.class" afterPath="$PROJECT_DIR$/client/target/classes/GUI/GUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/Mydir/server-1.0.jar" afterPath="$PROJECT_DIR$/server/Mydir/server-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/BiljetkeuzeScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/BiljetkeuzeScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Printer/Printer.java" afterPath="$PROJECT_DIR$/client/src/main/java/Printer/Printer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/API.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/API.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +13,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="391" column="37" lean-forward="false" selection-start-line="391" selection-start-column="37" selection-end-line="391" selection-end-column="37" />
+            <state relative-caret-position="803">
+              <caret line="381" column="13" lean-forward="true" selection-start-line="381" selection-start-column="13" selection-end-line="381" selection-end-column="13" />
               <folding>
                 <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
                 <element signature="method#withDraw#0;class#Database#0" expanded="false" />
@@ -95,14 +51,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Printer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/Printer/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="115" column="26" lean-forward="false" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
-              <folding>
-                <marker date="1491825637000" expanded="true" signature="5344:5478" ph="{...}" />
-              </folding>
+            <state relative-caret-position="-722">
+              <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,6 +74,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -701,10 +658,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8000" />
+    <option name="totallyTimeSpent" value="151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -721,7 +679,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13304721" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13304721" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -744,12 +702,6 @@
           <url>file://$PROJECT_DIR$/server/src/main/java/apis/API.java</url>
           <line>17</line>
           <properties class="apis.API" method="parse" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/apis/Database.java</url>
-          <line>218</line>
-          <properties />
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="5" />
@@ -1218,20 +1170,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/Printer/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="115" column="26" lean-forward="false" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
-          <folding>
-            <marker date="1491825637000" expanded="true" signature="5344:5478" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/apis/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="391" column="37" lean-forward="false" selection-start-line="391" selection-start-column="37" selection-end-line="391" selection-end-column="37" />
+        <state relative-caret-position="803">
+          <caret line="381" column="13" lean-forward="true" selection-start-line="381" selection-start-column="13" selection-end-line="381" selection-end-column="13" />
           <folding>
             <element signature="method#withdrawPossible#0;class#Database#0" expanded="false" />
             <element signature="method#withDraw#0;class#Database#0" expanded="false" />
@@ -1261,6 +1203,14 @@
             <marker date="1491825557000" expanded="false" signature="13037:13868" ph="{...}" />
             <marker date="1491825557000" expanded="true" signature="13104:13269" ph="SELECT pinco... pas" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/Printer/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
