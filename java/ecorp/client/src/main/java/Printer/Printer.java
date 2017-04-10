@@ -21,7 +21,7 @@ import javax.swing.JPanel;
     public class Printer {
 
         private PageFormat page;
-        public String[] message = {"ING Bank", "uw saldo:" + " \u20AC" + "250"}; //dingen binnenhalen van informatie transactie ofzo
+        //public String[] message = {"ING Bank", "uw saldo:" + " \u20AC" + "250"}; //dingen binnenhalen van informatie transactie ofzo
 
         public String transactieID;
         public String rekeningNr;
@@ -130,7 +130,7 @@ import javax.swing.JPanel;
             graphics.drawString("RekeningNr: ", 20, 130);
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
-            graphics.drawString(rekeningNr, 80, 130);
+            graphics.drawString("xxxxxxx"+rekeningNr.substring(8), 80, 130);
 
             //datum/tijd
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
