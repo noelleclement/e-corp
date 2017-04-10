@@ -58,7 +58,6 @@ import javax.swing.JPanel;
             frame.add(new PrintPreview());
         }
 
-
         public void print (boolean voorbeeld ) {
 
 

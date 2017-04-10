@@ -44,25 +44,27 @@ public class API {
         boolean reknrpasinvoer = database.checkPasRekening(object.get("IBAN").getAsString(), object.get("CARD_UID").getAsString());
 
         if (reknrpasinvoer){
-            System.out.println("Goedrekjnr");
-            JsonObject result = new JsonObject();
-            result.addProperty("transactionId", "123");
-            result.addProperty("IBAN", object.get("IBAN").getAsString());
-            result.addProperty("type", "CORRECT_REKENINGNUMMER" );
-            result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
-            System.out.println(result);
-            return result.toString();
+            if(database.getGeblokkeerd(object.get("CARD_UID").getAsString())) {
+                System.out.println("Fout pasnr");
+                JsonObject result = new JsonObject();
+                result.addProperty("transactionId", "123");
+                result.addProperty("IBAN", object.get("IBAN").getAsString());
+                result.addProperty("type", "PAS_GEBLOKKEERD");
+                result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
 
-        } else if(database.getGeblokkeerd(object.get("CARD_UID").getAsString())) {
-            System.out.println("Fout pasnr");
-            JsonObject result = new JsonObject();
-            result.addProperty("transactionId", "123");
-            result.addProperty("IBAN", object.get("IBAN").getAsString());
-            result.addProperty("type", "PAS_GEBLOKKEERD" );
-            result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
+                System.out.println(result.toString());
+                return result.toString();
+            } else {
+                System.out.println("Goedrekjnr");
+                JsonObject result = new JsonObject();
+                result.addProperty("transactionId", "123");
+                result.addProperty("IBAN", object.get("IBAN").getAsString());
+                result.addProperty("type", "CORRECT_REKENINGNUMMER");
+                result.addProperty("CARD_UID", object.get("CARD_UID").getAsString());
+                System.out.println(result);
+                return result.toString();
+            }
 
-            System.out.println(result.toString());
-            return result.toString();
         }else{
             System.out.println("Fout reknr");
             JsonObject result = new JsonObject();
