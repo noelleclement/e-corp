@@ -7,7 +7,7 @@ public class AppPrinter {
 
 
     public static void main(String[] args){
-        Printer printer = new Printer(1, "1234567", "2016-01-03", 50);
-        printer.print(false);
+        Printer printer = new Printer(1, "EVIL1234567", "2016-01-03", 50);
+        printer.print(true);
     }
 }
