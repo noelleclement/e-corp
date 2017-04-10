@@ -427,7 +427,7 @@ public class GUI {
                                 if(lastScreen == ActiveScreen.BILJETKEUZESCREEN) {
                                     Printer printer = new Printer(123, //TODO right transactionID
                                             transaction.getIBAN(),
-                                            new SimpleDateFormat("dd-MM-yyyy").format(new Date()),
+                                            new SimpleDateFormat("dd-MM-yyyyG HH:mm:s").format(new Date()),
                                             withdrawAmountConfirmScreen.getDesiredAmount(),
                                             biljetkeuzeScreen.biljetten[0],
                                             biljetkeuzeScreen.biljetten[1],
@@ -457,7 +457,7 @@ public class GUI {
                                     }
                                     Printer printer = new Printer(123, //TODO right transactionID
                                             transaction.getIBAN(),
-                                            new SimpleDateFormat("dd-MM-yyyy").format(new Date()),
+                                            new SimpleDateFormat("d-MM-yyyyG HH:mm:s").format(new Date()),
                                             withdrawAmountConfirmScreen.getDesiredAmount(),
                                             tien,
                                             twintig,
