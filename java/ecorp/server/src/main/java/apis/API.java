@@ -145,7 +145,7 @@ public class API {
             result.addProperty("transactionId", "123");
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "HOGER_DAN_DAGLIMIET");
-            result.addProperty("saldo", database.getDagTotaal(object.get("CARD_UID").getAsString()));
+            result.addProperty("dagtotaal", database.getDagTotaal(object.get("CARD_UID").getAsString()));
             return result.toString();
         }else if(hoeveelheidOpname==0) {
             result.addProperty("transactionId", "123");
@@ -182,48 +182,4 @@ public class API {
 
         }
     }
-
-    /*public String transactieSTATUS(JsonObject object){
-
-        boolean statusTransactie database.getWithdraw(object.get("amount").getAsString());
-
-            if (statusTransactie) {
-
-                JsonObject result = new JsonObject;
-                result.addProperty("transactionId", "123");
-                result.addProperty("IBAN", object.get("IBAN").getAsString());
-                result.addProperty("type", "TRANSACTIE_ONDERBROKEN");
-                return result.toString();
-
-            } else if {
-
-                JsonObject result = new JsonObject;
-                result.addProperty("transactionId", "123");
-                result.addProperty("IBAN", object.get("IBAN").getAsString());
-                result.addProperty("type", "TRANSACTIE_AFGESLOTEN");
-                return result.toString();
-
-            } else if {
-
-                JsonObject result = new JsonObject;
-                result.addProperty("transactionId", "123");
-                result.addProperty("IBAN", object.get("IBAN").getAsString());
-                result.addProperty("type", "TRANSACTIE_TIMEOUT");
-                return result.toString();
-
-            } else if {
-
-                JsonObject result = new JsonObject;
-                result.addProperty("transactionId", "123");
-                result.addProperty("IBAN", object.get("IBAN").getAsString());
-                result.addProperty("type", "TRANSACTIENUMMER_ONBEKEND");
-                result.addProperty("CARD_UID", "ac30df");
-                return result.toString();
-            }
-            */
-
-
-
-
-
 }

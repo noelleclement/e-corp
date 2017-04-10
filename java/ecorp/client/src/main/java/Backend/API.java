@@ -87,9 +87,9 @@ public class API {
                     object.get("IBAN").getAsString(),
                     object.get("hoeveelheid").getAsInt());
         }else if(object.get("type").getAsString().equals("HOGER_DAN_DAGLIMIET")) {
-            return new JsonResponses.OpnameHogerDanDaglimiet(object.get("transactionID").getAsString(),
+            return new JsonResponses.OpnameHogerDanDaglimiet(object.get("transactionId").getAsString(),
                     object.get("IBAN").getAsString(),
-                    object.get("daglimiet").getAsInt());
+                    object.get("dagtotaal").getAsDouble());
         }else if(object.get("type").getAsString().equals("ONTOEREIKEND_SALDO")) {
             return new JsonResponses.OntoereikendSaldo(object.get("transactionId").getAsString(),
                     object.get("IBAN").getAsString(),

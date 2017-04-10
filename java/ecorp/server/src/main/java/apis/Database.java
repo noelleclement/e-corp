@@ -69,7 +69,7 @@ public class Database implements DatabaseInf{
 
     public boolean checkSaldo(String rekeningNr, int amount){
         double saldo = getSaldo(rekeningNr);
-        if (saldo > amount){
+        if (saldo >= amount){
             return true;
         }
         return false;
@@ -357,7 +357,7 @@ public class Database implements DatabaseInf{
 
 
         }catch(SQLException e){
-            logger.error("Execution of query getDaglimiet failed", e);
+            logger.error("Execution of query getDagtotaal failed", e);
         }
         return 0.0;
     }
@@ -367,7 +367,7 @@ public class Database implements DatabaseInf{
 
         //updaten
         try {
-            PreparedStatement ps = con.prepareStatement("INSERT INTO tranactie (datumtijd, hoeveelheid, pasNr) "
+            PreparedStatement ps = con.prepareStatement("INSERT INTO transactie (datumtijd, hoeveelheid, pasNr) "
                                                              + "VALUES (NOW(), ?, ?) ");
 
 

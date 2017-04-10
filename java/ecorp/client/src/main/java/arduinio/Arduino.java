@@ -10,6 +10,7 @@ import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import GUI.GUI;
 
 public class Arduino
 {
@@ -18,7 +19,13 @@ public class Arduino
         super();
     }*/
 
-    void connect ( String portName ) throws Exception
+    private static GUI gui;
+
+    public Arduino(GUI gui) {
+        this.gui = gui;
+    }
+
+    public void connect ( String portName ) throws Exception
     {
         CommPortIdentifier portIdentifier = CommPortIdentifier.getPortIdentifier(portName);
         if ( portIdentifier.isCurrentlyOwned() )
@@ -64,8 +71,10 @@ public class Arduino
             int len = -1;
             try
             {
+
                 while ( ( len = this.in.read(buffer)) > -1 )
                 {
+                    //gui.arduinoInput(new String(buffer,0,len));
                     System.out.print(new String(buffer,0,len));
                 }
             }
@@ -103,7 +112,7 @@ public class Arduino
         }
     }
 
-    public static void main ( String[] args )
+    /*public static void main ( String[] args )
     {
         try
         {
@@ -114,5 +123,5 @@ public class Arduino
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-    }
+    }*/
 }

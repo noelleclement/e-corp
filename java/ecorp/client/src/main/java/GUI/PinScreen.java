@@ -45,7 +45,7 @@ public class PinScreen extends ButtonScreen {
     }
 
     public void wrongPin(int tries) {
-        this.errorField.setText("<html>You've entered the <br>wrong PIN <br>"+tries+" times</html>");
+        this.errorField.setText("<html>You've entered the <br>wrong PIN <br>"+tries+" time"+(tries>1?"s":"")+"</html>");
         currentNumber = 0;
         for(int i=0;i<4;i++)
             pinField.setNumber(i,false);

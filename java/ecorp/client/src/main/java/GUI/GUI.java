@@ -2,6 +2,10 @@ package GUI;
 
 
 import Backend.*;
+import arduinio.Arduino;
+import arduinio.ArduinoNew;
+
+import java.net.PasswordAuthentication;
 
 /**
  * Created by Hans de Rooij on 21/02/2017.
@@ -23,17 +27,84 @@ public class GUI {//TODO add exit on every screen
     private InteruptScreen interuptScreen;
     private BiljetkeuzeScreen biljetkeuzeScreen;
     private PincodePasBlockedScreen pincodePasBlockedScreen;
+    private pasGeblokkeerdScreen pasGeblokkeerdScreen;
     private API api;
     private Transaction transaction;
     private JsonResponse response;
+    private ArduinoNew arduino;
 
     private KeyboardHandler k;
     public GUI() {
         this.api = new API();
         this.mainScreen = new MainScreen();
         k = new KeyboardHandler(this);
+        try {
+            this.arduino = new ArduinoNew();
+            arduino.startup(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         mainScreen.addKeyListener(k);//TODO remove after buttons
         this.activeScreen = ActiveScreen.MAINSCREEN;
+    }
+
+    private String rekeningNummer;
+    private String pasNummer;
+
+    public void arduinoInput(String inputLine) {
+        System.out.println(inputLine.length());
+        if(inputLine.length()==11) {
+            //Een rekeningnummer
+            this.rekeningNummer = inputLine;
+            this.mainScreenInput();
+        } else if(inputLine.length() >15) {
+            this.pasNummer = inputLine;
+            this.mainScreenInput();
+        } else if(inputLine.length() == 1 ) {
+            this.keyPressed(Character.toLowerCase(inputLine.charAt(0)));
+        }
+    }
+
+    private void mainScreenInput() {
+        if(this.activeScreen==ActiveScreen.MAINSCREEN) {
+            this.mainScreen.tempLabelAccountNumber.setText(rekeningNummer+"  "+pasNummer);
+            if(this.rekeningNummer.length()==11 && this.pasNummer.length() == 16) {
+                JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(rekeningNummer, pasNummer);
+                if(response.type.equals("CORRECT_REKENINGNUMMER")) {
+                    this.transaction = new Transaction(response.IBAN,
+                            response.transaction_id,
+                            response.card_uid);
+                    this.activeScreen = ActiveScreen.PINSCREEN;
+                    this.mainScreen.setVisible(false);
+                    this.mainScreen = null;
+                    this.pinScreen = new PinScreen();
+                    pinScreen.addKeyListener(k);//TODO remove after keypad
+                } else if(response.type.equals("INCORRECT_REKENINGNUMMER")) { //TODO maak scherm voor
+                    this.mainScreen.incorrectRekeningnummer();
+                } else if(response.type.equals("PAS_GEBLOKKEERD")) {
+                    this.activeScreen = ActiveScreen.PASGEBLOKKEERDSCHERM;
+                    this.mainScreen.setVisible(false);
+                    this.mainScreen = null;
+                    this.pasGeblokkeerdScreen = new pasGeblokkeerdScreen();
+                    this.pasGeblokkeerdScreen.addKeyListener(k);
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    this.activeScreen = ActiveScreen.MAINSCREEN;
+                    this.pasGeblokkeerdScreen.setVisible(false);
+                    this.pasGeblokkeerdScreen = null;
+                    this.mainScreen = new MainScreen();
+                    this.mainScreen.addKeyListener(k);
+                }
+                this.rekeningNummer = "";
+                this.pasNummer = "";
+            }
+        } else {
+            this.rekeningNummer = "";
+            this.pasNummer = "";
+        }
     }
 
     //TODO only temporary I SWEAR TESTING ONLY
@@ -46,6 +117,9 @@ public class GUI {//TODO add exit on every screen
                 if(Character.isDigit(key)) {
                     accountNumber = accountNumber+key;
                     mainScreen.tempLabelAccountNumber.setText(accountNumber);
+                }else if(Character.isLowerCase(key)) {
+                    accountNumber = "";
+                    mainScreen.tempLabelAccountNumber.setText("-");
                 }
                 if(Character.isSpaceChar(key)) {
                     System.out.println(accountNumber);
@@ -59,10 +133,20 @@ public class GUI {//TODO add exit on every screen
                         this.mainScreen = null;
                         this.pinScreen = new PinScreen();
                         pinScreen.addKeyListener(k);//TODO remove after keypad
-                    } else if(response.type.equals("INCORRECT_REKENINGNUMMER")) {
+                    } else if(response.type.equals("INCORRECT_REKENINGNUMMER")) { //TODO maak scherm voor
                         this.mainScreen.incorrectRekeningnummer();
                     } else if(response.type.equals("PAS_GEBLOKKEERD")) {
-                        this.mainScreen.pasGeblokkeerd();
+                        this.activeScreen = ActiveScreen.PASGEBLOKKEERDSCHERM;
+                        this.mainScreen.setVisible(false);
+                        this.mainScreen = null;
+                        this.pasGeblokkeerdScreen = new pasGeblokkeerdScreen();
+                        this.pasGeblokkeerdScreen.addKeyListener(k);
+
+                        this.activeScreen = ActiveScreen.MAINSCREEN;
+                        this.pasGeblokkeerdScreen.setVisible(false);
+                        this.pasGeblokkeerdScreen = null;
+                        this.mainScreen = new MainScreen();
+                        this.mainScreen.addKeyListener(k);
                     }
                 }
                 break;
@@ -97,6 +181,16 @@ public class GUI {//TODO add exit on every screen
                                 this.pinScreen = null;
                                 this.pincodePasBlockedScreen = new PincodePasBlockedScreen();
                                 this.pincodePasBlockedScreen.addKeyListener(k);
+                                try {
+                                    Thread.sleep(3000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                                this.activeScreen = ActiveScreen.MAINSCREEN;
+                                this.pincodePasBlockedScreen.setVisible(false);
+                                this.pincodePasBlockedScreen = null;
+                                this.mainScreen = new MainScreen();
+                                this.mainScreen.addKeyListener(k);
                             }
                             break;
                         case 'd':
@@ -105,6 +199,16 @@ public class GUI {//TODO add exit on every screen
                             this.pinScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            this.activeScreen = ActiveScreen.MAINSCREEN;
+                            this.interuptScreen.setVisible(false);
+                            this.interuptScreen = null;
+                            this.mainScreen = new MainScreen();
+                            this.mainScreen.addKeyListener(k);
                             break;
                     }
                 }
@@ -141,6 +245,16 @@ public class GUI {//TODO add exit on every screen
                             this.chooseActionScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            this.activeScreen = ActiveScreen.MAINSCREEN;
+                            this.interuptScreen.setVisible(false);
+                            this.interuptScreen = null;
+                            this.mainScreen = new MainScreen();
+                            this.mainScreen.addKeyListener(k);
                             break;
                     }
                 }
@@ -168,6 +282,16 @@ public class GUI {//TODO add exit on every screen
                             this.checkBalanceScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            this.activeScreen = ActiveScreen.MAINSCREEN;
+                            this.interuptScreen.setVisible(false);
+                            this.interuptScreen = null;
+                            this.mainScreen = new MainScreen();
+                            this.mainScreen.addKeyListener(k);
                             break;
                     }
                 }
@@ -209,6 +333,16 @@ public class GUI {//TODO add exit on every screen
                             this.withdrawMoneyScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            this.activeScreen = ActiveScreen.MAINSCREEN;
+                            this.interuptScreen.setVisible(false);
+                            this.interuptScreen = null;
+                            this.mainScreen = new MainScreen();
+                            this.mainScreen.addKeyListener(k);
                             break;
                     }
                 } else if(Character.isDigit(key)) {
@@ -237,6 +371,16 @@ public class GUI {//TODO add exit on every screen
                             this.biljetkeuzeScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            this.activeScreen = ActiveScreen.MAINSCREEN;
+                            this.interuptScreen.setVisible(false);
+                            this.interuptScreen = null;
+                            this.mainScreen = new MainScreen();
+                            this.mainScreen.addKeyListener(k);
                             break;
                     }
                 } else if(Character.isDigit(key)) {
@@ -262,6 +406,16 @@ public class GUI {//TODO add exit on every screen
                                 this.biljetkeuzeScreen = null;
                                 this.endScreen = new EndScreen();
                                 endScreen.addKeyListener(k);
+                                try {
+                                    Thread.sleep(3000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                                this.activeScreen = ActiveScreen.MAINSCREEN;
+                                this.endScreen.setVisible(false);
+                                this.endScreen = null;
+                                this.mainScreen = new MainScreen();
+                                this.mainScreen.addKeyListener(k);
                             } else if(result.type.equals("HOGER_DAN_DAGLIMIET")) {
                                 //result = (JsonResponses.OpnameHogerDanDaglimiet) result;
                                 withdrawAmountConfirmScreen.hogerDanDaglimiet();
@@ -286,6 +440,16 @@ public class GUI {//TODO add exit on every screen
                             this.withdrawAmountConfirmScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            this.activeScreen = ActiveScreen.MAINSCREEN;
+                            this.interuptScreen.setVisible(false);
+                            this.interuptScreen = null;
+                            this.mainScreen = new MainScreen();
+                            this.mainScreen.addKeyListener(k);
                             break;
                     }
                 }
@@ -295,7 +459,6 @@ public class GUI {//TODO add exit on every screen
                 this.endScreen.setVisible(false);
                 this.endScreen = null;
                 this.mainScreen = new MainScreen();
-                mainScreen.addKeyListener(k);
                 break;
             case INTERUPTEDSCREEN:
                 this.activeScreen=ActiveScreen.MAINSCREEN;
@@ -304,10 +467,17 @@ public class GUI {//TODO add exit on every screen
                 this.mainScreen = new MainScreen();
                 mainScreen.addKeyListener(k);
                 break;
+            case PASGEBLOKKEERDSCHERM:
+                this.activeScreen=ActiveScreen.MAINSCREEN;
+                this.pasGeblokkeerdScreen.setVisible(false);
+                this.pasGeblokkeerdScreen = null;
+                this.mainScreen = new MainScreen();
+                mainScreen.addKeyListener(k);
+                break;
         }
     }
     private enum ActiveScreen {
         MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN, WITHDRAWAMOUNTCONFIRMSCREEN,
-        ENDSCREEN, BILJETKEUZESCREEN, WRONGPINTOOOFTENSCREEN, INTERUPTEDSCREEN
+        ENDSCREEN, BILJETKEUZESCREEN, WRONGPINTOOOFTENSCREEN, PASGEBLOKKEERDSCHERM, INTERUPTEDSCREEN
     }
 }
