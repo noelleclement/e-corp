@@ -4,8 +4,10 @@ package GUI;
 import Backend.*;
 import arduinio.Arduino;
 import arduinio.ArduinoNew;
-
+import Printer.*;
 import java.net.PasswordAuthentication;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by Hans de Rooij on 21/02/2017.
@@ -416,11 +418,52 @@ public class GUI {
                     switch (key) {
                         case 'a':
                         case 'b':
+
                             JsonResponse result = api.gewensteOpnameHoeveelheid(transaction.getTransactionId(),
                                     transaction.getIBAN(),
                                     withdrawAmountConfirmScreen.getDesiredAmount(),
                                     transaction.getCARD_UID());
                             if(result.type.equals("OPNAME_IS_MOGELIJK")) {
+                                if(lastScreen == ActiveScreen.BILJETKEUZESCREEN) {
+                                    Printer printer = new Printer(123, //TODO right transactionID
+                                            transaction.getIBAN(),
+                                            new SimpleDateFormat("dd-MM-yyyy").format(new Date()),
+                                            withdrawAmountConfirmScreen.getDesiredAmount(),
+                                            biljetkeuzeScreen.biljetten[0],
+                                            biljetkeuzeScreen.biljetten[1],
+                                            biljetkeuzeScreen.biljetten[2]);
+                                    printer.print(false);
+                                } else {
+                                    int bedrag = withdrawAmountConfirmScreen.getDesiredAmount();
+                                    int tien = 0, twintig = 0, vijftig = 0;
+                                    while (bedrag>0) {
+                                        int tempBedrag = bedrag-50;
+                                        if(tempBedrag>=0) {
+                                            vijftig++;
+                                            bedrag -= 50;
+                                        } else {
+                                            tempBedrag  = bedrag-20;
+                                            if(tempBedrag>=0) {
+                                                twintig++;
+                                                bedrag -= 20;
+                                            } else {
+                                                tempBedrag = bedrag - 10;
+                                                if (tempBedrag >= 0) {
+                                                    tien++;
+                                                    bedrag -= 10;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    Printer printer = new Printer(123, //TODO right transactionID
+                                            transaction.getIBAN(),
+                                            new SimpleDateFormat("dd-MM-yyyy").format(new Date()),
+                                            withdrawAmountConfirmScreen.getDesiredAmount(),
+                                            tien,
+                                            twintig,
+                                            vijftig);
+                                    printer.print(false);
+                                }
                                 api.geldOpnemen(transaction.getTransactionId(),
                                         transaction.getIBAN(),
                                         withdrawAmountConfirmScreen.getDesiredAmount(),
