@@ -27,7 +27,7 @@ public class BiljetkeuzeScreen extends ButtonScreen {
         addPinField();
     }
 
-    private int[] biljetten = {0,0,0};
+    public int[] biljetten = {0,0,0};
     private int activeBiljet = 10;
 
 
