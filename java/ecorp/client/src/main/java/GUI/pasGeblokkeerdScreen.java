@@ -6,7 +6,7 @@ package GUI;
 public class pasGeblokkeerdScreen extends ButtonlessScreen {
     public pasGeblokkeerdScreen() {
         super();
-        this.mainTextLabel.setText("<htlm>your pas is blocked,<br>please contact your bank</html>");
+        this.mainTextLabel.setText("<html>your pas is blocked,<br>please contact your bank</html>");
     }
 
 

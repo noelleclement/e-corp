@@ -1,7 +1,5 @@
 package Backend;
 
-import java.util.Date;
-
 /**
  * Created by Hans de Rooij on 24/03/2017.
  */
@@ -75,9 +73,9 @@ public class JsonResponses {
     }
 
     public static class OpnameHogerDanDaglimiet extends JsonResponse {
-        public int daglimiet;
+        public double daglimiet;
 
-        public OpnameHogerDanDaglimiet(String transaction_id, String IBAN, int daglimiet) {
+        public OpnameHogerDanDaglimiet(String transaction_id, String IBAN, double daglimiet) {
             super("HOGER_DAN_DAGLIMIET", IBAN);
             this.type = "HOGER_DAN_DAGLIMIET";
             this.transaction_id = transaction_id;

@@ -145,7 +145,7 @@ public class API {
             result.addProperty("transactionId", "123");
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "HOGER_DAN_DAGLIMIET");
-            result.addProperty("saldo", database.getDagTotaal(object.get("CARD_UID").getAsString()));
+            result.addProperty("dagtotaal", database.getDagTotaal(object.get("CARD_UID").getAsString()));
             return result.toString();
         }else if(hoeveelheidOpname==0) {
             result.addProperty("transactionId", "123");
