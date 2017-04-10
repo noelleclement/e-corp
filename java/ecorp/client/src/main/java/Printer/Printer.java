@@ -101,6 +101,7 @@ import javax.swing.JPanel;
             graphics.setColor(Color.black);
 
             Image img = new ImageIcon("445110_1.jpg").getImage();
+
             graphics.drawImage(img, 55, 10, 50, 50, null);
 
             /*
