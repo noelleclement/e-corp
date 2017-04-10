@@ -25,17 +25,22 @@ import javax.swing.JPanel;
 
         public String transactieID;
         public String rekeningNr;
-        public String bedrag;
         public String datumtijd;
+        public String tien;
+        public String twintig;
+        public String vijftig;
+        public String bedrag;
 
 
-        public Printer(int transactieID_, String rekeningNr_, String datumtijd_, int bedrag_) {
+        public Printer(int transactieID_, String rekeningNr_, String datumtijd_, int bedrag_, int tien_, int twintig_, int vijftig_ ) {
 
             transactieID = Integer.toString(transactieID_);
             rekeningNr = rekeningNr_;
-            bedrag = Integer.toString(bedrag_);
             datumtijd = datumtijd_;             //letop hier wordt er rekening mee gehouden dat datumtijd overal in server door wordt gegeven als String
-
+            tien = Integer.toString(tien_);
+            twintig = Integer.toString(twintig_);
+            vijftig = Integer.toString(vijftig_);
+            bedrag = Integer.toString(bedrag_);
 
         }
 
@@ -77,15 +82,6 @@ import javax.swing.JPanel;
                 try {
                     pj.print();
 
-                    /*
-                    if (noDialog)
-                        job.print();
-                    else{
-                        if (job.printDialog())
-                            job.print();
-                        }
-                    }
-                     */
                 }
                 catch(PrinterException e) {
                     System.out.println("Error while printing: " + e.getMessage());
@@ -125,7 +121,7 @@ import javax.swing.JPanel;
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
             graphics.drawString(transactieID, 80, 110);
 
-            //rekeningnr Exxxxxx2834
+            //rekeningnr xxxxxxx2834
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
             graphics.drawString("RekeningNr: ", 20, 130);
 
@@ -138,6 +134,13 @@ import javax.swing.JPanel;
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
             graphics.drawString(datumtijd, 80, 150);
+
+            //biljetten
+            graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
+            graphics.drawString("Biljetten: ", 20, 150);
+
+            graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
+            graphics.drawString("10: "+tien+", 20: "+twintig+", 50: "+vijftig, 80, 150);
 
             //bedrag
             graphics.setFont(new Font("Bodoni MT", Font.BOLD, 10));
