@@ -100,7 +100,7 @@ import javax.swing.JPanel;
 
             graphics.setColor(Color.black);
 
-            Image img = new ImageIcon("//Users/Noelle/Documents/github/e-corp/java/ecorp/client/src/main/java/Printer/445110_1.jpg").getImage();
+            Image img = new ImageIcon("445110_1.jpg").getImage();
             graphics.drawImage(img, 55, 10, 50, 50, null);
 
             /*
@@ -111,42 +111,42 @@ import javax.swing.JPanel;
             graphics.setFont(new Font("Roboto", Font.PLAIN, 8));
             graphics.drawString("Together we can change the world", 13, 70);
 
-            graphics.drawLine(10, 80, 150, 80);
+            graphics.drawLine(50, 80, 150, 80);
 
             //transactieid
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
-            graphics.drawString("TransactieNr: ", 20, 110);
+            graphics.drawString("TransactieNr: ", 10, 110);
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
-            graphics.drawString(transactieID, 80, 110);
+            graphics.drawString(transactieID, 58, 110);
 
             //rekeningnr xxxxxxx2834
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
-            graphics.drawString("RekeningNr: ", 20, 130);
+            graphics.drawString("RekeningNr: ", 10, 130);
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
-            graphics.drawString("xxxxxxx"+rekeningNr.substring(7), 80, 130);
+            graphics.drawString("xxxxxxx"+rekeningNr.substring(7), 58, 130);
 
             //datum/tijd
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
-            graphics.drawString("Datum: ", 20, 150);
+            graphics.drawString("Datum: ", 10, 150);
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
-            graphics.drawString(datumtijd, 80, 150);
+            graphics.drawString(datumtijd, 58, 150);
 
             //biljetten
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
-            graphics.drawString("Biljetten: ", 20, 170);
+            graphics.drawString("Biljetten: ", 10, 170);
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
-            graphics.drawString("10: "+tien+", 20: "+twintig+", 50: "+vijftig, 80, 170);
+            graphics.drawString("10: "+tien+", 20: "+twintig+", 50: "+vijftig, 58, 170);
 
             //bedrag
             graphics.setFont(new Font("Bodoni MT", Font.BOLD, 10));
-            graphics.drawString("Totaal: ", 15, 200);
+            graphics.drawString("Totaal: ", 5, 200);
 
             graphics.setFont(new Font("Dialog", Font.BOLD, 10));
-            graphics.drawString(bedrag, 80, 200);
+            graphics.drawString(bedrag, 58, 200);
 
 
 
