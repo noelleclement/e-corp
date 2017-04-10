@@ -101,7 +101,7 @@ import javax.swing.JPanel;
 
             graphics.setColor(Color.black);
 
-            Image img = new ImageIcon("//Users/Noelle/Documents/github/e-corp/445110_1.jpg").getImage();
+            Image img = new ImageIcon("//Users/Noelle/Documents/github/e-corp/java/ecorp/client/src/main/java/Printer/445110_1.jpg").getImage();
             graphics.drawImage(img, 55, 10, 50, 50, null);
 
             /*
@@ -126,7 +126,7 @@ import javax.swing.JPanel;
             graphics.drawString("RekeningNr: ", 20, 130);
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
-            graphics.drawString("xxxxxxx"+rekeningNr.substring(8), 80, 130);
+            graphics.drawString("xxxxxxx"+rekeningNr.substring(7), 80, 130);
 
             //datum/tijd
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
@@ -137,10 +137,10 @@ import javax.swing.JPanel;
 
             //biljetten
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
-            graphics.drawString("Biljetten: ", 20, 150);
+            graphics.drawString("Biljetten: ", 20, 170);
 
             graphics.setFont(new Font("Dialog", Font.PLAIN, 8));
-            graphics.drawString("10: "+tien+", 20: "+twintig+", 50: "+vijftig, 80, 150);
+            graphics.drawString("10: "+tien+", 20: "+twintig+", 50: "+vijftig, 80, 170);
 
             //bedrag
             graphics.setFont(new Font("Bodoni MT", Font.BOLD, 10));
