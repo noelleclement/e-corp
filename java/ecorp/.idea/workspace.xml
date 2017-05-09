@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d682b8e1-4669-4908-98dd-1b6e753d1aec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/GUI/GUI$ActiveScreen.class" afterPath="$PROJECT_DIR$/client/target/classes/GUI/GUI$ActiveScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/GUI/GUI.class" afterPath="$PROJECT_DIR$/client/target/classes/GUI/GUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/Printer/AppPrinter.class" afterPath="$PROJECT_DIR$/client/target/classes/Printer/AppPrinter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/Printer/Printer$OutPrintable.class" afterPath="$PROJECT_DIR$/client/target/classes/Printer/Printer$OutPrintable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/Printer/Printer$PrintPreview.class" afterPath="$PROJECT_DIR$/client/target/classes/Printer/Printer$PrintPreview.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/Printer/Printer.class" afterPath="$PROJECT_DIR$/client/target/classes/Printer/Printer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/Mydir/server-1.0.jar" afterPath="$PROJECT_DIR$/server/Mydir/server-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/BiljetkeuzeScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/BiljetkeuzeScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/CheckBalanceScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/CheckBalanceScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/ChooseActionScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/ChooseActionScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/EndScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/EndScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/InteruptScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/InteruptScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/MainScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/MainScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/PasBestaatNietScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/PasBestaatNietScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/PinScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/PinScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/PincodePasBlockedScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/PincodePasBlockedScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawMoneyScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawMoneyScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/GUI/pasGeblokkeerdScreen.java" afterPath="$PROJECT_DIR$/client/src/main/java/GUI/pasGeblokkeerdScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Printer/AppPrinter.java" afterPath="$PROJECT_DIR$/client/src/main/java/Printer/AppPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/Printer/Printer.java" afterPath="$PROJECT_DIR$/client/src/main/java/Printer/Printer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/API.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/API.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/DatabaseInf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/apis/MockDB.java" afterPath="$PROJECT_DIR$/server/src/main/java/apis/MockDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/client/target/" />
     <ignored path="$PROJECT_DIR$/server/target/" />
@@ -76,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PinScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PinScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/PinScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1390">
-              <caret line="97" column="9" lean-forward="false" selection-start-line="94" selection-start-column="26" selection-end-line="97" selection-end-column="9" />
+            <state relative-caret-position="290">
+              <caret line="47" column="101" lean-forward="false" selection-start-line="47" selection-start-column="101" selection-end-line="47" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -96,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WithdrawMoneyScreen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WithdrawMoneyScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/WithdrawMoneyScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-106">
-              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+            <state relative-caret-position="488">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -191,9 +165,9 @@
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/PasBestaatNietScreen.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/pasGeblokkeerdScreen.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/PincodePasBlockedScreen.java" />
-        <option value="$PROJECT_DIR$/client/src/main/java/GUI/PinScreen.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/GUI/WithdrawMoneyScreen.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/GUI/PinScreen.java" />
       </list>
     </option>
   </component>
@@ -935,12 +909,12 @@
       <updated>1491904051342</updated>
       <workItem from="1491904057871" duration="3245000" />
       <workItem from="1494334705299" duration="19000" />
-      <workItem from="1494334812314" duration="1261000" />
+      <workItem from="1494334812314" duration="2076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7645000" />
+    <option name="totallyTimeSpent" value="8460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1291,6 +1265,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1445" column="7" lean-forward="false" selection-start-line="1445" selection-start-column="0" selection-end-line="1445" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,14 +1429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/PinScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1390">
-          <caret line="97" column="9" lean-forward="false" selection-start-line="94" selection-start-column="26" selection-end-line="97" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/WithdrawAmountConfirmScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -1472,8 +1439,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/WithdrawMoneyScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        <state relative-caret-position="488">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/GUI/PinScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="47" column="101" lean-forward="false" selection-start-line="47" selection-start-column="101" selection-end-line="47" selection-end-column="101" />
           <folding />
         </state>
       </provider>
