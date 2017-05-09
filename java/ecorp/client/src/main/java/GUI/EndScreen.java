@@ -6,6 +6,6 @@ package GUI;
 public class EndScreen extends ButtonlessScreen {
     public EndScreen() {
         super();
-        this.mainTextLabel.setText("<html>Finished<br>Please remove your card</html>");
+        this.mainTextLabel.setText("<html>Voltooid<br>Neem uw pas uit</html>");
     }
 }

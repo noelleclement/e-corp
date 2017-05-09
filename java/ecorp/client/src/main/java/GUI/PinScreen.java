@@ -16,7 +16,7 @@ public class PinScreen extends ButtonScreen {
     private JLabel errorField = new JLabel();
     public PinScreen() {
         super();
-        this.mainTextLabel.setText("Please insert your PIN");
+        this.mainTextLabel.setText("Voer uw PIN in");
 
         addPinField();
         addErrorField();
@@ -37,7 +37,7 @@ public class PinScreen extends ButtonScreen {
         System.out.println(pin);
         if(currentNumber>3) {
             rightButtons[1].setIdentifier("B");
-            rightButtons[1].setText("Continue");
+            rightButtons[1].setText("Doorgaan");
         } else {
             rightButtons[1].setIdentifier("");
             rightButtons[1].setText("");
@@ -45,7 +45,7 @@ public class PinScreen extends ButtonScreen {
     }
 
     public void wrongPin(int tries) {
-        this.errorField.setText("<html>You've entered the <br>wrong PIN <br>"+tries+" time"+(tries>1?"s":"")+"</html>");
+        this.errorField.setText("<html>U hebgt de verkeerde PIN<br>"+tries+" keer<br>ingevoerd</html>");
         currentNumber = 0;
         for(int i=0;i<4;i++)
             pinField.setNumber(i,false);

@@ -6,6 +6,8 @@ public interface DatabaseInf {
     //saldo opvragen database
 
 
+    int getLatestTransactieID(String pasnummer);
+
     boolean checkSaldo(String rekeningNr, int amount);
     //checken of saldo>amount
     //true als goed, false als te weinig

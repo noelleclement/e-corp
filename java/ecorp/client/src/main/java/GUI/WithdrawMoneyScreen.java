@@ -14,12 +14,12 @@ public class WithdrawMoneyScreen extends ButtonScreen {
 
     public WithdrawMoneyScreen() {
         super();
-        mainTextLabel.setText("Enter the desired amount:");
+        mainTextLabel.setText("Voer de gewenste heoveelheid in:");
         rightButtons[0].setIdentifier("A");
         rightButtons[0].setText("Backspace");
         rightButtons[1].setIdentifier("B");
-        rightButtons[1].setText("Confirm");
-        rightButtons[2].setText("Check Balance");
+        rightButtons[1].setText("Doorgaan");
+        rightButtons[2].setText("Controleer balans");
         rightButtons[2].setIdentifier("C");
         addPinField();
     }

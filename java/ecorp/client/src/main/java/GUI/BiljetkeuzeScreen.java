@@ -17,12 +17,12 @@ public class BiljetkeuzeScreen extends ButtonScreen {
 
     public BiljetkeuzeScreen() {
         super();
-        mainTextLabel.setText("<html>Use numeric keys to select biljet<br>use B, C to select amount");
+        mainTextLabel.setText("<html>Gebruik 1,2,3 om een biljet te selecteren<br>Gebruik B en C om een hoeveelheid<br>aan te geven");
         rightButtons[0].setIdentifier("A");
-        rightButtons[0].setText("Confirm");
+        rightButtons[0].setText("Doorgaan");
         rightButtons[1].setIdentifier("B");
-        rightButtons[1].setText("Add");
-        rightButtons[2].setText("Subtract");
+        rightButtons[1].setText("Plus");
+        rightButtons[2].setText("Min");
         rightButtons[2].setIdentifier("C");
         addPinField();
     }

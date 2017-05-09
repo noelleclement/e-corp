@@ -7,12 +7,12 @@ public class WithdrawAmountConfirmScreen extends ButtonScreen {
     private int amount;
     public WithdrawAmountConfirmScreen(int amount) {
         this.rightButtons[0].setIdentifier("A");
-        this.rightButtons[0].setText("Yes - with receipt");
+        this.rightButtons[0].setText("Ja - met bon");
         this.rightButtons[1].setIdentifier("B");
-        this.rightButtons[1].setText("Yes - without receipt");
+        this.rightButtons[1].setText("Ja - zonder bon");
         this.rightButtons[2].setIdentifier("C");
-        this.rightButtons[2].setText("no");
-        this.mainTextLabel.setText("<html>Do you want to take<br>"+amount+"?");
+        this.rightButtons[2].setText("Nee");
+        this.mainTextLabel.setText("<html>Wilt u<br>"+amount+"<br>opnemen?");
         this.amount = amount;
     }
 

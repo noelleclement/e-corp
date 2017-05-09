@@ -112,7 +112,7 @@ import javax.swing.JPanel;
             graphics.setFont(new Font("Roboto", Font.PLAIN, 8));
             graphics.drawString("Together we can change the world", 13, 70);
 
-            graphics.drawLine(50, 80, 150, 80);
+            graphics.drawLine(5, 80, 150, 80);
 
             //transactieid
             graphics.setFont(new Font("Bodoni MT", Font.PLAIN, 8));
@@ -144,7 +144,7 @@ import javax.swing.JPanel;
 
             //bedrag
             graphics.setFont(new Font("Bodoni MT", Font.BOLD, 10));
-            graphics.drawString("Totaal: ", 5, 200);
+            graphics.drawString("Totaal: ", 10, 200);
 
             graphics.setFont(new Font("Dialog", Font.BOLD, 10));
             graphics.drawString(bedrag, 58, 200);

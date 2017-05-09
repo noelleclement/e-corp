@@ -13,8 +13,8 @@ public class MainScreen extends ButtonlessScreen {
     public MainScreen() {
         super();
         //HTML seems to be the easiest way to introduce line breaks
-        mainTextLabel.setText("<html><p align='center'>Welcome to the Bank of E - Corp,<br />" +
-                              "Please insert your card</p></html>");
+        mainTextLabel.setText("<html><p align='center'>Welkom bij de E-Corp bank,<br />" +
+                              "Voer uw pas in</p></html>");
         addTempLabel();;
     }
     private void addTempLabel() { //TODO remove after testing
@@ -31,11 +31,11 @@ public class MainScreen extends ButtonlessScreen {
         add(tempLabelAccountNumber, tempAccountLabelConstraints);
     }
     public void incorrectRekeningnummer() {
-        this.mainTextLabel.setText("<html><p align='center'>This card is not recognized</p></html>");
+        this.mainTextLabel.setText("<html><p align='center'>Deze kaart wordt niet herkend</p></html>");
         this.tempLabelAccountNumber.setText("");
     }
     public void pasGeblokkeerd() {
-        this.mainTextLabel.setText("<html><p align='center'>This card is blocked<br>contact your bank</p></html>");
+        this.mainTextLabel.setText("<html><p align='center'>Deze kaart is geblokkeerd<br>Neem contact op met uw bank</p></html>");
         this.tempLabelAccountNumber.setText("");
     }
 }
