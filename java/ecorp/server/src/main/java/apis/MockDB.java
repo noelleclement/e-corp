@@ -6,6 +6,11 @@ public class MockDB implements DatabaseInf {
         return 500;
     }
 
+    @Override
+    public int getLatestTransactieID(String pasnummer) {
+        return 0;
+    }
+
 
     public boolean checkSaldo(String rekeningNr, int amount) {
         return amount<500;

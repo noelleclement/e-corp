@@ -6,8 +6,8 @@ package GUI;
 public class PincodePasBlockedScreen extends ButtonlessScreen {
     public PincodePasBlockedScreen() {
         super();
-        this.mainTextLabel.setText("<html>you have entered the wrong pin<br>" +
-                "too often<br>" +
-                "your pas is blocked");
+        this.mainTextLabel.setText("<html><p style='align:center;'>u hebt de verkeerde pincode<br>" +
+                "te vaak ingevoerd<br>" +
+                "uw pas is geblokkeerd</p></html>");
     }
 }

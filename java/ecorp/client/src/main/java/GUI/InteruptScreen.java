@@ -6,6 +6,6 @@ package GUI;
 public class InteruptScreen extends ButtonlessScreen {
     public InteruptScreen(){
         super();
-        this.mainTextLabel.setText("<html>The transaction is<br>interupted,<br>remove your card");
+        this.mainTextLabel.setText("<html>De transactie<br>is onderbroken<br>Verwijder uw pas</html>");
     }
 }

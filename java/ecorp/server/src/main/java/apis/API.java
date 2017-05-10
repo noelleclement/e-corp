@@ -131,7 +131,7 @@ public class API {
         System.out.println(hoeveelheidOpname);
         JsonObject result = new JsonObject();
         if(hoeveelheidOpname==3) {
-            result.addProperty("transactionId", "123");
+            result.addProperty("transactionId", database.getLatestTransactieID(object.get("CARD_UID").getAsString()));
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "OPNAME_IS_MOGELIJK");
             result.addProperty("hoeveelheid", object.get("hoeveelheid").getAsBigInteger());
@@ -168,7 +168,7 @@ public class API {
         if (opnameGeld) {
             System.out.println("Geldopname Mogelijk");
             JsonObject result = new JsonObject();
-            result.addProperty("transactionId", "123");
+            result.addProperty("transactionId", database.getLatestTransactieID(object.get("CARD_UID").getAsString()));
             result.addProperty("IBAN", object.get("IBAN").getAsString());
             result.addProperty("type", "OPNAME_IS_MOGELIJK");
             result.addProperty("hoeveelheid", object.get("amount").getAsInt());

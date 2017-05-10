@@ -6,6 +6,6 @@ package GUI;
 public class PasBestaatNietScreen extends ButtonlessScreen {
     public PasBestaatNietScreen() {
         super();
-        this.mainTextLabel.setText("<html>This pas is not recognized<br>Please remove it</html>");
+        this.mainTextLabel.setText("<html><p style=\"align: center;\"Deze pas wordt niet herkend<br>Neem hem uit</html>");
     }
 }

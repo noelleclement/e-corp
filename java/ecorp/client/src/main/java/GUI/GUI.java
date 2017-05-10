@@ -132,6 +132,11 @@ public class GUI {
     //TODO only temporary I SWEAR TESTING ONLY
     private String accountNumber="";
     private ActiveScreen lastScreen;
+
+    public void setActiveScreen(ActiveScreen activeScreen) {
+        this.activeScreen = activeScreen;
+    }
+
     public void keyPressed(char key) {
         System.out.println(key);
         switch(activeScreen) {
@@ -383,13 +388,15 @@ public class GUI {
                             biljetkeuzeScreen.addSubstract(key);
                             break;
                         case 'a':
-                            int amount = biljetkeuzeScreen.getEnteredAmount();
-                            this.lastScreen = ActiveScreen.BILJETKEUZESCREEN;
-                            this.activeScreen = ActiveScreen.WITHDRAWAMOUNTCONFIRMSCREEN;
-                            this.biljetkeuzeScreen.setVisible(false);
-                            this.biljetkeuzeScreen.removeKeyListener(k);
-                            this.withdrawAmountConfirmScreen = new WithdrawAmountConfirmScreen(amount);
-                            withdrawAmountConfirmScreen.addKeyListener(k);
+                            if(biljetkeuzeScreen.getEnteredAmount()>0) {
+                                int amount = biljetkeuzeScreen.getEnteredAmount();
+                                this.lastScreen = ActiveScreen.BILJETKEUZESCREEN;
+                                this.activeScreen = ActiveScreen.WITHDRAWAMOUNTCONFIRMSCREEN;
+                                this.biljetkeuzeScreen.setVisible(false);
+                                this.biljetkeuzeScreen.removeKeyListener(k);
+                                this.withdrawAmountConfirmScreen = new WithdrawAmountConfirmScreen(amount);
+                                withdrawAmountConfirmScreen.addKeyListener(k);
+                            }
                             break;
                         case 'd':
                             this.activeScreen = ActiveScreen.INTERUPTEDSCREEN;
@@ -425,9 +432,9 @@ public class GUI {
                                     transaction.getCARD_UID());
                             if(result.type.equals("OPNAME_IS_MOGELIJK")) {
                                 if(lastScreen == ActiveScreen.BILJETKEUZESCREEN) {
-                                    Printer printer = new Printer(123, //TODO right transactionID
+                                    Printer printer = new Printer(Integer.parseInt(result.transaction_id),
                                             transaction.getIBAN(),
-                                            new SimpleDateFormat("dd-MM-yyyyG HH:mm:s").format(new Date()),
+                                            new SimpleDateFormat("dd-MM-yyyy G HH:mm:s").format(new Date()),
                                             withdrawAmountConfirmScreen.getDesiredAmount(),
                                             biljetkeuzeScreen.biljetten[0],
                                             biljetkeuzeScreen.biljetten[1],
@@ -455,9 +462,9 @@ public class GUI {
                                             }
                                         }
                                     }
-                                    Printer printer = new Printer(123, //TODO right transactionID
+                                    Printer printer = new Printer(Integer.parseInt(result.transaction_id),
                                             transaction.getIBAN(),
-                                            new SimpleDateFormat("d-MM-yyyyG HH:mm:s").format(new Date()),
+                                            new SimpleDateFormat("d-MM-yyyy G HH:mm:s").format(new Date()),
                                             withdrawAmountConfirmScreen.getDesiredAmount(),
                                             tien,
                                             twintig,
