@@ -35,12 +35,13 @@ public class Database implements DatabaseInf{
     private void connect() {
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(host, uName, uPass);
             logger.info("Connection to the database is established");
         } catch (Exception e) {
-            //moet nog meerdere exceptions voor alle aparte fouten die kunnen opkomen, voor elke aparte error andere log namelijk
+            //TODO moet nog meerdere exceptions voor alle aparte fouten die kunnen opkomen, voor elke aparte error andere log namelijk
             logger.error("Connection to database failed", e);
+            System.out.println(e.toString());
         }
 
 
