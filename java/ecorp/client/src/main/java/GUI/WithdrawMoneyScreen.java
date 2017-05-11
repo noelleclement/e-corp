@@ -54,6 +54,13 @@ public class WithdrawMoneyScreen extends ButtonScreen {
     }
 
     public int getEnteredAmount() {
-        return Integer.parseInt(this.amount);
+        try {
+            if(Integer.parseInt(this.amount)>999)
+                return 999;
+            else
+                return Integer.parseInt(this.amount);
+        }catch (Exception e) {
+            return 999;
+        }
     }
 }
