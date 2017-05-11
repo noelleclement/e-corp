@@ -17,7 +17,6 @@ public class Server {
 
 
     public static void Server() {
-        System.out.println("versie nu");
         while (true) {
             SSLServer server = new SSLServer(DB_INSTANCE);
             server.start();
