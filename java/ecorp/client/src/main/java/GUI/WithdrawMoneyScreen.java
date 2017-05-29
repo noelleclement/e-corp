@@ -48,12 +48,20 @@ public class WithdrawMoneyScreen extends ButtonScreen {
     }
 
     public void newNumber(int number) {
-        this.amount = amount + number;
-        currentNumber++;
-        amountLabel.setText(amount);
+        if(currentNumber>4) {
+            this.mainTextLabel.setText("U kunt maximaal 9990 euro opnemen");
+        } else {
+            this.amount = amount + number;
+            currentNumber++;
+            amountLabel.setText(amount);
+        }
     }
 
     public int getEnteredAmount() {
-        return Integer.parseInt(this.amount);
+        try {
+            return Integer.parseInt(this.amount);
+        }catch (Exception e) {
+            return 999;
+        }
     }
 }

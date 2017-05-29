@@ -1,7 +1,5 @@
 package GUI;
 
-import Backend.Backend;
-
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
@@ -27,8 +25,9 @@ public class PinScreen extends ButtonScreen {
     }
 
     public void numberEntered(int number) {
-        if(number<0)
+        if(number<0) {
             return;
+        }
         if(currentNumber<=3) {
             pin = pin + number;
             pinField.setNumber(currentNumber, true);
@@ -45,7 +44,7 @@ public class PinScreen extends ButtonScreen {
     }
 
     public void wrongPin(int tries) {
-        this.errorField.setText("<html>U hebt nog<br>"+(3-tries)+"<br>pogingen om uw pin in te voeren</html>");
+        this.errorField.setText("<html>U hebt nog<br>"+(3-tries)+"<br>poging"+(tries<2?"en":"")+" om uw pin correct in te voeren</html>");
         currentNumber = 0;
         for(int i=0;i<4;i++)
             pinField.setNumber(i,false);
