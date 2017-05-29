@@ -1,5 +1,6 @@
 package arduinio;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import GUI.GUI;
@@ -28,7 +29,7 @@ public class ArduinoNew implements SerialPortEventListener {
     /** Milliseconds to block while waiting for port open */
     private static final int TIME_OUT = 2000;
     /** Default bits per second for COM port. */
-    private static final int DATA_RATE = 9600;
+    private static final int DATA_RATE = 14400;
 
     public void initialize() {
         // the next line is for Raspberry Pi and
@@ -49,7 +50,7 @@ public class ArduinoNew implements SerialPortEventListener {
             }
         }
         try {
-            portId = CommPortIdentifier.getPortIdentifier("COM7");
+            portId = CommPortIdentifier.getPortIdentifier("COM3");
         } catch (NoSuchPortException e) {
             e.printStackTrace();
         }
@@ -92,7 +93,15 @@ public class ArduinoNew implements SerialPortEventListener {
             serialPort.close();
         }
     }
-
+    public void serialWrite(String message) {
+        try {
+            System.out.println("Sending this to the arduino: "+message);
+            output.write(message.getBytes());
+        } catch (IOException e) {
+            System.out.println("error with sending data");
+            e.printStackTrace();
+        }
+    }
     /**
      * Handle an event on the serial port. Read the data and print it.
      */
@@ -104,7 +113,7 @@ public class ArduinoNew implements SerialPortEventListener {
                 System.out.println(inputLine);
             } catch (Exception e) {
                 System.out.println("inputerror");
-                System.err.println(e.toString());
+                System.out.println(e.toString());
             }
         }
         // Ignore all the other eventTypes, but you should consider the other ones.

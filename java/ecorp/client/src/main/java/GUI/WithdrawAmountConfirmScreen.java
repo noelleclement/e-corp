@@ -31,6 +31,8 @@ public class WithdrawAmountConfirmScreen extends ButtonScreen {
         this.mainTextLabel.setText("<html>U gaat met het voorgestelde<br> bedrag over uw daglimiet heen</html>");
         this.rightButtons[0].setIdentifier("");
         this.rightButtons[0].setText("");
-        this.rightButtons[1].setText("Ga terug");
+        this.rightButtons[1].setText("");
+        this.rightButtons[1].setIdentifier("");
+        this.rightButtons[2].setText("Ga terug");
     }
 }

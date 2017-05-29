@@ -54,25 +54,29 @@ public class GUI {
 
     private String rekeningNummer;
     private String pasNummer;
-
+    private final static int lengteRekeniningnummer = 11;
+    private final static int lengtePasnummer = 10;
     public void arduinoInput(String inputLine) {
-        System.out.println(inputLine.length());
-        if(inputLine.length()==11) {
-            //Een rekeningnummer
-            this.rekeningNummer = inputLine;
-            this.mainScreenInput();
-        } else if(inputLine.length() >15) {
-            this.pasNummer = inputLine;
-            this.mainScreenInput();
-        } else if(inputLine.length() == 1 ) {
-            this.keyPressed(Character.toLowerCase(inputLine.charAt(0)));
+        if(this.activeScreen==ActiveScreen.MAINSCREEN) {
+            System.out.println(inputLine.length());
+            if (inputLine.length() == lengteRekeniningnummer) {
+                //Een rekeningnummer
+                this.rekeningNummer = inputLine;
+                this.mainScreenInput();
+            } else if (inputLine.length() == lengtePasnummer) { //TODO het er nou even
+                this.pasNummer = inputLine;
+                this.mainScreenInput();
+            }
+        }
+        if (inputLine.length() == 1) {
+                this.keyPressed(Character.toLowerCase(inputLine.charAt(0)));
         }
     }
 
     private void mainScreenInput() {
         if(this.activeScreen==ActiveScreen.MAINSCREEN) {
             this.mainScreen.tempLabelAccountNumber.setText(rekeningNummer + "  " + pasNummer);
-            if (this.rekeningNummer.length() == 11 && this.pasNummer.length() == 16) {
+            if (this.rekeningNummer.length() == lengteRekeniningnummer && this.pasNummer.length() == lengtePasnummer) {
                 JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(rekeningNummer, pasNummer);
                 if (response.type.equals("CORRECT_REKENINGNUMMER")) {
                     this.transaction = new Transaction(response.IBAN,
@@ -119,6 +123,7 @@ public class GUI {
 
                 this.rekeningNummer = "";
                 this.pasNummer = "";
+                arduino.serialWrite("s");
             }
 
         }
@@ -338,7 +343,9 @@ public class GUI {
                             break;
                         case 'b':
                             int amount = withdrawMoneyScreen.getEnteredAmount();
-                            if (amount % 10 == 0) {
+                            if(amount<10) {
+                                withdrawAmountConfirmScreen.mainTextLabel.setText("<html>U moet minstens 10 euro opnemen<html>");
+                            }else if (amount % 10 == 0) {
                                 this.lastScreen = ActiveScreen.WITHDRAWMONEYSCREEN;
                                 this.activeScreen = ActiveScreen.WITHDRAWAMOUNTCONFIRMSCREEN;
                                 this.withdrawMoneyScreen.setVisible(false);
@@ -346,7 +353,7 @@ public class GUI {
                                 this.withdrawAmountConfirmScreen = new WithdrawAmountConfirmScreen(amount);
                                 withdrawAmountConfirmScreen.addKeyListener(k);
                             } else {
-                                withdrawMoneyScreen.mainTextLabel.setText("<html>This can not be withdrawn<br>enter a multiple of 10</html>");
+                                withdrawMoneyScreen.mainTextLabel.setText("<html>U kunt dit niet opnemen<br>voer een meervoud van 10 in</html>");
                             }
                             break;
                         case 'c':
@@ -439,7 +446,7 @@ public class GUI {
                                             biljetkeuzeScreen.biljetten[0],
                                             biljetkeuzeScreen.biljetten[1],
                                             biljetkeuzeScreen.biljetten[2]);
-                                    printer.print(false);
+                                    printer.print(true);
                                 } else {
                                     int bedrag = withdrawAmountConfirmScreen.getDesiredAmount();
                                     int tien = 0, twintig = 0, vijftig = 0;
@@ -469,7 +476,7 @@ public class GUI {
                                             tien,
                                             twintig,
                                             vijftig);
-                                    printer.print(false);
+                                    printer.print(true);
                                 }
                                 api.geldOpnemen(transaction.getTransactionId(),
                                         transaction.getIBAN(),
@@ -550,7 +557,9 @@ public class GUI {
                 mainScreen.addKeyListener(k);
                 break;
         }
+    response = null;
     }
+
     private enum ActiveScreen {
         MAINSCREEN, PINSCREEN, CHOOSE_ACTION_SCREEN, CHECK_BALANCE_SCREEN, WITHDRAWMONEYSCREEN, WITHDRAWAMOUNTCONFIRMSCREEN,
         ENDSCREEN, BILJETKEUZESCREEN, WRONGPINTOOOFTENSCREEN, PASGEBLOKKEERDSCHERM, PASBESTAATNIETSCREEN, INTERUPTEDSCREEN
