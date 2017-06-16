@@ -7,11 +7,15 @@ public class JsonResponses {
     public static class ControleerRekeningnummer extends JsonResponse {
         public String transaction_id;
         public String card_uid;
+        public int customerID;
+        public int accountNr;
 
-        public ControleerRekeningnummer(String type, String IBAN, String transaction_id, String card_uid) {
+        public ControleerRekeningnummer(String type, String IBAN, String transaction_id, String card_uid, int customerID, int account_nr) {
             super(type, IBAN);
             this.transaction_id = transaction_id;
             this.card_uid = card_uid;
+            this.customerID = customerID;
+            this.accountNr = account_nr;
         }
     }
 

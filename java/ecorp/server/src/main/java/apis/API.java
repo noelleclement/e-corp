@@ -14,7 +14,7 @@ public class API {
         this.database = database;
 
     }
-
+/*
     public String parse(String jsonLine) {
 
         JsonElement jelement = new JsonParser().parse(jsonLine);
@@ -183,5 +183,5 @@ public class API {
             return result.toString();
 
         }
-    }
+    }*/
 }

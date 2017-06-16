@@ -6,7 +6,7 @@ import com.google.gson.*;
 /**
  * Created by Hans de Rooij on 24/03/2017.
  */
-public class API {
+public class API {/*
     public JsonResponses.ControleerRekeningnummer isCorrectCard(String accountNumber, String passNumber) {
         JsonObject object = new JsonObject();
         object.addProperty("type","CONTROLEER_REKENINGNUMMER");
@@ -141,5 +141,5 @@ public class API {
         while(ssl.isAlive()) {}
         System.out.println("Server reaction:"+ssl.getReaction());
         return ssl.getReaction();
-    }
+    }*/
 }

@@ -5,6 +5,8 @@ import Backend.*;
 import arduinio.Arduino;
 import arduinio.ArduinoNew;
 import Printer.*;
+import com.sun.org.apache.bcel.internal.generic.LAND;
+
 import java.net.PasswordAuthentication;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,7 +32,7 @@ public class GUI {
     private BiljetkeuzeScreen biljetkeuzeScreen;
     private PincodePasBlockedScreen pincodePasBlockedScreen;
     private pasGeblokkeerdScreen pasGeblokkeerdScreen;
-    private API api;
+    private LandAPI api;
     private Transaction transaction;
     private JsonResponse response;
     private ArduinoNew arduino;
@@ -39,7 +41,7 @@ public class GUI {
     private PasBestaatNietScreen pasBestaatNietScreen;
 
     public GUI() {
-        this.api = new API();
+        this.api = new LandAPI();
         this.mainScreen = new MainScreen();
         k = new KeyboardHandler(this);
         try {
@@ -78,16 +80,19 @@ public class GUI {
             this.mainScreen.tempLabelAccountNumber.setText(rekeningNummer + "  " + pasNummer);
             if (this.rekeningNummer.length() == lengteRekeniningnummer && this.pasNummer.length() == lengtePasnummer) {
                 JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(rekeningNummer, pasNummer);
-                if (response.type.equals("CORRECT_REKENINGNUMMER")) {
+                if (!response.card_uid.equals("")) {
                     this.transaction = new Transaction(response.IBAN,
                             response.transaction_id,
-                            response.card_uid);
+                            response.card_uid,
+                            response.customerID,
+                            response.accountNr);
+                    System.out.println("begin, totaal niet om duplicate code gejank te stoppen");
                     this.activeScreen = ActiveScreen.PINSCREEN;
                     this.mainScreen.setVisible(false);
                     this.mainScreen = null;
                     this.pinScreen = new PinScreen();
                     pinScreen.addKeyListener(k);//TODO remove after keypad
-                } else if (response.type.equals("INCORRECT_REKENINGNUMMER")) { //TODO maak scherm voor
+                } else { //TODO maak scherm voor
                     this.activeScreen = ActiveScreen.PASBESTAATNIETSCREEN;
                     this.mainScreen.setVisible(false);
                     this.mainScreen = null;
@@ -103,24 +108,7 @@ public class GUI {
                     this.pasBestaatNietScreen = null;
                     this.mainScreen = new MainScreen();
                     this.mainScreen.addKeyListener(k);
-                } else if (response.type.equals("PAS_GEBLOKKEERD")) {
-                    this.activeScreen = ActiveScreen.PASGEBLOKKEERDSCHERM;
-                    this.mainScreen.setVisible(false);
-                    this.mainScreen = null;
-                    this.pasGeblokkeerdScreen = new pasGeblokkeerdScreen();
-                    this.pasGeblokkeerdScreen.addKeyListener(k);
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    this.activeScreen = ActiveScreen.MAINSCREEN;
-                    this.pasGeblokkeerdScreen.setVisible(false);
-                    this.pasGeblokkeerdScreen = null;
-                    this.mainScreen = new MainScreen();
-                    this.mainScreen.addKeyListener(k);
                 }
-
                 this.rekeningNummer = "";
                 this.pasNummer = "";
                 arduino.serialWrite("s");
@@ -155,25 +143,32 @@ public class GUI {
                 }
                 if(Character.isSpaceChar(key)) {
                     System.out.println(accountNumber);
-                    JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(accountNumber, "111222");
-                    if(response.type.equals("CORRECT_REKENINGNUMMER")) {
+                    JsonResponses.ControleerRekeningnummer response = api.isCorrectCard(
+                            "EVIL1234567",
+                            "C7 D1 94 25");
+                    if(!response.card_uid.equals("")) {
                         this.transaction = new Transaction(response.IBAN,
                                 response.transaction_id,
-                                response.card_uid);
+                                response.card_uid,
+                                response.customerID,
+                                response.accountNr);
                         this.activeScreen = ActiveScreen.PINSCREEN;
                         this.mainScreen.setVisible(false);
                         this.mainScreen = null;
                         this.pinScreen = new PinScreen();
                         pinScreen.addKeyListener(k);//TODO remove after keypad
-                    } else if(response.type.equals("INCORRECT_REKENINGNUMMER")) { //TODO maak scherm voor
-                        this.mainScreen.incorrectRekeningnummer();
-                    } else if(response.type.equals("PAS_GEBLOKKEERD")) {
+                    } else {
                         this.activeScreen = ActiveScreen.PASGEBLOKKEERDSCHERM;
                         this.mainScreen.setVisible(false);
                         this.mainScreen = null;
                         this.pasGeblokkeerdScreen = new pasGeblokkeerdScreen();
                         this.pasGeblokkeerdScreen.addKeyListener(k);
-
+                        this.transaction = null;
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                         this.activeScreen = ActiveScreen.MAINSCREEN;
                         this.pasGeblokkeerdScreen.setVisible(false);
                         this.pasGeblokkeerdScreen = null;
@@ -196,7 +191,9 @@ public class GUI {
                             response = api.checkPinCode(transaction.getTransactionId(),
                                                         transaction.getIBAN(),
                                                         pinScreen.getPin(),
-                                                        transaction.getCARD_UID());
+                                                        transaction.getCARD_UID(),
+                                                        transaction.getCustomerID(),
+                                                        transaction.getAccountNr());
                             if(response.type.equals("CORRECTE_PINCODE")) {
                                 this.activeScreen = ActiveScreen.CHOOSE_ACTION_SCREEN;
                                 this.pinScreen.setVisible(false);
@@ -213,6 +210,7 @@ public class GUI {
                                 this.pinScreen = null;
                                 this.pincodePasBlockedScreen = new PincodePasBlockedScreen();
                                 this.pincodePasBlockedScreen.addKeyListener(k);
+                                this.transaction = null;
                                 try {
                                     Thread.sleep(3000);
                                 } catch (InterruptedException e) {
@@ -231,6 +229,7 @@ public class GUI {
                             this.pinScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            this.transaction = null;
                             try {
                                 Thread.sleep(3000);
                             } catch (InterruptedException e) {
@@ -249,7 +248,8 @@ public class GUI {
                 if(Character.isLowerCase(key)) {
                     switch (key) {
                         case 'a':
-                            JsonResponses.SaldoInformatie response = api.saldoOpvragen(transaction.getTransactionId(),
+                            JsonResponses.SaldoInformatie response = api.saldoOpvragen(
+                                    transaction.getAccountNr(),
                                     transaction.getIBAN());
                             this.activeScreen = ActiveScreen.CHECK_BALANCE_SCREEN;
                             this.chooseActionScreen.setVisible(false);
@@ -276,6 +276,7 @@ public class GUI {
                             this.chooseActionScreen.setVisible(false);
                             this.chooseActionScreen = null;
                             this.interuptScreen = new InteruptScreen();
+                            this.transaction = null;
                             interuptScreen.addKeyListener(k);
                             try {
                                 Thread.sleep(3000);
@@ -314,6 +315,7 @@ public class GUI {
                             this.checkBalanceScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            this.transaction = null;
                             try {
                                 Thread.sleep(3000);
                             } catch (InterruptedException e) {
@@ -334,6 +336,7 @@ public class GUI {
                 this.pincodePasBlockedScreen = null;
                 this.mainScreen = new MainScreen();
                 mainScreen.addKeyListener(k);
+                this.transaction = null;
                 break;
             case WITHDRAWMONEYSCREEN:
                 if(Character.isLowerCase(key)) {
@@ -357,7 +360,7 @@ public class GUI {
                             }
                             break;
                         case 'c':
-                            JsonResponses.SaldoInformatie response = api.saldoOpvragen(transaction.getTransactionId(),
+                            JsonResponses.SaldoInformatie response = api.saldoOpvragen(transaction.getAccountNr(),
                                     transaction.getIBAN());
                             this.activeScreen = ActiveScreen.CHECK_BALANCE_SCREEN;
                             this.withdrawMoneyScreen.setVisible(false);
@@ -371,6 +374,7 @@ public class GUI {
                             this.withdrawMoneyScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            this.transaction = null;
                             try {
                                 Thread.sleep(3000);
                             } catch (InterruptedException e) {
@@ -411,6 +415,7 @@ public class GUI {
                             this.biljetkeuzeScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            this.transaction = null;
                             try {
                                 Thread.sleep(3000);
                             } catch (InterruptedException e) {
@@ -433,10 +438,12 @@ public class GUI {
                         case 'a':
                         case 'b':
 
-                            JsonResponse result = api.gewensteOpnameHoeveelheid(transaction.getTransactionId(),
+                            JsonResponse result = api.geldOpnemen(transaction.getTransactionId(),
                                     transaction.getIBAN(),
                                     withdrawAmountConfirmScreen.getDesiredAmount(),
-                                    transaction.getCARD_UID());
+                                    transaction.getCARD_UID(),
+                                    transaction.getAccountNr(),
+                                    transaction.getCustomerID());
                             if(result.type.equals("OPNAME_IS_MOGELIJK")) {
                                 if(lastScreen == ActiveScreen.BILJETKEUZESCREEN) {
                                     Printer printer = new Printer(Integer.parseInt(result.transaction_id),
@@ -450,14 +457,14 @@ public class GUI {
                                 } else {
                                     int bedrag = withdrawAmountConfirmScreen.getDesiredAmount();
                                     int tien = 0, twintig = 0, vijftig = 0;
-                                    while (bedrag>0) {
-                                        int tempBedrag = bedrag-50;
-                                        if(tempBedrag>=0) {
+                                    while (bedrag > 0) {
+                                        int tempBedrag = bedrag - 50;
+                                        if (tempBedrag >= 0) {
                                             vijftig++;
                                             bedrag -= 50;
                                         } else {
-                                            tempBedrag  = bedrag-20;
-                                            if(tempBedrag>=0) {
+                                            tempBedrag = bedrag - 20;
+                                            if (tempBedrag >= 0) {
                                                 twintig++;
                                                 bedrag -= 20;
                                             } else {
@@ -469,19 +476,17 @@ public class GUI {
                                             }
                                         }
                                     }
-                                    Printer printer = new Printer(Integer.parseInt(result.transaction_id),
-                                            transaction.getIBAN(),
-                                            new SimpleDateFormat("d-MM-yyyy G HH:mm:s").format(new Date()),
-                                            withdrawAmountConfirmScreen.getDesiredAmount(),
-                                            tien,
-                                            twintig,
-                                            vijftig);
-                                    printer.print(true);
+                                    if(key == 'a') {
+                                        Printer printer = new Printer(Integer.parseInt(result.transaction_id),
+                                                transaction.getIBAN(),
+                                                new SimpleDateFormat("d-MM-yyyy G HH:mm:s").format(new Date()),
+                                                withdrawAmountConfirmScreen.getDesiredAmount(),
+                                                tien,
+                                                twintig,
+                                                vijftig);
+                                        printer.print(true);
+                                    }
                                 }
-                                api.geldOpnemen(transaction.getTransactionId(),
-                                        transaction.getIBAN(),
-                                        withdrawAmountConfirmScreen.getDesiredAmount(),
-                                        transaction.getCARD_UID());
                                 this.activeScreen = ActiveScreen.ENDSCREEN;
                                 this.withdrawAmountConfirmScreen.setVisible(false);
                                 this.withdrawAmountConfirmScreen = null;
@@ -499,8 +504,9 @@ public class GUI {
                                 this.mainScreen = new MainScreen();
                                 this.mainScreen.addKeyListener(k);
                             } else if(result.type.equals("HOGER_DAN_DAGLIMIET")) {
-                                //result = (JsonResponses.OpnameHogerDanDaglimiet) result;
-                                withdrawAmountConfirmScreen.hogerDanDaglimiet();
+                                withdrawAmountConfirmScreen.hogerDanDaglimiet(api.getDaglimietRemaining(
+                                        transaction.getIBAN(),
+                                        transaction.getAccountNr()));
                             } else if(result.type.equals("ONTOEREIKEND_SALDO")) {
                                 withdrawAmountConfirmScreen.ontoereikendSaldo();
                             }
@@ -522,6 +528,7 @@ public class GUI {
                             this.withdrawAmountConfirmScreen = null;
                             this.interuptScreen = new InteruptScreen();
                             interuptScreen.addKeyListener(k);
+                            this.transaction = null;
                             try {
                                 Thread.sleep(3000);
                             } catch (InterruptedException e) {
@@ -541,6 +548,7 @@ public class GUI {
                 this.endScreen.setVisible(false);
                 this.endScreen = null;
                 this.mainScreen = new MainScreen();
+                this.transaction = null;
                 break;
             case INTERUPTEDSCREEN:
                 this.activeScreen=ActiveScreen.MAINSCREEN;
@@ -548,6 +556,7 @@ public class GUI {
                 this.interuptScreen = null;
                 this.mainScreen = new MainScreen();
                 mainScreen.addKeyListener(k);
+                this.transaction = null;
                 break;
             case PASGEBLOKKEERDSCHERM:
                 this.activeScreen=ActiveScreen.MAINSCREEN;
@@ -555,6 +564,7 @@ public class GUI {
                 this.pasGeblokkeerdScreen = null;
                 this.mainScreen = new MainScreen();
                 mainScreen.addKeyListener(k);
+                this.transaction = null;
                 break;
         }
     response = null;

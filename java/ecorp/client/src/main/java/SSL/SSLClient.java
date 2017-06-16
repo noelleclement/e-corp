@@ -19,16 +19,21 @@ public class SSLClient extends Thread{
             Security.addProvider(new Provider());
 
             //Specifying the Keystore details
-            System.setProperty("javax.net.ssl.trustStore","eCorpKey");
-            System.setProperty("javax.net.ssl.trustStorePassword","CertificaatWachtwoord");
+
+            System.setProperty("javax.net.ssl.trustStore","main-server-public-cacert.jks");
+            System.setProperty("javax.net.ssl.trustStorePassword","9An9fix9DT");
 
             // Enable debugging to view the handshake and communication which happens between the SSLClient and the SSLServer
-            //System.setProperty("javax.net.debug","all");
+            //System.setProperty("javax.net.debug","all"); */
+            //System.setProperty("javax.net.ssl.trustStore","eCorpKey");
+            //System.setProperty("javax.net.ssl.trustStorePassword","CertificaatWachtwoord");
+
         }
         try {
 
             SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-            SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("145.24.222.99", 4443);
+            SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("145.24.222.233", 8860);
+           // SSLSocket sslsocket = (SSLSocket) sslsocketfactory.createSocket("145.24.222.99", 4443);
 
             OutputStream outputstream = sslsocket.getOutputStream();
             OutputStreamWriter outputstreamwriter = new OutputStreamWriter(outputstream);

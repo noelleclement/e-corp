@@ -27,8 +27,9 @@ public class WithdrawAmountConfirmScreen extends ButtonScreen {
         this.rightButtons[1].setText("Ga terug");
     }
 
-    public void hogerDanDaglimiet() {
-        this.mainTextLabel.setText("<html>U gaat met het voorgestelde<br> bedrag over uw daglimiet heen</html>");
+    public void hogerDanDaglimiet(double daglimiet) {
+        this.mainTextLabel.setText("<html>U gaat met het voorgestelde<br> bedrag over uw daglimiet heen" +
+                "<br />U hebt nog:<br />€"+daglimiet+" over</html>");
         this.rightButtons[0].setIdentifier("");
         this.rightButtons[0].setText("");
         this.rightButtons[1].setText("");
