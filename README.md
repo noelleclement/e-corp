@@ -23,7 +23,7 @@ Part 2 included:
 - correcting the mistakes observed by the product owner during the assessment of part 1
 - designing the hardware, including the following components:
   - Lego Technic in combination with Arduino for the money dispensers
-  - a numeral keypad for the pincode
+  - a numeral keypad for the pincode and navigation in the GUI
   - a RFID scanner for scanning the bankcards
   - a DYMO printer for the receipts (without using the DYMO software)
 - creating a communication protocol with the other banks and implementing this (must say this was a real pain in the butt since not everyone implented it correctly...)
