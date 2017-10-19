@@ -6,6 +6,7 @@ For our third firstyears project we were told to create the software of a bank a
 This particular project was actually very interesting since it was much larger scale than the previous two projects, but also since it was the first time that we had multiple people working concurrently on the same code (hence the necessary git usage).
 
 Part 1 included:
+- first time really using an IDE (in our case, IntelliJ)
 - setting up a server, using a virtual Ubuntu Linux, with a database
 - programming our application and GUI, including the usage of the following:
     - Java (for application) / Java Swing (for GUI)
