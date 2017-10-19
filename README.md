@@ -3,7 +3,7 @@
 (Firstyears project #3)
 
 For our third firstyears project we were told to create the software of a bank and matching ATM. The first part consisted of creating the software, including setting up the server side. The second part was creating the communication software with the other banks in our year, and creating a physical money dispenser.
-This particular project was actually very interesting since it was much larger scale than the previous two projects, but also since it was the first time that we had multiple people working on the same code (hence the necessary git usage).
+This particular project was actually very interesting since it was much larger scale than the previous two projects, but also since it was the first time that we had multiple people working concurrently on the same code (hence the necessary git usage).
 
 Part 1 included:
 - setting up a server, using a virtual Ubuntu Linux, with a database
